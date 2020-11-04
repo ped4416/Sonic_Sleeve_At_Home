@@ -7,6 +7,9 @@
          "inputs-3",
          "inputs-1",
          "inputs-2",
+         "inputs-3",
+         "inputs-1",
+         "inputs-2",
          "inputs-3"
       ],
       "numInputs" : 3,
@@ -23,36 +26,39 @@
             "inputs-3",
             "inputs-1",
             "inputs-2",
+            "inputs-3",
+            "inputs-1",
+            "inputs-2",
             "inputs-3"
          ],
          "modelType" : "Neural Network",
          "nodes" : [
             {
-               "Node 1" : 0.73767252100266978,
-               "Node 2" : 2.8424175789635742,
-               "Node 3" : 1.2096123683370723,
-               "Threshold" : -1.3158272396000175,
+               "Node 1" : -1.6237602185222784,
+               "Node 2" : 2.492239475912823,
+               "Node 3" : 0.16747154247284823,
+               "Threshold" : 1.0517067234187267,
                "name" : "Linear Node 0"
             },
             {
                "Attrib inputs-1" : -0.3645229957032195,
-               "Attrib inputs-2" : -0.80942434312206779,
+               "Attrib inputs-2" : 9.4684700787130396,
                "Attrib inputs-3" : 0.46886777112423139,
-               "Threshold" : -0.98047225610965272,
+               "Threshold" : -0.84206096980069456,
                "name" : "Sigmoid Node 1"
             },
             {
                "Attrib inputs-1" : -0.19183294949299673,
-               "Attrib inputs-2" : 5.5247671921196613,
+               "Attrib inputs-2" : 9.3004051024295791,
                "Attrib inputs-3" : -0.3116180239528189,
-               "Threshold" : -4.5400393742868257,
+               "Threshold" : -5.320279769350396,
                "name" : "Sigmoid Node 2"
             },
             {
                "Attrib inputs-1" : 0.4964613255480087,
-               "Attrib inputs-2" : 2.8069147203196718,
+               "Attrib inputs-2" : 2.5288878075903223,
                "Attrib inputs-3" : 0.22583896321188968,
-               "Threshold" : -3.9565014943616079,
+               "Threshold" : -5.3459544969598847,
                "name" : "Sigmoid Node 3"
             }
          ],

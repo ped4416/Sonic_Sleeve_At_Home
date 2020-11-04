@@ -4,6 +4,7 @@ using UnityEngine;
 using XNode;
 using System.Linq;
 using ReusableMethods;
+using JetBrains.Annotations;
 
 namespace InteractML
 {
@@ -137,6 +138,9 @@ namespace InteractML
         private bool badRemove = false;
         private string portName = "";
 
+        // temporary storage of training example to enable re-adding of last recorded example to list
+        // see ClearLastTrainingExample() - Bryan
+        private IMLTrainingExample tempExample;
         #endregion
 
         #region XNode Messages
@@ -340,7 +344,52 @@ namespace InteractML
             {
                 ToggleCollectExamples();
             }
+
+            // Added keyboard shortcut to clear training examples - Bryan
+            if(Input.GetKeyDown(KeyCode.D))
+            {
+                ClearTrainingExamples();
+            }
+
+            // Added keyboard shortcut to clear last example - Bryan
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+                ClearLastTrainingExample();
+            }
+
+            // Added keyboard shortcut to re-add last example - Bryan
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                ReAddLastTrainingExample();
+            }
             
+        }
+
+        /// <summary>
+        /// Removes last training example from list - Bryan
+        /// </summary>
+        public virtual void ClearLastTrainingExample()
+        {
+            if(TrainingExamplesVector.Count > 0)
+            {
+                // store last example temporarily in case user wants to re-add - Bryan
+                tempExample = TrainingExamplesVector[TrainingExamplesVector.Count - 1];
+                // remove last element from list - Bryan
+                TrainingExamplesVector.RemoveAt(TrainingExamplesVector.Count - 1);
+            }
+        }
+
+        /// <summary>
+        /// Re-adds previously removed example to list - Bryan
+        /// </summary>
+        public virtual void ReAddLastTrainingExample()
+        {
+            if(tempExample != null)
+            {
+                TrainingExamplesVector.Add(tempExample);
+                // reset tempExample to null to avoid re-adding the same example multiple times - Bryan
+                tempExample = null;
+            }
         }
 
         /// <summary>

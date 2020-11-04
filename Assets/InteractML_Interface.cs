@@ -20,7 +20,7 @@ public class InteractML_Interface : MonoBehaviour
     {
         if(Input.GetKeyDown("r"))
         {
-            //find tran the machine node
+            //find train the machine node
           //model.MLController.nodes.
         }
     }

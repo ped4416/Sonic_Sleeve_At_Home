@@ -34,9 +34,21 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 13990
+  ScriptHashCode: 14130
   m_PortsPerFieldInfo:
-    m_keys: []
+    m_keys:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: -3059549752214388801}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 8174679739403498299}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   CreatedDuringPlaymode: 0
 --- !u!114 &-2738212221435848212
 MonoBehaviour:
@@ -134,7 +146,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 0
-  GOHashCode: -1316
+  GOHashCode: 14052
   CreatedDuringPlaymode: 0
 --- !u!114 &-1599874515576188
 MonoBehaviour:
@@ -330,7 +342,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 0
-  GOHashCode: 13940
+  GOHashCode: 14056
   CreatedDuringPlaymode: 0
 --- !u!114 &5449093109136495618
 MonoBehaviour:
