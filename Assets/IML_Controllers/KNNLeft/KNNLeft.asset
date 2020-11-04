@@ -145,7 +145,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
+  state: 1
   GOHashCode: 14052
   CreatedDuringPlaymode: 0
 --- !u!114 &-1599874515576188
@@ -300,11 +300,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0
+  m_Value: 2
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0
+  m_UserInput: 2
   int_switch: 1
 --- !u!114 &3990298633928389739
 MonoBehaviour:
@@ -341,7 +341,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
+  state: 1
   GOHashCode: 14056
   CreatedDuringPlaymode: 0
 --- !u!114 &5449093109136495618

@@ -83,6 +83,17 @@ namespace InteractML.DataTypeNodes
             {
                 InputConnected = false;
                 if (!int_switch) m_UserInput = 0;
+
+                // Hack to allow keyboard control of int node user input of classification target values - Bryan
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    m_UserInput = 1;
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    m_UserInput = 2;
+                }
+
                 Value = m_UserInput;
             }
             else

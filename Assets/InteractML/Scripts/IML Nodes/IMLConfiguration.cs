@@ -400,6 +400,12 @@ namespace InteractML
                 TrainModel();
             }
 
+            // Keyboard shortcut to reset model - Bryan
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                ResetModel();
+            }
+
             //Check if live data input matches training examples 
             CheckLiveDataInputMatchesTrainingExamples();
 
