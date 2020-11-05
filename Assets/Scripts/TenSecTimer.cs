@@ -37,7 +37,11 @@ public class TenSecTimer : MonoBehaviour
     {
         timer += 1;
         print("Time in seconds: " + timer);
-        if (timer == 10) End();
+        if (timer == 10)
+        {
+            timer = 0;
+            End();
+        }
     }
 
     public void End()

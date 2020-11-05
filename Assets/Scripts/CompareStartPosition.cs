@@ -17,6 +17,7 @@ public class CompareStartPosition : MonoBehaviour
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
     private bool b_referencePosLoaded;
+    private bool b_correctPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,21 @@ public class CompareStartPosition : MonoBehaviour
         }
     }
 
-    public void ComparePositions()
+    public void CheckPositionAuto()
+    {
+        bool b_correctPos = ComparePositions();
+
+        if (b_correctPos)
+        {
+            print("Correct Position");
+        }
+        else
+        {
+            print("Wrong Position");
+        }
+    }
+
+    private bool ComparePositions()
     {
         if (!b_referencePosLoaded) print("NO REFERENCE POSITION STORED");
         
@@ -69,8 +84,9 @@ public class CompareStartPosition : MonoBehaviour
         float f_distRHip = Vector3.Distance(currentRightHip, referenceRightHip);
         float f_distLHip = Vector3.Distance(currentLeftHip, referenceLeftHip);
         float f_totalDist = f_distLShoulder + f_distRShoulder + f_distNeck + f_distRHip + f_distLHip;
-        string output;
-        output = f_totalDist < errorMargin ? "Correct Position!" : "Wrong Position!";
-        print(output);
+
+        if (f_totalDist < errorMargin) return true;
+        
+        return false;
     }
 }

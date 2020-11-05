@@ -208,7 +208,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 210279056}
-        m_MethodName: ComparePositions
+        m_MethodName: CheckPositionAuto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
