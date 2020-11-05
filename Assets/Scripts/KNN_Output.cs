@@ -21,7 +21,7 @@ public class KNN_Output : MonoBehaviour
         int i_currentVal;
 
         i_currentVal = i_knnOutputValue;
-        if (i_currentVal != i_prevVal) print("KNN Output = " + i_currentVal);
+        //if (i_currentVal != i_prevVal) print("KNN Output = " + i_currentVal);
         i_prevVal = i_currentVal;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using InteractML;
 
-public class MLP_Output : MonoBehaviour
+public class ShoulderElevationOutput : MonoBehaviour
 {
     [PullFromIMLController]
     public float f_MLPOutputValue;
@@ -21,7 +21,7 @@ public class MLP_Output : MonoBehaviour
         float f_currentVal;
 
         f_currentVal = f_MLPOutputValue;
-        if (f_currentVal != f_prevVal) print("MLP Output = " + f_currentVal);
+        if (f_currentVal != f_prevVal) print("Shoulder Elevation Output = " + f_currentVal);
         f_prevVal = f_currentVal;
     }
 }

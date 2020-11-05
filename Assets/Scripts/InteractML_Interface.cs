@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using InteractML;
 
+/// <summary>
+/// This class will receive commands from the Sonic Sleeve GUI and call the relevant 
+/// interactML methods.
+/// </summary>
 public class InteractML_Interface : MonoBehaviour
 {
 
