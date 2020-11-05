@@ -15,13 +15,13 @@ public class RecordTargetPosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hand = false; //left hand = false, right hand = true
+        hand = true; //left hand = false, right hand = true
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("t"))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             bool captured = GetTargetCoords();
             if (captured)
@@ -36,6 +36,8 @@ public class RecordTargetPosition : MonoBehaviour
 
     private bool GetTargetCoords()
     {
+        l_targetPositions.Clear();
+
         if(hand)
         {
             l_targetPositions.Add(rightHand.position);

@@ -16,8 +16,9 @@ public class GetStartPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.S))
         {
+            l_startPositions.Clear();
             bool saved = GetStartCoords();
             if (saved) StoreStartPosition.WriteStartPosition(l_startPositions);
 

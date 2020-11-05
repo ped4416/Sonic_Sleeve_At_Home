@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class CompareStartPosition : MonoBehaviour
@@ -11,6 +12,7 @@ public class CompareStartPosition : MonoBehaviour
     public Transform leftHip;
     public Transform rightHip;
     public float errorMargin;
+    public On10SecTimerEndListener timerEndListener;
 
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
@@ -25,21 +27,16 @@ public class CompareStartPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (b_referencePosLoaded && Input.GetKeyDown("c"))
+        if (b_referencePosLoaded && Input.GetKeyDown(KeyCode.C))
         {
-            bool matched = ComparePositions();
-            if(matched)
-            {
-                print("Correct Position!");
-            } else
-            {
-                print("Wrong Position!");
-            }
-            
+            ComparePositions();
         }
     }
-    private bool ComparePositions()
+
+    public void ComparePositions()
     {
+        if (!b_referencePosLoaded) print("NO REFERENCE POSITION STORED");
+        
         Vector3 currentLeftShoulder = new Vector3();
         Vector3 referenceLeftShoulder = new Vector3();
         Vector3 currentRightShoulder = new Vector3();
@@ -72,8 +69,8 @@ public class CompareStartPosition : MonoBehaviour
         float f_distRHip = Vector3.Distance(currentRightHip, referenceRightHip);
         float f_distLHip = Vector3.Distance(currentLeftHip, referenceLeftHip);
         float f_totalDist = f_distLShoulder + f_distRShoulder + f_distNeck + f_distRHip + f_distLHip;
-        if (f_totalDist < errorMargin) return true;
-
-        return false;
+        string output;
+        output = f_totalDist < errorMargin ? "Correct Position!" : "Wrong Position!";
+        print(output);
     }
 }

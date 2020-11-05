@@ -5,9 +5,9 @@ using UnityEngine;
 public class RepCounter : MonoBehaviour
 {
     public KNN_Output i_classificationValue;
+    public OnTenReps tenReps;
     public int i_repCount;
 
-    public OnTenReps tenReps;
     private int i_prevVal;
     private int i_prevRep;
 

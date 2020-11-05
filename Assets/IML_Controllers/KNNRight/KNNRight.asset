@@ -45,11 +45,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 1
+  m_Value: 2
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 1
+  m_UserInput: 2
   int_switch: 1
 --- !u!114 &-4170127636422417946
 MonoBehaviour:
@@ -169,7 +169,19 @@ MonoBehaviour:
   m_ScriptInternal: {fileID: 0}
   ScriptHashCode: 14130
   m_PortsPerFieldInfo:
-    m_keys: []
+    m_keys:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: -3850368314550601562}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: -2936430221245890153}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   CreatedDuringPlaymode: 0
 --- !u!114 &-2936430221245890153
 MonoBehaviour:
@@ -220,7 +232,7 @@ MonoBehaviour:
   ValueName: 
   m_In: 0
   m_Value: 0
-  m_Out: 1
+  m_Out: 0
   ReceivingData: 0
   InputConnected: 1
   m_UserInput: 0
@@ -517,7 +529,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 1
-  m_NumExamplesTrainedOn: 206
+  m_NumExamplesTrainedOn: 135
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
