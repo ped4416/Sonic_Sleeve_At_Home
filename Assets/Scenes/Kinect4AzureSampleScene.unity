@@ -175,6 +175,7 @@ MonoBehaviour:
   rightHip: {fileID: 186009866}
   errorMargin: 0.8
   timerEndListener: {fileID: 210279058}
+  positionFound: {fileID: 11400000, guid: 96f630da5de229c44b9f28f9ead309d5, type: 2}
 --- !u!114 &210279057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bac2d9ab3a07b545807daea68b5c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b88e5f86a037cfa4e8a14d0c724550d7, type: 2}
+  Event: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -645,6 +646,8 @@ GameObject:
   m_Component:
   - component: {fileID: 786797241}
   - component: {fileID: 786797242}
+  - component: {fileID: 786797244}
+  - component: {fileID: 786797243}
   m_Layer: 0
   m_Name: RepCounter
   m_TagString: Untagged
@@ -680,7 +683,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i_classificationValue: {fileID: 1934467466}
   tenReps: {fileID: 11400000, guid: 1a74a6268044d7942bc0ef10b122bd45, type: 2}
+  fiftyReps: {fileID: 0}
+  blockCount: {fileID: 11400000, guid: 40722a0087d184c4b847cba180501b7c, type: 2}
+  restStartListener: {fileID: 786797244}
+  positionFoundListener: {fileID: 786797243}
   i_repCount: 0
+--- !u!114 &786797243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786797240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6427a9968466e042b1ffbc0999a5e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 96f630da5de229c44b9f28f9ead309d5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 786797242}
+        m_MethodName: EnableRepCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &786797244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786797240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693265161b1a5ab4ebcf7634daa79559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 88e4d7f7ec3fd2847a199febff485baa, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 786797242}
+        m_MethodName: DisableRepCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &792984389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tenRepsListener: {fileID: 1360341518}
-  timerEnd: {fileID: 11400000, guid: b88e5f86a037cfa4e8a14d0c724550d7, type: 2}
+  timerEnd: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
+  restStart: {fileID: 11400000, guid: 88e4d7f7ec3fd2847a199febff485baa, type: 2}
 --- !u!114 &1360341518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,6 +1658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2075525566}
   - component: {fileID: 2075525567}
+  - component: {fileID: 2075525568}
   m_Layer: 0
   m_Name: TwoMinTimer
   m_TagString: Untagged
@@ -1629,6 +1692,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667da70bf9c3d054a9433ea22d7f80cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fiftyRepsListener: {fileID: 2075525568}
+  timerEnd: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
+  restStart: {fileID: 11400000, guid: 88e4d7f7ec3fd2847a199febff485baa, type: 2}
+--- !u!114 &2075525568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075525565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ad551be92578f4ba706bb88b84c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2be44df9aeea0e14da7dec5a7d97e6d8, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2075525567}
+        m_MethodName: Begin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2101674006
 GameObject:
   m_ObjectHideFlags: 0

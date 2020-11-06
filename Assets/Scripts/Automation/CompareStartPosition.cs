@@ -12,7 +12,8 @@ public class CompareStartPosition : MonoBehaviour
     public Transform leftHip;
     public Transform rightHip;
     public float errorMargin;
-    public On10SecTimerEndListener timerEndListener;
+    public OnTimerEndListener timerEndListener;
+    public OnPositionFound positionFound;
 
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
@@ -96,6 +97,7 @@ public class CompareStartPosition : MonoBehaviour
             {
                 b_autoCheck = false;
                 StopCoroutine(ComparePositionCoroutine());
+                positionFound.Raise();
             }
         }
         else

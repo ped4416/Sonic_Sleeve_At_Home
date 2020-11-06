@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TwoMinTimer : MonoBehaviour
 {
-    //public OnTenRepsListener tenRepsListener;
-    //public On10SecTimerEnd timerEnd;
+    public On50RepsListener fiftyRepsListener;
+    public OnTimerEnd timerEnd;
+    public OnRestStart restStart;
 
     private int timer;
     private bool timerOn;
@@ -19,6 +20,7 @@ public class TwoMinTimer : MonoBehaviour
     public void Begin()
     {
         print("2 minute timer start!");
+        restStart.Raise();
         timerOn = true;
         StartCoroutine(TwoMinCoroutine());
 
@@ -49,6 +51,6 @@ public class TwoMinTimer : MonoBehaviour
         timerOn = false;
         StopCoroutine(TwoMinCoroutine());
         print("Check Start Position!");
-        //timerEnd.Raise();
+        timerEnd.Raise();
     }
 }

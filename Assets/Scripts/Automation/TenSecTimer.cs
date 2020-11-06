@@ -5,7 +5,8 @@ using UnityEngine;
 public class TenSecTimer : MonoBehaviour
 {
     public OnTenRepsListener tenRepsListener;
-    public On10SecTimerEnd timerEnd;
+    public OnTimerEnd timerEnd;
+    public OnRestStart restStart;
 
     private int timer;
     private bool timerOn;
@@ -19,6 +20,7 @@ public class TenSecTimer : MonoBehaviour
     public void Begin()
     {
         print("10 second timer start!");
+        restStart.Raise();
         timerOn = true;
         StartCoroutine(TenSecCoroutine());
         
