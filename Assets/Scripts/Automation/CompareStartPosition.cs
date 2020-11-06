@@ -17,7 +17,8 @@ public class CompareStartPosition : MonoBehaviour
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
     private bool b_referencePosLoaded;
-    private bool b_correctPosition;
+    private bool b_singleCheck;
+    private bool b_autoCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -30,25 +31,28 @@ public class CompareStartPosition : MonoBehaviour
     {
         if (b_referencePosLoaded && Input.GetKeyDown(KeyCode.C))
         {
+            b_singleCheck = true;
             ComparePositions();
         }
     }
 
     public void CheckPositionAuto()
     {
-        bool b_correctPos = ComparePositions();
+        b_autoCheck = true;
+        StartCoroutine(ComparePositionCoroutine());
+    }
 
-        if (b_correctPos)
+    IEnumerator ComparePositionCoroutine()
+    {
+        while(b_autoCheck)
         {
-            print("Correct Position");
-        }
-        else
-        {
-            print("Wrong Position");
+            print("Please wait: checking start position");
+            ComparePositions();
+            yield return new WaitForSeconds(2);
         }
     }
 
-    private bool ComparePositions()
+    private void ComparePositions()
     {
         if (!b_referencePosLoaded) print("NO REFERENCE POSITION STORED");
         
@@ -85,8 +89,20 @@ public class CompareStartPosition : MonoBehaviour
         float f_distLHip = Vector3.Distance(currentLeftHip, referenceLeftHip);
         float f_totalDist = f_distLShoulder + f_distRShoulder + f_distNeck + f_distRHip + f_distLHip;
 
-        if (f_totalDist < errorMargin) return true;
-        
-        return false;
+        if (f_totalDist < errorMargin)
+        {
+            print("Correct Position");
+            if(!b_singleCheck)
+            {
+                b_autoCheck = false;
+                StopCoroutine(ComparePositionCoroutine());
+            }
+        }
+        else
+        {
+            print("Wrong Position: Please adjust your sitting position");
+        }
+
+        b_singleCheck = false;
     }
 }
