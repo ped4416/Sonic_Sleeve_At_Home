@@ -683,7 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i_classificationValue: {fileID: 1934467466}
   tenReps: {fileID: 11400000, guid: 1a74a6268044d7942bc0ef10b122bd45, type: 2}
-  fiftyReps: {fileID: 0}
+  fiftyReps: {fileID: 11400000, guid: 2be44df9aeea0e14da7dec5a7d97e6d8, type: 2}
   blockCount: {fileID: 11400000, guid: 40722a0087d184c4b847cba180501b7c, type: 2}
   restStartListener: {fileID: 786797244}
   positionFoundListener: {fileID: 786797243}
