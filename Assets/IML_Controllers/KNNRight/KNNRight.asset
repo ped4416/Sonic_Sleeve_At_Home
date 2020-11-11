@@ -415,7 +415,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
+  state: 1
   GOHashCode: 14184
   CreatedDuringPlaymode: 0
 --- !u!114 &6370511199787230484
@@ -453,7 +453,7 @@ MonoBehaviour:
   IsInitialized: 1
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
-  state: 0
+  state: 1
   GOHashCode: 14076
   CreatedDuringPlaymode: 0
 --- !u!114 &6410666454098018049
@@ -528,8 +528,8 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 2
-  m_NumExamplesTrainedOn: 107
+  - 1
+  m_NumExamplesTrainedOn: 221
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
