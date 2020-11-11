@@ -17,7 +17,7 @@ public class StopwatchTimer : MonoBehaviour
         if(startTimer)
         {
             time += Time.deltaTime;
-            print(time.ToString("F2"));
+            //print(time.ToString("F2"));
         }
     }
     public void StartTimer()

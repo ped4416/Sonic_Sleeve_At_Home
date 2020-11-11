@@ -99,6 +99,10 @@ public class CompareStartPosition : MonoBehaviour
                 StopCoroutine(ComparePositionCoroutine());
                 positionFound.Raise();
             }
+            else
+            {
+                positionFound.Raise();
+            }
         }
         else
         {

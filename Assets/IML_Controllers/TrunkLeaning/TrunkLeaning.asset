@@ -228,7 +228,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: -1312
+  GOHashCode: 14136
   CreatedDuringPlaymode: 0
 --- !u!114 &-2689086204555105422
 MonoBehaviour:
@@ -310,6 +310,50 @@ MonoBehaviour:
   RunOnAwake: 0
   matchLiveDataInputs: 1
   learningChoice: 1
+--- !u!114 &-1544380487707568891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
+  m_Name: TrunkLeaningOutput (Script)
+  m_EditorClassIdentifier: 
+  id: 1445b412-3353-4864-9579-b7255995b798
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 0}
+  ports:
+    keys:
+    - f_MLPOutputValue
+    values:
+    - _fieldName: f_MLPOutputValue
+      _node: {fileID: -1544380487707568891}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  DevMode: 0
+  IsInitialized: 1
+  m_ScriptInternal: {fileID: 0}
+  ScriptHashCode: 14216
+  m_PortsPerFieldInfo:
+    m_keys:
+    - _fieldName: f_MLPOutputValue
+      _node: {fileID: -1544380487707568891}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  CreatedDuringPlaymode: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +374,7 @@ MonoBehaviour:
   - {fileID: -5180618486919345613}
   - {fileID: -2689086204555105422}
   - {fileID: -5195856377059644841}
+  - {fileID: -1544380487707568891}
   SceneComponent: {fileID: 0}
 --- !u!114 &1842726042240975514
 MonoBehaviour:
@@ -392,7 +437,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: MLP_Output (Script)
+  m_Name: ShoulderElevationOutput (Script)
   m_EditorClassIdentifier: 
   id: 35bcf00d-f1e8-4799-9527-eeb39bafcb6d
   graph: {fileID: 11400000}
@@ -416,19 +461,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14042
+  ScriptHashCode: 14214
   m_PortsPerFieldInfo:
-    m_keys:
-    - _fieldName: f_MLPOutputValue
-      _node: {fileID: 8165257623317243823}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: -5195856377059644841}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
+    m_keys: []
   CreatedDuringPlaymode: 0

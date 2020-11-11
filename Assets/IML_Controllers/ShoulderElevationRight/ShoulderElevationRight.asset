@@ -36,7 +36,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14096
+  GOHashCode: 14168
   CreatedDuringPlaymode: 0
 --- !u!114 &-5821081313487316623
 MonoBehaviour:
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: MLP_Output (Script)
+  m_Name: ShoulderElevationOutput (Script)
   m_EditorClassIdentifier: 
   id: 88a5ecbf-22ba-49f2-b2e6-ce91457b4370
   graph: {fileID: 11400000}
@@ -72,7 +72,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14134
+  ScriptHashCode: 14214
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: f_MLPOutputValue
@@ -366,8 +366,8 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 1
-  m_NumExamplesTrainedOn: 0
+  - 0.20518532396016553
+  m_NumExamplesTrainedOn: 157
   m_ExpectedInputList: 03000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 1

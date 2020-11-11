@@ -127,6 +127,137 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 847802396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &146105945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 146105946}
+  - component: {fileID: 146105949}
+  - component: {fileID: 146105948}
+  - component: {fileID: 146105947}
+  - component: {fileID: 146105950}
+  m_Layer: 0
+  m_Name: ErrorTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &146105946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146105945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 603520789}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146105947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146105945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97c85551149296408bad66a29e28845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a3998a2ca1f52a14aa0917d7047f6d43, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146105949}
+        m_MethodName: StopErrorTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &146105948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146105945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a582e22932827cd4e867fb5532171a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1a02d29f41ecf5b439284afd57032cba, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146105949}
+        m_MethodName: StartErrorTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &146105949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146105945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa23734baef018479f5abaa68ea034b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 825234764}
+  errorTimerStart: {fileID: 146105948}
+  errorTimerPause: {fileID: 146105950}
+  errorTimerStop: {fileID: 146105947}
+--- !u!114 &146105950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146105945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5642e82eb7155c43bb66a68b0735afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 146105949}
+        m_MethodName: PauseErrorTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &186009866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 507758587, guid: 019b917704c3c29478d778e143d411d2,
@@ -409,6 +540,7 @@ Transform:
   - {fileID: 2075525566}
   - {fileID: 825234765}
   - {fileID: 1306563238}
+  - {fileID: 146105946}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -628,6 +760,7 @@ MonoBehaviour:
   - {fileID: -3191245551590577983, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   m_ScriptNodesList:
   - {fileID: 8165257623317243823, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
+  - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 1934467469}
@@ -635,8 +768,10 @@ MonoBehaviour:
   m_MonoBehavioursPerScriptNode:
     m_keys:
     - {fileID: 1934467468}
+    - {fileID: 1934467469}
     m_values:
     - {fileID: 8165257623317243823, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
+    - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   m_MonobehaviourClones: []
 --- !u!1 &786797240
 GameObject:
@@ -691,6 +826,7 @@ MonoBehaviour:
   positionFoundListener: {fileID: 786797243}
   repTimerStart: {fileID: 11400000, guid: 20a164fbd3e48414ca40cd22dcf8eaf9, type: 2}
   repTimerStop: {fileID: 11400000, guid: 30f97dfb0dd62e548a717dfb61bb80a4, type: 2}
+  errorTimerStop: {fileID: 11400000, guid: a3998a2ca1f52a14aa0917d7047f6d43, type: 2}
   i_repCount: 0
 --- !u!114 &786797243
 MonoBehaviour:
@@ -805,6 +941,7 @@ MonoBehaviour:
   - {fileID: -755376702173356288, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   m_ScriptNodesList:
   - {fileID: -551128164281287361, guid: caf5a568551bf014690893a3e5753b93, type: 2}
+  - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 1934467470}
@@ -812,8 +949,10 @@ MonoBehaviour:
   m_MonoBehavioursPerScriptNode:
     m_keys:
     - {fileID: 1934467468}
+    - {fileID: 1934467470}
     m_values:
     - {fileID: -551128164281287361, guid: caf5a568551bf014690893a3e5753b93, type: 2}
+    - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   m_MonobehaviourClones: []
 --- !u!1 &820762019 stripped
 GameObject:
@@ -1190,7 +1329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1097821607
 Transform:
   m_ObjectHideFlags: 0
@@ -1690,6 +1829,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_MLPOutputValue: 0
+  f_threshold: 0.2
+  errorTimerStart: {fileID: 11400000, guid: 1a02d29f41ecf5b439284afd57032cba, type: 2}
+  errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
 --- !u!114 &1934467469
 MonoBehaviour:
   m_ObjectHideFlags: 0
