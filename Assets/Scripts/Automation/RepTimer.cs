@@ -5,16 +5,20 @@ using UnityEngine;
 public class RepTimer : MonoBehaviour
 {
     public StopwatchTimer timer;
-    public OnStopwatchStartListener stopwatchStart;
-    public OnStopwatchStopListener stopwatchStop;
+    public OnStopwatchStartListener repTimerStart;
+    public OnStopwatchStopListener repTimerStop;
+    public RepMs repTime;
 
     public void StartRepTimer()
     {
+        print("Rep timer start");
         timer.StartTimer();
     }
 
     public void StopRepTimer()
     {
+        repTime.rep_ms = timer.GetCurrentTime();
+        print("Rep timer stop");
         timer.StopTimer();
     }
 }

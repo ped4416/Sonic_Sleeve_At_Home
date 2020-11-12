@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42fa9d6c-8c93-42e8-8d9b-54c863e1f951
   graph: {fileID: 11400000}
-  position: {x: 0, y: 0}
+  position: {x: 1352, y: -136}
   ports:
     keys:
     - f_MLPOutputValue
@@ -23,7 +23,10 @@ MonoBehaviour:
       _node: {fileID: -7774270626402005474}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: m_Out
+        node: {fileID: -7155935277802249380}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -31,14 +34,17 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14218
+  ScriptHashCode: 14292
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: f_MLPOutputValue
       _node: {fileID: -7774270626402005474}
       _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: m_Out
+        node: {fileID: -7155935277802249380}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -82,7 +88,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: f_MLPOutputValue
-        node: {fileID: -551128164281287361}
+        node: {fileID: -7774270626402005474}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -170,8 +176,8 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 0
-  m_NumExamplesTrainedOn: 0
+  - -0.002690786023853642
+  m_NumExamplesTrainedOn: 228
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 1
@@ -300,45 +306,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14076
-  CreatedDuringPlaymode: 0
---- !u!114 &-551128164281287361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: ShoulderElevationOutput (Script)
-  m_EditorClassIdentifier: 
-  id: e2f12ada-8b88-465e-9f35-9eb9541331f1
-  graph: {fileID: 11400000}
-  position: {x: 1352, y: -120}
-  ports:
-    keys:
-    - f_MLPOutputValue
-    values:
-    - _fieldName: f_MLPOutputValue
-      _node: {fileID: -551128164281287361}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: -7155935277802249380}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  DevMode: 0
-  IsInitialized: 1
-  m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14214
-  m_PortsPerFieldInfo:
-    m_keys: []
+  GOHashCode: 14134
   CreatedDuringPlaymode: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -355,7 +323,6 @@ MonoBehaviour:
   nodes:
   - {fileID: 1292495224468012309}
   - {fileID: -755376702173356288}
-  - {fileID: -551128164281287361}
   - {fileID: 6312257469752930140}
   - {fileID: 9006353024598236423}
   - {fileID: 7656424822197969487}
@@ -400,7 +367,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14184
+  GOHashCode: 14258
   CreatedDuringPlaymode: 0
 --- !u!114 &6312257469752930140
 MonoBehaviour:
@@ -507,11 +474,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0
+  m_Value: 1
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0
+  m_UserInput: 1
   float_switch: 1
 --- !u!114 &9006353024598236423
 MonoBehaviour:

@@ -9,10 +9,9 @@ public class ShoulderElevationOutput : MonoBehaviour
     [PullFromIMLController]
     public float f_MLPOutputValue;
     public float f_threshold;
-    //public OnAboveThresh aboveThresh_shoulderElev;
-    //public OnBelowThresh belowThresh_shoulderElev;
     public OnStopwatchStart errorTimerStart;
     public OnStopwatchPause errorTimerPause;
+    public ErrorTimerActive errorTimerCheck;
 
     private float f_prevVal;
     // Start is called before the first frame update
@@ -20,6 +19,7 @@ public class ShoulderElevationOutput : MonoBehaviour
     {
         f_prevVal = 0.0f;
         f_threshold = 0.2f; // default value
+        errorTimerCheck.b_isActive = false;
     }
 
     // Update is called once per frame
@@ -32,19 +32,22 @@ public class ShoulderElevationOutput : MonoBehaviour
 
         if(f_currentVal >= f_threshold && f_prevVal < f_threshold)
         {
-            // raise event above threshold
-            // call start error timer
-            // pause music
-            //aboveThresh_shoulderElev.Raise();
-            errorTimerStart.Raise();
+            if(!errorTimerCheck.b_isActive)
+            {
+                print("Shoulder elevation adjustment needed");
+                errorTimerStart.Raise();
+                errorTimerCheck.b_isActive = true;
+            }
+            
         }
         else if(f_currentVal < f_threshold && f_prevVal >= f_threshold)
         {
-            // raise event below threshold
-            // call pause error timer
-            // play music
-            //belowThresh_shoulderElev.Raise();
-            errorTimerPause.Raise();
+            if(errorTimerCheck.b_isActive)
+            {
+                errorTimerPause.Raise();
+                errorTimerCheck.b_isActive = false;
+            }
+            
         }
 
         f_prevVal = f_currentVal;

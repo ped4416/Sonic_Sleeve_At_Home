@@ -35,4 +35,9 @@ public class StopwatchTimer : MonoBehaviour
     {
         startTimer = false;
     }
+
+    public float GetCurrentTime()
+    {
+        return time;
+    }
 }

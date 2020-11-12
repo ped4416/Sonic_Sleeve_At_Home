@@ -12,6 +12,8 @@ public class RepCounter : MonoBehaviour
     public OnPositionFoundListener positionFoundListener;
     public OnStopwatchStart repTimerStart;
     public OnStopwatchStop repTimerStop;
+    public OnStopwatchStart blockTimerStart;
+    public OnStopwatchStop blockTimerStop;
     public OnStopwatchStop errorTimerStop;
     public int i_repCount;
 
@@ -51,6 +53,7 @@ public class RepCounter : MonoBehaviour
                 tenReps.Raise();
                 errorTimerStop.Raise();
                 repTimerStop.Raise();
+                blockTimerStop.Raise();
                 i_repCount = 0;
                 blockCount.i_value += 1;
             }
@@ -59,6 +62,7 @@ public class RepCounter : MonoBehaviour
                 fiftyReps.Raise();
                 errorTimerStop.Raise();
                 repTimerStop.Raise();
+                blockTimerStop.Raise();
                 i_repCount = 0;
                 blockCount.i_value = 1;
             }
@@ -72,6 +76,7 @@ public class RepCounter : MonoBehaviour
 
     public void EnableRepCounter()
     {
+        blockTimerStart.Raise();
         repTimerStart.Raise();
         b_isRest = false;
     }

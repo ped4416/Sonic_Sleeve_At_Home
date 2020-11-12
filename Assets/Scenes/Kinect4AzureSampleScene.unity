@@ -121,6 +121,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &96627158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96627159}
+  - component: {fileID: 96627160}
+  m_Layer: 0
+  m_Name: DataCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96627159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96627158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96627160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96627158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1714d071016993641af41ca54de9634b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
 --- !u!4 &140567826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1635582690, guid: 019b917704c3c29478d778e143d411d2,
@@ -200,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a582e22932827cd4e867fb5532171a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 1a02d29f41ecf5b439284afd57032cba, type: 2}
+  Event: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -366,7 +410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &241272683
 Transform:
   m_ObjectHideFlags: 0
@@ -444,7 +488,7 @@ Transform:
   m_Children:
   - {fileID: 786797241}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481299728 stripped
 GameObject:
@@ -541,8 +585,9 @@ Transform:
   - {fileID: 825234765}
   - {fileID: 1306563238}
   - {fileID: 146105946}
+  - {fileID: 1854566935}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -652,7 +697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &778222787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &786148082
 Transform:
   m_ObjectHideFlags: 0
@@ -759,7 +804,6 @@ MonoBehaviour:
   m_GameObjectNodeList:
   - {fileID: -3191245551590577983, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   m_ScriptNodesList:
-  - {fileID: 8165257623317243823, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
@@ -767,10 +811,8 @@ MonoBehaviour:
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467468}
     - {fileID: 1934467469}
     m_values:
-    - {fileID: 8165257623317243823, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
     - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   m_MonobehaviourClones: []
 --- !u!1 &786797240
@@ -826,6 +868,8 @@ MonoBehaviour:
   positionFoundListener: {fileID: 786797243}
   repTimerStart: {fileID: 11400000, guid: 20a164fbd3e48414ca40cd22dcf8eaf9, type: 2}
   repTimerStop: {fileID: 11400000, guid: 30f97dfb0dd62e548a717dfb61bb80a4, type: 2}
+  blockTimerStart: {fileID: 11400000, guid: 9bcf99bd41a2e454aaa0c5134df2f89f, type: 2}
+  blockTimerStop: {fileID: 11400000, guid: 7e6c5cf42ff4e974ead38855b1c9c8a5, type: 2}
   errorTimerStop: {fileID: 11400000, guid: a3998a2ca1f52a14aa0917d7047f6d43, type: 2}
   i_repCount: 0
 --- !u!114 &786797243
@@ -898,7 +942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &792984390
 Transform:
   m_ObjectHideFlags: 0
@@ -940,7 +984,6 @@ MonoBehaviour:
   - {fileID: 1292495224468012309, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   - {fileID: -755376702173356288, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   m_ScriptNodesList:
-  - {fileID: -551128164281287361, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
@@ -948,10 +991,8 @@ MonoBehaviour:
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467468}
     - {fileID: 1934467470}
     m_values:
-    - {fileID: -551128164281287361, guid: caf5a568551bf014690893a3e5753b93, type: 2}
     - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   m_MonobehaviourClones: []
 --- !u!1 &820762019 stripped
@@ -1066,51 +1107,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 847802396}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &894341174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 894341176}
-  - component: {fileID: 894341175}
-  m_Layer: 0
-  m_Name: IML_InterfaceControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &894341175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894341174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936cc2ef52e24d247928269db0009895, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model: {fileID: 0}
-  trainingNode: {fileID: 0}
---- !u!4 &894341176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894341174}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907569042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1142928000, guid: 019b917704c3c29478d778e143d411d2,
@@ -1463,8 +1459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 825234764}
-  stopwatchStart: {fileID: 1306563239}
-  stopwatchStop: {fileID: 1306563241}
+  repTimerStart: {fileID: 1306563239}
+  repTimerStop: {fileID: 1306563241}
+  repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
 --- !u!114 &1306563241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1766,108 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 847802396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1854566934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854566935}
+  - component: {fileID: 1854566936}
+  - component: {fileID: 1854566938}
+  - component: {fileID: 1854566937}
+  m_Layer: 0
+  m_Name: BlockTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854566935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854566934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 603520789}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854566936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854566934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505c2ae8291b57942ab1e315159ec18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 825234764}
+  blockTimerStart: {fileID: 1854566938}
+  blockTimerStop: {fileID: 1854566937}
+--- !u!114 &1854566937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854566934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97c85551149296408bad66a29e28845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7e6c5cf42ff4e974ead38855b1c9c8a5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1854566936}
+        m_MethodName: StopBlockTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1854566938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854566934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a582e22932827cd4e867fb5532171a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9bcf99bd41a2e454aaa0c5134df2f89f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1854566936}
+        m_MethodName: StartBlockTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1934467465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1882,7 @@ GameObject:
   - component: {fileID: 1934467470}
   - component: {fileID: 1934467469}
   m_Layer: 0
-  m_Name: DataReceiver
+  m_Name: IML_Output
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1830,8 +1929,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f_MLPOutputValue: 0
   f_threshold: 0.2
-  errorTimerStart: {fileID: 11400000, guid: 1a02d29f41ecf5b439284afd57032cba, type: 2}
+  errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
+  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
 --- !u!114 &1934467469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,6 +1945,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_MLPOutputValue: 0
+  f_threshold: 0.2
+  errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
+  errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
+  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
 --- !u!114 &1934467470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1858,6 +1962,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_MLPOutputValue: 0
+  f_threshold: 0.2
+  errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
+  errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
+  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
 --- !u!4 &2007055318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 761279764, guid: 019b917704c3c29478d778e143d411d2,
@@ -2029,7 +2137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2101674007
 Transform:
   m_ObjectHideFlags: 0
@@ -2071,14 +2179,14 @@ MonoBehaviour:
   - {fileID: -8220465022779601038, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
   - {fileID: -8900866623354634563, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
   m_ScriptNodesList:
-  - {fileID: -6286178093248796830, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
+  - {fileID: -4521180899270199881, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 1934467470}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467468}
+    - {fileID: 1934467470}
     m_values:
-    - {fileID: -6286178093248796830, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
+    - {fileID: -4521180899270199881, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
   m_MonobehaviourClones: []
