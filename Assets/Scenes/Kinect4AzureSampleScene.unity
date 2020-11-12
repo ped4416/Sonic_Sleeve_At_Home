@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96627159}
   - component: {fileID: 96627160}
+  - component: {fileID: 96627161}
   m_Layer: 0
   m_Name: DataCollector
   m_TagString: Untagged
@@ -165,7 +166,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
-  repErr: {fileID: 11400000, guid: 6f6cf4e5015661a47baa25e2e9df7619, type: 2}
+  repStopListener: {fileID: 96627161}
+--- !u!114 &96627161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96627158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97c85551149296408bad66a29e28845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 30f97dfb0dd62e548a717dfb61bb80a4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 96627160}
+        m_MethodName: WriteDataToFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &140567826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1635582690, guid: 019b917704c3c29478d778e143d411d2,
@@ -874,7 +902,6 @@ MonoBehaviour:
   blockTimerStop: {fileID: 11400000, guid: 7e6c5cf42ff4e974ead38855b1c9c8a5, type: 2}
   errorTimerStop: {fileID: 11400000, guid: a3998a2ca1f52a14aa0917d7047f6d43, type: 2}
   i_repCount: 0
-  data: {fileID: 96627160}
 --- !u!114 &786797243
 MonoBehaviour:
   m_ObjectHideFlags: 0

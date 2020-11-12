@@ -7,7 +7,8 @@ using System;
 public class DataCollector : MonoBehaviour
 {
     public RepMs repTime;
-    public RepError repErr;
+    public OnStopwatchStopListener repStopListener;
+    //public RepError repErr;
 
     private string filepath;
     private bool b_writeData;
@@ -24,19 +25,19 @@ public class DataCollector : MonoBehaviour
     {
         if(b_writeData)
         {
-            AddData("test", "12/11/2020", repTime.rep_ms, repErr.rep_error_ms);
+            AddData("test", "12/11/2020", repTime.rep_ms);
             b_writeData = false;
         }
         
     }
 
-    void AddData(string id, string date, float rep_ms, float rep_error_ms)
+    void AddData(string id, string date, float rep_ms)
     {
         try
         {
             using (StreamWriter file = new StreamWriter(@filepath, true))
             {
-                file.WriteLine(id + ", " + date + ", " + rep_ms + ", " + rep_error_ms);
+                file.WriteLine(id + ", " + date + ", " + rep_ms);
             }
         }
         catch(Exception ex)
