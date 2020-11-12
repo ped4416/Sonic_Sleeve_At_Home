@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StopwatchTimer : MonoBehaviour
 {
-    private float time;
+    public float time;
+
     private bool startTimer;
 
     private void Start()
@@ -38,6 +39,7 @@ public class StopwatchTimer : MonoBehaviour
 
     public float GetCurrentTime()
     {
-        return time;
+        float currentTime = time;
+        return currentTime;
     }
 }

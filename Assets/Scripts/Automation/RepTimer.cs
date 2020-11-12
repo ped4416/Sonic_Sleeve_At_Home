@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class RepTimer : MonoBehaviour
 {
-    public StopwatchTimer timer;
+    public StopwatchTimer repTimer;
     public OnStopwatchStartListener repTimerStart;
     public OnStopwatchStopListener repTimerStop;
     public RepMs repTime;
 
+    private void Start()
+    {
+        repTime.rep_ms = 0.0f;
+    }
+
+    private void Update()
+    {
+        repTime.rep_ms = repTimer.time;
+    }
+
     public void StartRepTimer()
     {
-        print("Rep timer start");
-        timer.StartTimer();
+        //print("Rep timer start");
+        repTimer.StartTimer();
     }
 
     public void StopRepTimer()
     {
-        repTime.rep_ms = timer.GetCurrentTime();
-        print("Rep timer stop");
-        timer.StopTimer();
+        //print("Rep timer stop");
+        repTimer.StopTimer();
     }
 }

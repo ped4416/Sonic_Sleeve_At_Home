@@ -16,6 +16,7 @@ public class RepCounter : MonoBehaviour
     public OnStopwatchStop blockTimerStop;
     public OnStopwatchStop errorTimerStop;
     public int i_repCount;
+    public DataCollector data;
 
     private int i_prevVal;
     private int i_prevRep;
@@ -42,6 +43,7 @@ public class RepCounter : MonoBehaviour
                 i_repCount += 1;
                 errorTimerStop.Raise();
                 repTimerStop.Raise();
+                data.WriteDataToFile();
                 repTimerStart.Raise();
             }
             if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount + "    ||  Block Number: " + blockCount.i_value);

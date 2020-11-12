@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
+  repErr: {fileID: 11400000, guid: 6f6cf4e5015661a47baa25e2e9df7619, type: 2}
 --- !u!4 &140567826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1635582690, guid: 019b917704c3c29478d778e143d411d2,
@@ -271,10 +272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa23734baef018479f5abaa68ea034b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 825234764}
+  errorTimer: {fileID: 825234764}
   errorTimerStart: {fileID: 146105948}
   errorTimerPause: {fileID: 146105950}
   errorTimerStop: {fileID: 146105947}
+  repError: {fileID: 11400000, guid: 6f6cf4e5015661a47baa25e2e9df7619, type: 2}
 --- !u!114 &146105950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,6 +874,7 @@ MonoBehaviour:
   blockTimerStop: {fileID: 11400000, guid: 7e6c5cf42ff4e974ead38855b1c9c8a5, type: 2}
   errorTimerStop: {fileID: 11400000, guid: a3998a2ca1f52a14aa0917d7047f6d43, type: 2}
   i_repCount: 0
+  data: {fileID: 96627160}
 --- !u!114 &786797243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6cb3e5a4c7c6e54eaf330ead2dc77d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
 --- !u!4 &825234765
 Transform:
   m_ObjectHideFlags: 0
@@ -1458,7 +1462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94aced13dd1b3f44b935d62144c9a935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 825234764}
+  repTimer: {fileID: 825234764}
   repTimerStart: {fileID: 1306563239}
   repTimerStop: {fileID: 1306563241}
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
@@ -1811,7 +1815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505c2ae8291b57942ab1e315159ec18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 825234764}
+  blockTimer: {fileID: 825234764}
   blockTimerStart: {fileID: 1854566938}
   blockTimerStop: {fileID: 1854566937}
 --- !u!114 &1854566937
