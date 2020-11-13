@@ -15,8 +15,9 @@ public class AudioController : MonoBehaviour
     private void Awake()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
-        //filepath needs to work on multiple machines. To do!
-        soundPath = "C://Users//UCLH_RehabKit_12//Documents//Unity Projects//samples";
+        //filepath needs to work on multiple machines. To do! using C// may work1? 
+        soundPath = "C:";
+        //soundPath = "C://Users//UCLH_RehabKit_12//Documents//Unity Projects//samples";
         Debug.Log("Loading file");
         StartCoroutine(GetAudioClip());
     }
@@ -32,7 +33,7 @@ public class AudioController : MonoBehaviour
             audioClip = DownloadHandlerAudioClip.GetContent(uwr);
             audioSource.clip = audioClip;
             //audioSource.isReadyToPLay();
-            Debug.Log("File Ready");
+            Debug.Log("File Ready path = : " + soundPath + "//song.wav");
         }
     }
 
