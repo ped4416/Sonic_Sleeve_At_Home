@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 400072069}
+      - m_Target: {fileID: 938398003}
         m_MethodName: PauseAudioFile
         m_Mode: 1
         m_Arguments:
@@ -7111,7 +7111,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1027594944}
+      - m_Target: {fileID: 938398003}
         m_MethodName: PlayAudioFile
         m_Mode: 1
         m_Arguments:
@@ -11704,7 +11704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1609298893}
+      - m_Target: {fileID: 938398003}
         m_MethodName: StopAudioFile
         m_Mode: 1
         m_Arguments:

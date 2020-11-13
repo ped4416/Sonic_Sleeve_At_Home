@@ -38,10 +38,23 @@ public class AudioController : MonoBehaviour
 
     public void PlayAudioFile()
     {
-        audioSource.clip = audioClip;
+        //audioSource.clip = audioClip;
         audioSource.Play();
         audioSource.loop = true;
         Debug.Log("Play file");
+    }
+    public void PauseAudioFile()
+    {
+        //audioSource.clip = audioClip;
+        audioSource.Pause();
+        Debug.Log("Pause file");
+    }
+
+    public void StopAudioFile()
+    {
+        //audioSource.clip = audioClip;
+        audioSource.Stop();
+        Debug.Log("Stop file");
     }
 
 }
