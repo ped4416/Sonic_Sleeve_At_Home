@@ -15,10 +15,10 @@ public class ErrorTimer : MonoBehaviour
         repError.rep_error_ms = 0.0f;
     }
 
-    private void Update()
+    /*private void Update()
     {
         repError.rep_error_ms = errorTimer.time;
-    }
+    }*/
 
     public void StartErrorTimer()
     {
@@ -32,9 +32,9 @@ public class ErrorTimer : MonoBehaviour
         errorTimer.StopTimer();
     }
 
-    public void PauseErrorTimer()
+    /*public void PauseErrorTimer()
     {
         //print("ERROR TIMER PAUSE");
         errorTimer.PauseTimer();
-    }
+    }*/
 }

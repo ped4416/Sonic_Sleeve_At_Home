@@ -10,11 +10,14 @@ public class RepCounter : MonoBehaviour
     public BlockCount blockCount;
     public OnRestStartListener restStartListener;
     public OnPositionFoundListener positionFoundListener;
-    public OnStopwatchStart repTimerStart;
-    public OnStopwatchStop repTimerStop;
-    public OnStopwatchStart blockTimerStart;
-    public OnStopwatchStop blockTimerStop;
-    public OnStopwatchStop errorTimerStop;
+    public OnRepTimerStart repTimerStart;
+    public OnRepTimerStop repTimerStop;
+    public OnRepTimerReset repTimerReset;
+    public OnRepTimeWrite repTimeWrite;
+    public RepMs repTime;
+    //public OnStopwatchStart blockTimerStart;
+    //public OnStopwatchStop blockTimerStop;
+    //public OnStopwatchStop errorTimerStop;
     public int i_repCount;
 
     private int i_prevVal;
@@ -40,8 +43,10 @@ public class RepCounter : MonoBehaviour
             if (i_currentVal == 1 && i_prevVal == 2)
             {
                 i_repCount += 1;
-                errorTimerStop.Raise();
+                //errorTimerStop.Raise();
+                //repTimeWrite.Raise();
                 repTimerStop.Raise();
+                repTimerReset.Raise();
                 repTimerStart.Raise();
             }
             if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount + "    ||  Block Number: " + blockCount.i_value);
@@ -51,18 +56,18 @@ public class RepCounter : MonoBehaviour
             if (i_repCount == 10 && blockCount.i_value < 5)
             {
                 tenReps.Raise();
-                errorTimerStop.Raise();
+                //errorTimerStop.Raise();
                 repTimerStop.Raise();
-                blockTimerStop.Raise();
+                //blockTimerStop.Raise();
                 i_repCount = 0;
                 blockCount.i_value += 1;
             }
             else if(i_repCount == 10 && blockCount.i_value == 5)
             {
                 fiftyReps.Raise();
-                errorTimerStop.Raise();
+                //errorTimerStop.Raise();
                 repTimerStop.Raise();
-                blockTimerStop.Raise();
+                //blockTimerStop.Raise();
                 i_repCount = 0;
                 blockCount.i_value = 1;
             }
@@ -76,7 +81,7 @@ public class RepCounter : MonoBehaviour
 
     public void EnableRepCounter()
     {
-        blockTimerStart.Raise();
+        //blockTimerStart.Raise();
         repTimerStart.Raise();
         b_isRest = false;
     }

@@ -7,31 +7,17 @@ using System;
 public class DataCollector : MonoBehaviour
 {
     public RepMs repTime;
-    public OnStopwatchStopListener repStopListener;
-    //public RepError repErr;
+    public OnBangListener bangListener;
 
     private string filepath;
-    private bool b_writeData;
 
     // Start is called before the first frame update
     void Start()
     {
         filepath = "data.txt";
-        b_writeData = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(b_writeData)
-        {
-            AddData("test", "12/11/2020", repTime.rep_ms);
-            b_writeData = false;
-        }
-        
-    }
-
-    void AddData(string id, string date, float rep_ms)
+    void AddData(string id, string date, double rep_ms)
     {
         try
         {
@@ -48,6 +34,6 @@ public class DataCollector : MonoBehaviour
 
     public void WriteDataToFile()
     {
-        b_writeData = true;
+        AddData("test", "13/11/2020", repTime.rep_ms);
     }
 }

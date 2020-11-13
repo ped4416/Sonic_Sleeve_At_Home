@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class RepMs : ScriptableObject
 {
-    public float rep_ms;
+    public double rep_ms;
 }

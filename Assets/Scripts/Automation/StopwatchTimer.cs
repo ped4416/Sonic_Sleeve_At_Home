@@ -1,45 +1,65 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Diagnostics;
+using System;
 
 public class StopwatchTimer : MonoBehaviour
 {
-    public float time;
+    public OnBang bang;
 
-    private bool startTimer;
+    private Stopwatch stopwatch = new Stopwatch();
+    private bool b_isRunning;
 
     private void Start()
     {
-        time = 0.0f;
+        b_isRunning = false;
     }
 
     private void Update()
     {
-        if(startTimer)
-        {
-            time += Time.deltaTime;
-            //print(time.ToString("F2"));
+        if(b_isRunning)
+        { 
+            long milliTime = stopwatch.ElapsedMilliseconds;
+            if (milliTime >= 20)
+            {
+                print("BANG");
+                bang.Raise();
+            }
         }
     }
     public void StartTimer()
     {
-        startTimer = true;
+        b_isRunning = true;
+        stopwatch.Start();
     }
 
     public void StopTimer()
     {
-        startTimer = false;
-        time = 0.0f;
+        b_isRunning = false;
+        stopwatch.Stop();
     }
 
-    public void PauseTimer()
+    public void ResetTimer()
     {
-        startTimer = false;
+        stopwatch.Reset();
     }
 
-    public float GetCurrentTime()
+    public double GetTimeSeconds()
     {
-        float currentTime = time;
-        return currentTime;
+        TimeSpan time = stopwatch.Elapsed;
+        double timeVal = time.TotalSeconds;
+
+        return timeVal;
     }
+
+    /*public void Bang()
+    {
+        while(b_isRunning)
+        {
+            print("BANG");
+            long milliTime = stopwatch.ElapsedMilliseconds;
+            if (milliTime >= 20) bang.Raise();
+        }
+    }*/
 }
