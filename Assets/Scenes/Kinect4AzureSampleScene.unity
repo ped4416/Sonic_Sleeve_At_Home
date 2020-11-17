@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
-  bangListener: {fileID: 96627161}
 --- !u!114 &96627161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1010,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 847802396}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &907569043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907569042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c9c30c199a3284ba4e3697f046b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataIn: {fileID: 907569042}
+  dataOut: {x: 0, y: 0, z: 0}
+  lowPassFactor: 0
+--- !u!114 &907569044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907569042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4d662ee70b38b41a05f4d65ca518e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataIn: {fileID: 907569042}
+  dataOut: {x: 0, y: 0, z: 0, w: 0}
+  lowPassFactor: 0
 --- !u!4 &912241620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 523990876, guid: 019b917704c3c29478d778e143d411d2,
@@ -1769,7 +1798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopwatchTimer: {fileID: 1792152080}
-  bangListener: {fileID: 1792152084}
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
 --- !u!1 &1826320871 stripped
 GameObject:

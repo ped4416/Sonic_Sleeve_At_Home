@@ -11,7 +11,7 @@ public class GetStartPosition : MonoBehaviour
     public Transform leftHip;
     public Transform rightHip;
 
-    private List<Vector3> l_startPositions = new List<Vector3>();
+    private List<Transform> l_startPositions = new List<Transform>();
 
     // Update is called once per frame
     void Update()
@@ -22,23 +22,17 @@ public class GetStartPosition : MonoBehaviour
             bool saved = GetStartCoords();
             if (saved) StoreStartPosition.WriteStartPosition(l_startPositions);
 
-            print("Start Coords Saved = " + saved);
-            foreach(Vector3 pos in StoreStartPosition.l_savedStartPositions)
-            {
-                print("Saved pos X:" + pos.x);
-                print("Saved pos Y:" + pos.y);
-                print("Saved pos Z:" + pos.z);
-            }
+            print("Start Data Saved = " + saved);
         }
     }
 
     private bool GetStartCoords()
     {
-        l_startPositions.Add(leftShoulder.position);
-        l_startPositions.Add(rightShoulder.position);
-        l_startPositions.Add(neck.position);
-        l_startPositions.Add(rightHip.position);
-        l_startPositions.Add(leftHip.position);
+        l_startPositions.Add(leftShoulder);
+        l_startPositions.Add(rightShoulder);
+        l_startPositions.Add(neck);
+        l_startPositions.Add(rightHip);
+        l_startPositions.Add(leftHip);
 
         if(l_startPositions.Count > 0) return true;
 
