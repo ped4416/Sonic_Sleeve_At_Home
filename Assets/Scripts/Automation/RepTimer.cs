@@ -5,7 +5,6 @@ using UnityEngine;
 public class RepTimer : MonoBehaviour
 {
     public StopwatchTimer stopwatchTimer;
-    public OnBangListener bangListener;
     public RepMs repTime;
 
     private void Start()

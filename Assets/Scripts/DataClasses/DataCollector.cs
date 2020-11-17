@@ -7,7 +7,6 @@ using System;
 public class DataCollector : MonoBehaviour
 {
     public RepMs repTime;
-    public OnBangListener bangListener;
 
     private string filepath;
 
