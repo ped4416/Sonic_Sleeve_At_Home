@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
+  dataTracker: {fileID: 11400000, guid: 41bf1392d92471f4b995228943b9f07e, type: 2}
 --- !u!114 &96627161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataIn: {fileID: 907569042}
   dataOut: {x: 0, y: 0, z: 0}
-  lowPassFactor: 0
+  lowPassFactor: 0.8
 --- !u!114 &907569044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,7 +1040,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataIn: {fileID: 907569042}
   dataOut: {x: 0, y: 0, z: 0, w: 0}
-  lowPassFactor: 0
+  lowPassFactor: 0.8
+--- !u!114 &907569045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907569042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bc4beb696569f448133f69b68e38da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataTracker: {fileID: 11400000, guid: 41bf1392d92471f4b995228943b9f07e, type: 2}
+  vecFilter: {fileID: 907569043}
+  quatFilter: {fileID: 907569044}
+  b_filterOn: 1
 --- !u!4 &912241620 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 523990876, guid: 019b917704c3c29478d778e143d411d2,

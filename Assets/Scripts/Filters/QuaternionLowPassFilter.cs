@@ -9,6 +9,7 @@ public class QuaternionLowPassFilter : MonoBehaviour
     public float lowPassFactor;
 
     private bool init;
+    private Quaternion prevData;
 
     // Start is called before the first frame update
     void Start()
@@ -16,13 +17,16 @@ public class QuaternionLowPassFilter : MonoBehaviour
         //Initialization done once:
         lowPassFactor = 0.8f; //Value should be between 0.01f and 0.99f. Smaller value is more damping.
         init = true;
+        prevData = new Quaternion();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Called every frame:
-        dataOut = lowPassFilterQuaternion(dataOut, dataIn.transform.rotation, lowPassFactor, init);
+        dataOut = lowPassFilterQuaternion(prevData, dataIn.transform.rotation, lowPassFactor, init);
+        prevData = dataOut;
+
     }
  
     Quaternion lowPassFilterQuaternion(Quaternion intermediateValue, Quaternion targetValue, float factor, bool init)

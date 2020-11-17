@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4e5f7499ca01948b2070984457b5ea, type: 3}
-  m_Name: New Data Tracker
+  m_Script: {fileID: 11500000, guid: cfe3bc97b78f5634f8b87775160f5b07, type: 3}
+  m_Name: NeckData_object
   m_EditorClassIdentifier: 
-  rep_ms: 0
-  neck_pos: {x: 0, y: 0, z: 0}
-  neck_rot: {x: 0, y: 0, z: 0}
+  neckPos: {x: 0, y: 0, z: 0}
+  neckRot: {x: 0, y: 0, z: 0, w: 0}
