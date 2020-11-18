@@ -5,16 +5,16 @@ using UnityEngine;
 public class RepTimer : MonoBehaviour
 {
     public StopwatchTimer stopwatchTimer;
-    public RepMs repTime;
+    public DataTracker dataTracker;
 
     private void Start()
     {
-        repTime.rep_ms = 0.0f;
+        dataTracker.rep_ms = 0.0f;
     }
 
     public void UpdateRepMs()
     {
         double timeVal = stopwatchTimer.GetTimeSeconds();
-        repTime.rep_ms = timeVal;
+        dataTracker.rep_ms = timeVal;
     }
 }

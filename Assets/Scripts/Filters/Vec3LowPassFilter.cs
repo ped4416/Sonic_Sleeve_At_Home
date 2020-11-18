@@ -7,6 +7,7 @@ public class Vec3LowPassFilter : MonoBehaviour
     public GameObject dataIn;
     public Vector3 dataOut;
     public float lowPassFactor;
+    public bool connectToTransform;
 
     private bool b_init;
     private Vector3 dataBuffer = new Vector3();
@@ -21,6 +22,10 @@ public class Vec3LowPassFilter : MonoBehaviour
     void Update()
     {
         dataOut = lowPassFilter(dataIn.transform.position, ref dataBuffer, lowPassFactor, b_init);
+        if(connectToTransform)
+        {
+            dataIn.transform.position = dataOut;
+        }
     }
 
     Vector3 lowPassFilter(Vector3 targetValue, ref Vector3 intermediateValueBuf, float factor, bool init)

@@ -767,7 +767,6 @@ MonoBehaviour:
   repTimerStop: {fileID: 11400000, guid: 938346907b83c3a4d8c4ed986e217647, type: 2}
   repTimerReset: {fileID: 11400000, guid: 13c33925b8a64be498aa30bbc1718fec, type: 2}
   repTimeWrite: {fileID: 11400000, guid: 8d3d414c6d2476745a8a20769f9deb69, type: 2}
-  repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
   i_repCount: 0
 --- !u!114 &786797243
 MonoBehaviour:
@@ -1026,6 +1025,7 @@ MonoBehaviour:
   dataIn: {fileID: 907569042}
   dataOut: {x: 0, y: 0, z: 0}
   lowPassFactor: 0.8
+  connectToTransform: 1
 --- !u!114 &907569044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1041,7 @@ MonoBehaviour:
   dataIn: {fileID: 907569042}
   dataOut: {x: 0, y: 0, z: 0, w: 0}
   lowPassFactor: 0.8
+  connectToTransform: 1
 --- !u!114 &907569045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1204,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bang: {fileID: 11400000, guid: deab46232c611f3489e76bb0c51f2ed4, type: 2}
+--- !u!1 &1073005683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 523990875, guid: 019b917704c3c29478d778e143d411d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 847802396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073005684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073005683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4d662ee70b38b41a05f4d65ca518e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataIn: {fileID: 1073005683}
+  dataOut: {x: 0, y: 0, z: 0, w: 0}
+  lowPassFactor: 0.1
+  connectToTransform: 1
+--- !u!114 &1073005685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073005683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c9c30c199a3284ba4e3697f046b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataIn: {fileID: 1073005683}
+  dataOut: {x: 0, y: 0, z: 0}
+  lowPassFactor: 0.1
+  connectToTransform: 1
 --- !u!1 &1073258965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopwatchTimer: {fileID: 1792152080}
-  repTime: {fileID: 11400000, guid: 91201b14e7da88043ade6241905b69ae, type: 2}
+  dataTracker: {fileID: 11400000, guid: 41bf1392d92471f4b995228943b9f07e, type: 2}
 --- !u!1 &1826320871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1626050125, guid: 019b917704c3c29478d778e143d411d2,

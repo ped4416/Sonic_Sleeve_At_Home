@@ -7,6 +7,7 @@ public class QuaternionLowPassFilter : MonoBehaviour
     public GameObject dataIn;
     public Quaternion dataOut;
     public float lowPassFactor;
+    public bool connectToTransform;
 
     private bool init;
     private Quaternion prevData;
@@ -15,7 +16,7 @@ public class QuaternionLowPassFilter : MonoBehaviour
     void Start()
     {
         //Initialization done once:
-        lowPassFactor = 0.8f; //Value should be between 0.01f and 0.99f. Smaller value is more damping.
+        //lowPassFactor = 0.8f; //Value should be between 0.01f and 0.99f. Smaller value is more damping.
         init = true;
         prevData = new Quaternion();
     }
@@ -26,7 +27,10 @@ public class QuaternionLowPassFilter : MonoBehaviour
         //Called every frame:
         dataOut = lowPassFilterQuaternion(prevData, dataIn.transform.rotation, lowPassFactor, init);
         prevData = dataOut;
-
+        if(connectToTransform)
+        {
+            dataIn.transform.rotation = dataOut;
+        }
     }
  
     Quaternion lowPassFilterQuaternion(Quaternion intermediateValue, Quaternion targetValue, float factor, bool init)
