@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class KnnTargets
+public static class GUItoIML
 {
-    public static int targetVal;
+    public static int knnTargetVal;
 }

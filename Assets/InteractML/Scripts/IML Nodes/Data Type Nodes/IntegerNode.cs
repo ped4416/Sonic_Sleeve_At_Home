@@ -93,8 +93,8 @@ namespace InteractML.DataTypeNodes
                  {
                      m_UserInput = 2;
                  }*/
-
-                m_UserInput = KnnTargets.targetVal;
+                // Hack to allow GUI control of int node user input - Bryan
+                m_UserInput = GUItoIML.knnTargetVal;
                 Value = m_UserInput;
             }
             else

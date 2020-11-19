@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnableDisable : MonoBehaviour
 {
-    public GameObject button;
-    public GameObject knn;
+    public CanvasTest button;
+    public GameObject canvas;
 
     private bool b_enable;
     // Start is called before the first frame update
@@ -17,14 +17,15 @@ public class EnableDisable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        b_enable = button.GetComponent<ToggleSwitch>().bOnOffSwitch;
+        b_enable = button.canvasOn;
+        //b_enable = button.GetComponent<ToggleSwitch>().bOnOffSwitch;
         if(b_enable)
         {
-            knn.SetActive(true);
+            canvas.SetActive(true);
         }
         else
         {
-            knn.SetActive(false);
+            canvas.SetActive(false);
         }
     }
 }
