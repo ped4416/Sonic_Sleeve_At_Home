@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepCounter : MonoBehaviour
+public class RepCountHandler : MonoBehaviour
 {
-    public KNN_Output i_classificationValue;
+    public RepCounter repCounter;
     public OnTenReps tenReps;
     public On50Reps fiftyReps;
     public BlockCount blockCount;
@@ -14,18 +14,13 @@ public class RepCounter : MonoBehaviour
     public OnRepTimerStop repTimerStop;
     public OnRepTimerReset repTimerReset;
     public OnRepTimeWrite repTimeWrite;
-    public int i_repCount;
 
-    private int i_prevVal;
     private int i_prevRep;
     private bool b_isRest;
 
     // Start is called before the first frame update
     void Start()
     {
-        i_repCount = 0;
-        i_prevVal = 0;
-        i_prevRep = 0;
         blockCount.i_value = 1;
     }
 
@@ -34,31 +29,29 @@ public class RepCounter : MonoBehaviour
     {
         if (!b_isRest)
         {
-            int i_currentRep = i_repCount;
-            int i_currentVal = i_classificationValue.i_knnOutputValue;
-            if (i_currentVal == 1 && i_prevVal == 2)
+            repCounter.Begin();
+            int i_currentRep = repCounter.i_repCount;
+            if (i_currentRep != i_prevRep)
             {
-                i_repCount += 1;
                 repTimerStop.Raise();
                 repTimerReset.Raise();
                 repTimerStart.Raise();
             }
-            if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount + "    ||  Block Number: " + blockCount.i_value);
             i_prevRep = i_currentRep;
-            i_prevVal = i_currentVal;
 
-            if (i_repCount == 10 && blockCount.i_value < 5)
+            if (repCounter.i_repCount == 10 && blockCount.i_value < 5)
             {
                 tenReps.Raise();
                 repTimerStop.Raise();
-                i_repCount = 0;
+                repCounter.i_repCount = 0;
                 blockCount.i_value += 1;
+                print("Block Number: " + blockCount.i_value);
             }
-            else if(i_repCount == 10 && blockCount.i_value == 5)
+            else if(repCounter.i_repCount == 10 && blockCount.i_value == 5)
             {
                 fiftyReps.Raise();
                 repTimerStop.Raise();
-                i_repCount = 0;
+                repCounter.i_repCount = 0;
                 blockCount.i_value = 1;
             }
         }
@@ -66,6 +59,7 @@ public class RepCounter : MonoBehaviour
 
     public void DisableRepCounter()
     {
+        repCounter.End();
         b_isRest = true;
     }
 

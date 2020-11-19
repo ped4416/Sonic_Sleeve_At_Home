@@ -34,7 +34,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 16782
+  ScriptHashCode: 64314
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: i_knnOutputValue
@@ -74,10 +74,7 @@ MonoBehaviour:
       _node: {fileID: -2738212221435848212}
       _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: GameObjectDataOut
-        node: {fileID: -1735865812383971843}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -106,48 +103,10 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 0
+    - 2
     - 1.04
-    - 0
+    - 2
   ReceivingData: 0
---- !u!114 &-1735865812383971843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fc602e16b045142bc5c26d2ce145a6, type: 3}
-  m_Name: lefttElbow (GameObject)
-  m_EditorClassIdentifier: 
-  id: 0485fdf2-e942-4077-802d-924ceb2615bf
-  graph: {fileID: 11400000}
-  position: {x: -680, y: -216}
-  ports:
-    keys:
-    - GameObjectDataOut
-    values:
-    - _fieldName: GameObjectDataOut
-      _node: {fileID: -1735865812383971843}
-      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: GameObjectDataIn
-        node: {fileID: -2738212221435848212}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  DevMode: 0
-  IsInitialized: 1
-  GameObjectDataOut: {fileID: 0}
-  GameObjMissing: 0
-  state: 1
-  GOHashCode: 16674
-  CreatedDuringPlaymode: 0
 --- !u!114 &-1599874515576188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +204,6 @@ MonoBehaviour:
   m_Name: KNNLeft
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 3990298633928389739}
   - {fileID: -3059549752214388801}
   - {fileID: -2738212221435848212}
   - {fileID: 8880801062408072080}
@@ -253,7 +211,6 @@ MonoBehaviour:
   - {fileID: 8174679739403498299}
   - {fileID: 5449093109136495618}
   - {fileID: -1599874515576188}
-  - {fileID: -1735865812383971843}
   SceneComponent: {fileID: 0}
 --- !u!114 &2090072441207960850
 MonoBehaviour:
@@ -306,44 +263,6 @@ MonoBehaviour:
   InputConnected: 0
   m_UserInput: 2
   int_switch: 1
---- !u!114 &3990298633928389739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fc602e16b045142bc5c26d2ce145a6, type: 3}
-  m_Name: leftWrist (GameObject)
-  m_EditorClassIdentifier: 
-  id: f6cc203c-9cda-4749-9e46-0397b3921b7e
-  graph: {fileID: 11400000}
-  position: {x: -664, y: 136}
-  ports:
-    keys:
-    - GameObjectDataOut
-    values:
-    - _fieldName: GameObjectDataOut
-      _node: {fileID: 3990298633928389739}
-      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: GameObjectDataIn
-        node: {fileID: 8880801062408072080}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  DevMode: 0
-  IsInitialized: 1
-  GameObjectDataOut: {fileID: 0}
-  GameObjMissing: 0
-  state: 1
-  GOHashCode: 16678
-  CreatedDuringPlaymode: 0
 --- !u!114 &5449093109136495618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,10 +423,7 @@ MonoBehaviour:
       _node: {fileID: 8880801062408072080}
       _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: GameObjectDataOut
-        node: {fileID: 3990298633928389739}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0

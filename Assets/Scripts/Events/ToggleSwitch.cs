@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class ToggleSwitch : MonoBehaviour
 {
     public GameObject switchOn, switchOff;
+    public bool bOnOffSwitch;
 
     public void OnChangeValue()
     {
-        bool bOnOffSwitch = gameObject.GetComponent<Toggle>().isOn;
+        bOnOffSwitch = gameObject.GetComponent<Toggle>().isOn;
 
         if (bOnOffSwitch)
         {
