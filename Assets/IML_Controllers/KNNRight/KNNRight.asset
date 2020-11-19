@@ -56,10 +56,10 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 2
-    - 1.04
-    - 2
-  ReceivingData: 0
+    - 1.5874426
+    - 1.3926073
+    - 3.400563
+  ReceivingData: 1
 --- !u!114 &-7524054682552693147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,11 +474,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 2
+  m_Value: 1
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 2
+  m_UserInput: 1
   int_switch: 1
 --- !u!114 &9121535258794980976
 MonoBehaviour:
@@ -536,7 +536,7 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 2
-    - 1.04
-    - 2
-  ReceivingData: 0
+    - 1.6176333
+    - 1.4121052
+    - 3.6295357
+  ReceivingData: 1

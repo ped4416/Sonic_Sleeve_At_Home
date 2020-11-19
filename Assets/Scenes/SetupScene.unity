@@ -9755,6 +9755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199366899}
   - component: {fileID: 1199366900}
+  - component: {fileID: 1199366901}
   m_Layer: 0
   m_Name: IML_KNNRight
   m_TagString: Untagged
@@ -9814,6 +9815,19 @@ MonoBehaviour:
     m_values:
     - {fileID: 4552488654130529052, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   m_MonobehaviourClones: []
+--- !u!114 &1199366901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199366898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knnDropdown: {fileID: 599400848}
 --- !u!1 &1221477392
 GameObject:
   m_ObjectHideFlags: 0
