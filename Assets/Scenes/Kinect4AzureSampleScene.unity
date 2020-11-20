@@ -7906,6 +7906,7 @@ GameObject:
   - component: {fileID: 862637385}
   - component: {fileID: 862637384}
   - component: {fileID: 862637383}
+  - component: {fileID: 862637386}
   m_Layer: 5
   m_Name: RepKNNDropdown
   m_TagString: Untagged
@@ -7990,7 +7991,18 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 862637386}
+        m_MethodName: knnDropdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &862637384
 MonoBehaviour:
@@ -8029,6 +8041,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862637381}
   m_CullTransparentMesh: 0
+--- !u!114 &862637386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862637381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &864302330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8504,7 +8528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1126659256}
-  bGui: 0
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10969,7 +10992,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309021030}
-  - component: {fileID: 1309021031}
   m_Layer: 0
   m_Name: IML_Models
   m_TagString: Untagged
@@ -10998,18 +11020,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1309021031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309021029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2e0c6431af26c4989266dfe5db2686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1321514480
 GameObject:
   m_ObjectHideFlags: 0
@@ -12420,6 +12430,7 @@ GameObject:
   - component: {fileID: 1505809005}
   - component: {fileID: 1505809007}
   - component: {fileID: 1505809006}
+  - component: {fileID: 1505809008}
   m_Layer: 5
   m_Name: ReprEnableRecordButton
   m_TagString: Untagged
@@ -12522,6 +12533,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
   m_IsOn: 0
+--- !u!114 &1505809008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505809004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2e0c6431af26c4989266dfe5db2686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1505809006}
+  modelLeft: {fileID: 778222786}
+  modelRight: {fileID: 1895510440}
+  armSelect: {fileID: 1010838457}
+  isTrunk: 0
 --- !u!1 &1512174300
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,6 +12561,7 @@ GameObject:
   - component: {fileID: 1512174301}
   - component: {fileID: 1512174303}
   - component: {fileID: 1512174302}
+  - component: {fileID: 1512174304}
   m_Layer: 5
   m_Name: ElbowEnableRecordButton
   m_TagString: Untagged
@@ -12635,6 +12664,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
   m_IsOn: 0
+--- !u!114 &1512174304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512174300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2e0c6431af26c4989266dfe5db2686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1512174302}
+  modelLeft: {fileID: 2101674006}
+  modelRight: {fileID: 792984389}
+  armSelect: {fileID: 1010838457}
+  isTrunk: 0
 --- !u!1 &1544677226
 GameObject:
   m_ObjectHideFlags: 0
@@ -14180,6 +14226,7 @@ GameObject:
   - component: {fileID: 1736926115}
   - component: {fileID: 1736926117}
   - component: {fileID: 1736926116}
+  - component: {fileID: 1736926118}
   m_Layer: 5
   m_Name: TrunkEnableRecordButton
   m_TagString: Untagged
@@ -14282,6 +14329,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
   m_IsOn: 0
+--- !u!114 &1736926118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736926114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2e0c6431af26c4989266dfe5db2686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1736926116}
+  modelLeft: {fileID: 786148081}
+  modelRight: {fileID: 786148081}
+  armSelect: {fileID: 1010838457}
+  isTrunk: 1
 --- !u!1 &1746252765
 GameObject:
   m_ObjectHideFlags: 0
@@ -16980,6 +17044,7 @@ GameObject:
   - component: {fileID: 2039487028}
   - component: {fileID: 2039487030}
   - component: {fileID: 2039487029}
+  - component: {fileID: 2039487031}
   m_Layer: 5
   m_Name: ShoulderEnableRecordButton
   m_TagString: Untagged
@@ -17082,6 +17147,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
   m_IsOn: 0
+--- !u!114 &2039487031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039487027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2e0c6431af26c4989266dfe5db2686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 2039487029}
+  modelLeft: {fileID: 241272682}
+  modelRight: {fileID: 1097821606}
+  armSelect: {fileID: 1010838457}
+  isTrunk: 0
 --- !u!4 &2044117050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1626050126, guid: 019b917704c3c29478d778e143d411d2,

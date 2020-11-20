@@ -8,6 +8,11 @@ public class ToggleSwitch : MonoBehaviour
     public GameObject switchOn, switchOff;
     public bool bOnOffSwitch;
 
+    private void Start()
+    {
+        gameObject.GetComponent<Toggle>().isOn = true;
+    }
+
     public void OnChangeValue()
     {
         bOnOffSwitch = gameObject.GetComponent<Toggle>().isOn;
