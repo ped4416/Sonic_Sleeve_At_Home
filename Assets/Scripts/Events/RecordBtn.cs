@@ -6,10 +6,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class RecordBtn : MonoBehaviour
 {
-    public Text mytext = null;
+    public TextMeshProUGUI mytext;
+    //public mytext = GetComponent<TextMeshPro>();
     public int counter = 0;
     public void changeText()
     {
@@ -17,12 +19,12 @@ public class RecordBtn : MonoBehaviour
         if (counter % 2 == 1)
         {
             mytext.color = Color.red;
-            mytext.text = "O";
+            mytext.text = "Stop Recording";
         }
         else
         {
             mytext.color = Color.black;
-            mytext.text = "X";
+            mytext.text = "Start Recording";
         }
     }
 }
