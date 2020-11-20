@@ -95,6 +95,8 @@ namespace InteractML.DataTypeNodes
                     m_UserInput = 0.0f;
                 }
 
+                m_UserInput = GUItoIML.f_boundaryValue;
+
                 Value = m_UserInput;
             }
             else

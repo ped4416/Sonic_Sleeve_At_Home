@@ -928,6 +928,7 @@ GameObject:
   - component: {fileID: 106934153}
   - component: {fileID: 106934152}
   - component: {fileID: 106934151}
+  - component: {fileID: 106934154}
   m_Layer: 5
   m_Name: ElbowClearButton
   m_TagString: Untagged
@@ -997,7 +998,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 106934152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 106934154}
+        m_MethodName: DeleteExamples
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &106934152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1047,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106934149}
   m_CullTransparentMesh: 0
+--- !u!114 &106934154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106934149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124722633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137238742}
   - component: {fileID: 137238743}
+  - component: {fileID: 137238744}
   m_Layer: 5
   m_Name: ElbowModel_Slider
   m_TagString: Untagged
@@ -1416,6 +1441,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 137238744}
+        m_MethodName: SetBounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &137238744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137238741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &140567826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1635582690, guid: 019b917704c3c29478d778e143d411d2,
@@ -16310,7 +16358,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934467465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c053ae2bc4961704a958dca848f6cef4, type: 3}
   m_Name: 
@@ -16320,7 +16368,6 @@ MonoBehaviour:
   errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
-  guiSlider: {fileID: 0}
 --- !u!114 &1934467469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16328,7 +16375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934467465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffea987dc4dbb3140a7074738b12508e, type: 3}
   m_Name: 
@@ -16345,7 +16392,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934467465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc549652773efd348a13cb3aa24a72ef, type: 3}
   m_Name: 
@@ -16355,6 +16402,7 @@ MonoBehaviour:
   errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
+  outputSlider: {fileID: 137238741}
 --- !u!1 &1943049695
 GameObject:
   m_ObjectHideFlags: 0

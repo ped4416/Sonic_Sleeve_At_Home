@@ -142,7 +142,7 @@ namespace InteractML
         // see ClearLastTrainingExample() - Bryan
         private IMLTrainingExample tempExample;
         private bool b_tempRecord = false;
-        
+        private bool b_tempDeleteEx = false;
         #endregion
 
         #region XNode Messages
@@ -362,6 +362,14 @@ namespace InteractML
             {
                 ClearTrainingExamples();
             }
+
+            bool b_currentDeleteEx = GUItoIML.b_deleteExamples;
+            if(b_currentDeleteEx != b_tempDeleteEx)
+            {
+                ClearTrainingExamples();
+            }
+            b_tempDeleteEx = b_currentDeleteEx;
+
 
             // Added keyboard shortcut to clear last example - Bryan
             if(Input.GetKeyDown(KeyCode.L))
