@@ -1988,6 +1988,7 @@ GameObject:
   - component: {fileID: 220504796}
   - component: {fileID: 220504795}
   - component: {fileID: 220504794}
+  - component: {fileID: 220504797}
   m_Layer: 5
   m_Name: TrainButton
   m_TagString: Untagged
@@ -2057,7 +2058,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220504795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220504797}
+        m_MethodName: TrainModel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &220504795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,6 +2107,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220504792}
   m_CullTransparentMesh: 0
+--- !u!114 &220504797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220504792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &223881966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5611,6 +5635,7 @@ GameObject:
   - component: {fileID: 647424508}
   - component: {fileID: 647424507}
   - component: {fileID: 647424506}
+  - component: {fileID: 647424509}
   m_Layer: 5
   m_Name: RecordButton_Pro
   m_TagString: Untagged
@@ -5692,6 +5717,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 647424509}
+        m_MethodName: RecordData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &647424507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5729,6 +5765,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647424504}
   m_CullTransparentMesh: 0
+--- !u!114 &647424509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647424504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648424347
 GameObject:
   m_ObjectHideFlags: 0
@@ -12826,6 +12874,7 @@ GameObject:
   - component: {fileID: 1553240052}
   - component: {fileID: 1553240051}
   - component: {fileID: 1553240050}
+  - component: {fileID: 1553240053}
   m_Layer: 5
   m_Name: RunButton
   m_TagString: Untagged
@@ -12895,7 +12944,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1553240051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1553240053}
+        m_MethodName: RunModel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553240051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12933,6 +12993,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553240048}
   m_CullTransparentMesh: 0
+--- !u!114 &1553240053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553240048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1554755978
 GameObject:
   m_ObjectHideFlags: 0

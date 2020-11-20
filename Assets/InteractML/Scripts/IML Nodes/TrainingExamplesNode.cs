@@ -141,6 +141,8 @@ namespace InteractML
         // temporary storage of training example to enable re-adding of last recorded example to list
         // see ClearLastTrainingExample() - Bryan
         private IMLTrainingExample tempExample;
+        private bool b_tempRecord = false;
+        
         #endregion
 
         #region XNode Messages
@@ -342,11 +344,21 @@ namespace InteractML
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
                 ToggleCollectExamples();
             }
 
+            bool b_currentRecord = GUItoIML.b_recordData;
+
+            if (b_currentRecord != b_tempRecord)
+            {
+                Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
+                ToggleCollectExamples();
+            }
+            b_tempRecord = b_currentRecord;
+
             // Added keyboard shortcut to clear training examples - Bryan
-            if(Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 ClearTrainingExamples();
             }
