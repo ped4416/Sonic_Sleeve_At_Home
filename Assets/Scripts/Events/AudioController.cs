@@ -18,6 +18,8 @@ public class AudioController : MonoBehaviour
         //filepath needs to work on multiple machines. To do! using C// may work1? 
         soundPath = "C:";
         //soundPath = "C://Users//UCLH_RehabKit_12//Documents//Unity Projects//samples";
+        //playOnAwake was causing a bug with GUI Toggle and the play/stop/pause buttons
+        audioSource.playOnAwake = false;
         Debug.Log("Loading file");
         StartCoroutine(GetAudioClip());
     }
