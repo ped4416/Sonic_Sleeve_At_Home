@@ -2179,6 +2179,7 @@ GameObject:
   - component: {fileID: 223881970}
   - component: {fileID: 223881969}
   - component: {fileID: 223881968}
+  - component: {fileID: 223881971}
   m_Layer: 5
   m_Name: RepClearButton
   m_TagString: Untagged
@@ -2248,7 +2249,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 223881969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 223881971}
+        m_MethodName: DeleteExamples
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &223881969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,6 +2298,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223881966}
   m_CullTransparentMesh: 0
+--- !u!114 &223881971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223881966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &226462441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +4679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439482023}
   - component: {fileID: 439482024}
+  - component: {fileID: 439482025}
   m_Layer: 5
   m_Name: ShoulderModel_Slider
   m_TagString: Untagged
@@ -4745,6 +4770,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 439482025}
+        m_MethodName: SetBounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &439482025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439482022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &465290615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,6 +4919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497345239}
   - component: {fileID: 497345240}
+  - component: {fileID: 497345241}
   m_Layer: 5
   m_Name: TrunkModel_Slider
   m_TagString: Untagged
@@ -4961,6 +5010,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 497345241}
+        m_MethodName: SetBounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &497345241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497345238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &522368193
 GameObject:
   m_ObjectHideFlags: 0
@@ -14489,6 +14561,7 @@ GameObject:
   - component: {fileID: 1746252769}
   - component: {fileID: 1746252768}
   - component: {fileID: 1746252767}
+  - component: {fileID: 1746252770}
   m_Layer: 5
   m_Name: TrunkClearButton
   m_TagString: Untagged
@@ -14558,7 +14631,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1746252768}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1746252770}
+        m_MethodName: DeleteExamples
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1746252768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14596,6 +14680,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746252765}
   m_CullTransparentMesh: 0
+--- !u!114 &1746252770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746252765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777949375
 GameObject:
   m_ObjectHideFlags: 0
@@ -15864,6 +15960,7 @@ GameObject:
   - component: {fileID: 1897296507}
   - component: {fileID: 1897296506}
   - component: {fileID: 1897296505}
+  - component: {fileID: 1897296508}
   m_Layer: 5
   m_Name: ShoulderClearButton
   m_TagString: Untagged
@@ -15933,7 +16030,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1897296506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897296508}
+        m_MethodName: DeleteExamples
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1897296506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15971,6 +16079,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897296503}
   m_CullTransparentMesh: 0
+--- !u!114 &1897296508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897296503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1902623378
 GameObject:
   m_ObjectHideFlags: 0

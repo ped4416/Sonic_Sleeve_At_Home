@@ -19,14 +19,14 @@ public class ToggleSwitch : MonoBehaviour
 
         if (bOnOffSwitch)
         {
-            Debug.Log("Switch On");
+            //Debug.Log("Switch On");
             switchOn.SetActive(true);
             switchOff.SetActive(false);
         }
         
         if (!bOnOffSwitch)
         { 
-            Debug.Log("Switch Off");
+            //Debug.Log("Switch Off");
             switchOn.SetActive(false);
             switchOff.SetActive(true);
         
