@@ -13,7 +13,7 @@ public class ShoulderElevationOutput : MonoBehaviour
     public OnStopwatchStart errorTimerStart;
     public OnStopwatchPause errorTimerPause;
     public ErrorTimerActive errorTimerCheck;
-    //public GameObject guiSlider;
+    public GameObject outputSlider;
 
     private float f_prevVal;
     // Start is called before the first frame update
@@ -29,12 +29,15 @@ public class ShoulderElevationOutput : MonoBehaviour
     {
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
-
+        if (GUItoIML.b_runModel)
+        {
+            outputSlider.GetComponent<Slider>().value = f_currentVal;
+        }
         //guiSlider.GetComponent<Slider>().value = f_MLPOutputValue;
 
         //if (f_currentVal != f_prevVal) print("Shoulder Elevation Output = " + f_currentVal);
 
-        if(f_currentVal >= f_threshold && f_prevVal < f_threshold)
+        if (f_currentVal >= f_threshold && f_prevVal < f_threshold)
         {
             if(!errorTimerCheck.b_isActive)
             {

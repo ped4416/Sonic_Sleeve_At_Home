@@ -8090,6 +8090,7 @@ GameObject:
   - component: {fileID: 862637384}
   - component: {fileID: 862637383}
   - component: {fileID: 862637386}
+  - component: {fileID: 862637387}
   m_Layer: 5
   m_Name: RepKNNDropdown
   m_TagString: Untagged
@@ -8236,6 +8237,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &862637387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862637381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e5ec0bdc91820449bd316055faf000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i_knnOutputValue: 0
 --- !u!1 &864302330
 GameObject:
   m_ObjectHideFlags: 0
@@ -16499,6 +16513,7 @@ MonoBehaviour:
   errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
+  outputSlider: {fileID: 439482022}
 --- !u!114 &1934467469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16516,6 +16531,7 @@ MonoBehaviour:
   errorTimerStart: {fileID: 11400000, guid: 3a7890e9db1f93b40af803ea04b9b3b5, type: 2}
   errorTimerPause: {fileID: 11400000, guid: cae203e4a2f428e4ca2a2e4460750656, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
+  outputSlider: {fileID: 497345238}
 --- !u!114 &1934467470
 MonoBehaviour:
   m_ObjectHideFlags: 0

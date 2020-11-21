@@ -344,7 +344,7 @@ namespace InteractML
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
+                //Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
                 ToggleCollectExamples();
             }
 
@@ -352,7 +352,7 @@ namespace InteractML
 
             if (b_currentRecord != b_tempRecord)
             {
-                Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
+                //Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
                 ToggleCollectExamples();
             }
             b_tempRecord = b_currentRecord;
@@ -367,6 +367,9 @@ namespace InteractML
             if(b_currentDeleteEx != b_tempDeleteEx)
             {
                 ClearTrainingExamples();
+                Debug.Log("CLEAR EXAMPLES RUNS: " + GUItoIML.b_deleteExamples);
+                GUItoIML.b_deleteExamples = false;
+                //Debug.Log("CLEAR EXAMPLES STOPS: " + GUItoIML.b_deleteExamples);
             }
             b_tempDeleteEx = b_currentDeleteEx;
 

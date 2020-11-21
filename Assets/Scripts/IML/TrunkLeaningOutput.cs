@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InteractML;
+using UnityEngine.UI;
 
 public class TrunkLeaningOutput : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class TrunkLeaningOutput : MonoBehaviour
     public OnStopwatchStart errorTimerStart;
     public OnStopwatchPause errorTimerPause;
     public ErrorTimerActive errorTimerCheck;
+    public GameObject outputSlider; 
 
     private float f_prevVal;
     // Start is called before the first frame update
@@ -26,6 +28,10 @@ public class TrunkLeaningOutput : MonoBehaviour
     {
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
+        if (GUItoIML.b_runModel)
+        {
+            outputSlider.GetComponent<Slider>().value = f_currentVal;
+        }
 
         //if (f_currentVal != f_prevVal) print("Trunk Leaning Output = " + f_currentVal);
 
