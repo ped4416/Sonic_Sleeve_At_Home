@@ -5684,6 +5684,7 @@ GameObject:
   - component: {fileID: 647424507}
   - component: {fileID: 647424506}
   - component: {fileID: 647424509}
+  - component: {fileID: 647424510}
   m_Layer: 5
   m_Name: RecordButton_Pro
   m_TagString: Untagged
@@ -5754,7 +5755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 963194232}
+      - m_Target: {fileID: 647424510}
         m_MethodName: changeText
         m_Mode: 1
         m_Arguments:
@@ -5825,6 +5826,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &647424510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647424504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49a13e102ee4114a8cf5a153c6df7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mytext: {fileID: 306051809}
+  counter: 0
 --- !u!1 &648424347
 GameObject:
   m_ObjectHideFlags: 0
@@ -8523,8 +8538,6 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  - component: {fileID: 963194233}
-  - component: {fileID: 963194232}
   - component: {fileID: 963194231}
   - component: {fileID: 963194230}
   m_Layer: 0
@@ -8639,34 +8652,6 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   soundPath: 
---- !u!114 &963194232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49a13e102ee4114a8cf5a153c6df7b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mytext: {fileID: 306051809}
-  counter: 0
---- !u!114 &963194233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46cf00c5f1948f47aa8cda5ebdb9f6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mytext: {fileID: 0}
-  counter: 0
 --- !u!1 &1009647950
 GameObject:
   m_ObjectHideFlags: 0
@@ -12923,8 +12908,9 @@ GameObject:
   - component: {fileID: 1553240051}
   - component: {fileID: 1553240050}
   - component: {fileID: 1553240053}
+  - component: {fileID: 1553240054}
   m_Layer: 5
-  m_Name: RunButton
+  m_Name: RunStopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13004,6 +12990,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1553240054}
+        m_MethodName: changeText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553240051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13053,6 +13050,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1553240054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553240048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8788118dfb4c8a47a36cd524f3ae7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mytext: {fileID: 2035273396}
+  counter: 0
 --- !u!1 &1554755978
 GameObject:
   m_ObjectHideFlags: 0
@@ -17032,7 +17043,7 @@ GameObject:
   - component: {fileID: 2035273397}
   - component: {fileID: 2035273396}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RunStopBtnText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
