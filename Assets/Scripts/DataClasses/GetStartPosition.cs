@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using TMPro;
 
 public class GetStartPosition : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GetStartPosition : MonoBehaviour
     public Transform neck;
     public Transform leftHip;
     public Transform rightHip;
+    //public TextMeshProUGUI saveStartPosButton;
 
     private List<Transform> l_startPositions = new List<Transform>();
 
@@ -37,5 +39,15 @@ public class GetStartPosition : MonoBehaviour
         if(l_startPositions.Count > 0) return true;
 
         return false;
+    }
+
+    public void setStartPosition()
+    {
+        l_startPositions.Clear();
+        bool saved = GetStartCoords();
+        if (saved) StoreStartPosition.WriteStartPosition(l_startPositions);
+
+        print("Start Data Saved = " + saved);
+
     }
 }

@@ -3808,7 +3808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.5, y: 0.4}
+  m_AnchoredPosition: {x: 2, y: 0.4}
   m_SizeDelta: {x: 44.99997, y: 35.157455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326116313
@@ -3830,7 +3830,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Load \nSong"
+  m_text: ' Save
+
+    START'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5436,8 +5438,9 @@ GameObject:
   - component: {fileID: 610486068}
   - component: {fileID: 610486067}
   - component: {fileID: 610486066}
+  - component: {fileID: 610486069}
   m_Layer: 5
-  m_Name: LoadSongButton
+  m_Name: SaveStartPositionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5460,7 +5463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214.2, y: -51.84998}
+  m_AnchoredPosition: {x: -214, y: -51.84998}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610486066
@@ -5505,7 +5508,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 610486067}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 610486069}
+        m_MethodName: setStartPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &610486067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5543,6 +5557,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610486064}
   m_CullTransparentMesh: 0
+--- !u!114 &610486069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610486064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5baeb611a5ed4074688acae45f5d2bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightShoulder: {fileID: 2007055318}
+  leftShoulder: {fileID: 2044117050}
+  neck: {fileID: 1390112647}
+  leftHip: {fileID: 1561207730}
+  rightHip: {fileID: 186009866}
 --- !u!1 &624123677
 GameObject:
   m_ObjectHideFlags: 0
@@ -10447,7 +10478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125.2, y: 4.6}
+  m_AnchoredPosition: {x: -125.2, y: 7}
   m_SizeDelta: {x: 95.10101, y: 30.656723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146657899
