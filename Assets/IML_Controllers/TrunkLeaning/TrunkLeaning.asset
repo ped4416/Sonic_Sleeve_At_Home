@@ -344,7 +344,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 15700
+  ScriptHashCode: 15710
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: f_MLPOutputValue
@@ -426,9 +426,9 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0.010422782
+  m_Value: 0.4547913
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0.010422782
+  m_UserInput: 0.4547913
   float_switch: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RepCounter : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class RepCounter : MonoBehaviour
     private int i_prevVal;
     private int i_prevRep;
     private bool b_active;
+    public TextMeshProUGUI intCurrentRepText;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class RepCounter : MonoBehaviour
             if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount);
             i_prevRep = i_currentRep;
             i_prevVal = i_currentVal;
+            intCurrentRepText.text = i_currentRep.ToString("F0");
         }
     }
 

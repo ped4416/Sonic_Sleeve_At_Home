@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
     private bool bGui = false;
     void Start()
     {
-        canvas.SetActive(bGui);
-        Debug.Log("GUI Hidden");
+       canvas.SetActive(bGui);
+       Debug.Log("GUI Hidden");
     }
 }
