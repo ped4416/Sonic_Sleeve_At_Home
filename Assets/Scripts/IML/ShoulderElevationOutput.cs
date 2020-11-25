@@ -10,8 +10,10 @@ public class ShoulderElevationOutput : MonoBehaviour
     [PullFromIMLController]
     public float f_MLPOutputValue;
     public float f_threshold;
-    public OnStopwatchStart errorTimerStart;
-    public OnStopwatchPause errorTimerPause;
+    public OnErrorTimerStart errorTimerStart;
+    public OnErrorTimerPause errorTimerPause;
+    public OnErrorTimerStop errorTimerStop;
+    public OnErrorTimerReset errorTimerReset;
     public ErrorTimerActive errorTimerCheck;
     public GameObject outputSlider;
 
@@ -58,5 +60,11 @@ public class ShoulderElevationOutput : MonoBehaviour
         }
 
         f_prevVal = f_currentVal;
+    }
+
+    public void StopResetError()
+    {
+        errorTimerStop.Raise();
+        errorTimerReset.Raise();
     }
 }

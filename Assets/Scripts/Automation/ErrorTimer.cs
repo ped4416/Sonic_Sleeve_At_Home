@@ -4,37 +4,17 @@ using UnityEngine;
 
 public class ErrorTimer : MonoBehaviour
 {
-    public StopwatchTimer errorTimer;
-    public OnStopwatchStartListener errorTimerStart;
-    public OnStopwatchPauseListener errorTimerPause;
-    public OnStopwatchStopListener errorTimerStop;
-    public RepError repError;
+    public StopwatchTimer stopwatchTimer;
+    public DataTracker dataTracker;
 
     private void Start()
     {
-        repError.rep_error_ms = 0.0f;
+        dataTracker.rep_error_ms = 0.0f;
     }
 
-    /*private void Update()
+    public void UpdateErrorMs()
     {
-        repError.rep_error_ms = errorTimer.time;
-    }*/
-
-    public void StartErrorTimer()
-    {
-        //print("ERROR TIMER START");
-        errorTimer.StartTimer();
+        double timeVal = stopwatchTimer.GetTimeSeconds();
+        dataTracker.rep_error_ms = timeVal;
     }
-
-    public void StopErrorTimer()
-    {
-        //print("ERROR TIMER STOP");
-        errorTimer.StopTimer();
-    }
-
-    /*public void PauseErrorTimer()
-    {
-        //print("ERROR TIMER PAUSE");
-        errorTimer.PauseTimer();
-    }*/
 }

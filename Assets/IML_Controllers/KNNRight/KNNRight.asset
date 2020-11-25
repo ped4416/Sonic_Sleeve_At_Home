@@ -96,7 +96,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 15330
+  GOHashCode: 15386
   CreatedDuringPlaymode: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -119,7 +119,7 @@ MonoBehaviour:
   - {fileID: 5698146144055646407}
   - {fileID: 5241940595933832001}
   - {fileID: 1383067374379658499}
-  - {fileID: 4552488654130529052}
+  - {fileID: 2377371536901232256}
   SceneComponent: {fileID: 0}
 --- !u!114 &1383067374379658499
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: i_knnOutputValue
-        node: {fileID: 4552488654130529052}
+        node: {fileID: 2377371536901232256}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -211,9 +211,9 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14640
+  GOHashCode: 14694
   CreatedDuringPlaymode: 0
---- !u!114 &4552488654130529052
+--- !u!114 &2377371536901232256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,15 +225,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
   m_Name: KNN_Output (Script)
   m_EditorClassIdentifier: 
-  id: 3d832545-c5dc-43e8-9743-74d034815391
+  id: 4514e898-b2c5-478e-93b4-2d0e2f42f5df
   graph: {fileID: 11400000}
-  position: {x: 1528, y: -184}
+  position: {x: 1496, y: -184}
   ports:
     keys:
     - i_knnOutputValue
     values:
     - _fieldName: i_knnOutputValue
-      _node: {fileID: 4552488654130529052}
+      _node: {fileID: 2377371536901232256}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
@@ -247,11 +247,11 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 15680
+  ScriptHashCode: -4712
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: i_knnOutputValue
-      _node: {fileID: 4552488654130529052}
+      _node: {fileID: 2377371536901232256}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
@@ -335,7 +335,7 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 0
+  - 1
   m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
