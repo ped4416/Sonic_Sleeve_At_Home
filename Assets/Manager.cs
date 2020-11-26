@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Manager : MonoBehaviour
 {
     public GameObject canvas;
-    private bool bGui = false;
+    private bool bGui = true;
     void Start()
     {
        canvas.SetActive(bGui);

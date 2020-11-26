@@ -11,20 +11,25 @@ public class CompareStartPosition : MonoBehaviour
     public Transform neck;
     public Transform leftHip;
     public Transform rightHip;
-    public float errorMargin;
+    public float f_startPosThresh;
     public OnTimerEndListener timerEndListener;
     public OnPositionFound positionFound;
+    public GameObject startPosThreshInput;
 
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
     private bool b_referencePosLoaded;
     private bool b_singleCheck;
     private bool b_autoCheck;
+    private string s_startPosThresh;
 
     // Start is called before the first frame update
     void Start()
     {
-        b_referencePosLoaded = StoreStartPosition.LoadStartPosition();           
+        b_referencePosLoaded = StoreStartPosition.LoadStartPosition();
+        f_startPosThresh = PlayerPrefs.GetFloat("Start Position Threshold");
+        string s_initialThreshVal = f_startPosThresh.ToString();
+        startPosThreshInput.GetComponent<TMP_InputField>().text = s_initialThreshVal;
     }
 
     // Update is called once per frame
@@ -35,6 +40,9 @@ public class CompareStartPosition : MonoBehaviour
             b_singleCheck = true;
             ComparePositions();
         }
+
+        s_startPosThresh = startPosThreshInput.GetComponent<TMP_InputField>().text;
+        f_startPosThresh = float.Parse(s_startPosThresh);
     }
 
     public void CheckPositionAuto()
@@ -90,7 +98,7 @@ public class CompareStartPosition : MonoBehaviour
         float f_distLHip = Vector3.Distance(currentLeftHip, referenceLeftHip);
         float f_totalDist = f_distLShoulder + f_distRShoulder + f_distNeck + f_distRHip + f_distLHip;
 
-        if (f_totalDist < errorMargin)
+        if (f_totalDist < f_startPosThresh)
         {
             print("Correct Position");
             if(!b_singleCheck)
@@ -110,5 +118,10 @@ public class CompareStartPosition : MonoBehaviour
         }
 
         b_singleCheck = false;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat("Start Position Threshold", f_startPosThresh);
     }
 }

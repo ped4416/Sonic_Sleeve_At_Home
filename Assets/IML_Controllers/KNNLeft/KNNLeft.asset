@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3aae02aa-b2a4-47b9-9208-af61b45bf479
   graph: {fileID: 11400000}
-  position: {x: 0, y: 0}
+  position: {x: 1400, y: 8}
   ports:
     keys:
     - i_knnOutputValue
@@ -80,7 +80,10 @@ MonoBehaviour:
       _node: {fileID: -781126535327675811}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 8174679739403498299}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -95,7 +98,10 @@ MonoBehaviour:
       _node: {fileID: -781126535327675811}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 8174679739403498299}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -375,7 +381,10 @@ MonoBehaviour:
       _node: {fileID: 8174679739403498299}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: i_knnOutputValue
+        node: {fileID: -781126535327675811}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0

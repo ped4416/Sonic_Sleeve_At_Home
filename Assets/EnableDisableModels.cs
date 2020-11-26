@@ -10,24 +10,33 @@ public class EnableDisableModels : MonoBehaviour
     public GameObject modelLeft;
     public GameObject modelRight;
     public GameObject armSelect;
-    public bool isTrunk;
+    public bool b_isTrunk;
 
     private bool b_enable;
+    private bool b_dataLoaded;
+    private bool b_firstFrame;
     private int i_arm;
 
     // Start is called before the first frame update
     void Start()
     {
         b_enable = true;
+        b_dataLoaded = false;
+        b_firstFrame = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(b_firstFrame)
+        {
+            StartCoroutine(WaitForDataLoadCoroutine());
+        }
+
         b_enable = button.bOnOffSwitch;
         i_arm = armSelect.GetComponent<TMP_Dropdown>().value;
 
-        if (isTrunk)
+        if (b_isTrunk && b_dataLoaded)
         {
             if (b_enable)
             {
@@ -40,7 +49,7 @@ public class EnableDisableModels : MonoBehaviour
                 modelLeft.SetActive(false);
             }
         }
-        else
+        else if(!b_isTrunk && b_dataLoaded)
         {
             // if right arm selected
             if (i_arm == 0)
@@ -54,6 +63,13 @@ public class EnableDisableModels : MonoBehaviour
                 modelRight.SetActive(false);
             }
         }
-        
+
+        b_firstFrame = false;
+    }
+
+    IEnumerator WaitForDataLoadCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        b_dataLoaded = true;
     }
 }

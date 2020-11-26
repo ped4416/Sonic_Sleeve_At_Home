@@ -41,7 +41,7 @@ public class GetStartPosition : MonoBehaviour
         return false;
     }
 
-    public void setStartPosition()
+    public void SetStartPosition()
     {
         l_startPositions.Clear();
         bool saved = GetStartCoords();
