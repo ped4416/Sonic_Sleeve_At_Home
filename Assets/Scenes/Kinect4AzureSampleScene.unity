@@ -874,7 +874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &96627160
 MonoBehaviour:
@@ -2591,20 +2591,16 @@ MonoBehaviour:
     - {fileID: 6451367934595914095, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
   m_GameObjectNodeList:
   - {fileID: 6451367934595914095, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
-  m_ScriptNodesList:
-  - {fileID: -1312703093101302289, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
-  - {fileID: -8455723902077045661, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
+  m_ScriptNodesList: []
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 241272685}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467468}
     - {fileID: 241272685}
     m_values:
-    - {fileID: -1312703093101302289, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
-    - {fileID: -8455723902077045661, guid: bb80ecd298a81ce4b8e2efcc08eba847, type: 2}
+    - {fileID: 0}
   m_MonobehaviourClones: []
 --- !u!114 &241272685
 MonoBehaviour:
@@ -2626,6 +2622,7 @@ MonoBehaviour:
   errorTimerReset: {fileID: 11400000, guid: 6169382641c840b419dd1dca7f64b2ac, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 439482022}
+  threshSlider: {fileID: 1055311187}
 --- !u!114 &241272686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,7 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 250071861}
 --- !u!114 &250071861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5208,7 +5205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552829034
 GameObject:
@@ -5476,7 +5473,7 @@ Transform:
   - {fileID: 1024326948}
   - {fileID: 871045035}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610486064
 GameObject:
@@ -7435,7 +7432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 764004014}
 --- !u!1 &778222786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7446,7 +7443,6 @@ GameObject:
   m_Component:
   - component: {fileID: 778222788}
   - component: {fileID: 778222787}
-  - component: {fileID: 778222789}
   m_Layer: 0
   m_Name: IML_KNNLeft
   m_TagString: Untagged
@@ -7479,19 +7475,16 @@ MonoBehaviour:
     - {fileID: 0}
   m_GameObjectNodeList: []
   m_ScriptNodesList:
-  - {fileID: -3059549752214388801, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
-  - {fileID: 6857490432473031811, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
+  - {fileID: -781126535327675811, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
-  - GameComponent: {fileID: 778222789}
+  - GameComponent: {fileID: 786797246}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467466}
-    - {fileID: 778222789}
+    - {fileID: 786797246}
     m_values:
-    - {fileID: -3059549752214388801, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
-    - {fileID: 6857490432473031811, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
+    - {fileID: -781126535327675811, guid: 7475ebc8ea7a5d14c94c93cd2798a190, type: 2}
   m_MonobehaviourClones: []
 --- !u!4 &778222788
 Transform:
@@ -7507,20 +7500,6 @@ Transform:
   m_Father: {fileID: 1309021030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &778222789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778222786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e5ec0bdc91820449bd316055faf000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  i_knnOutputValue: 0
-  intKnnText: {fileID: 1058266898}
 --- !u!1 &785956055
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,20 +7629,16 @@ MonoBehaviour:
     - {fileID: -3191245551590577983, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
   m_GameObjectNodeList:
   - {fileID: -3191245551590577983, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
-  m_ScriptNodesList:
-  - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
-  - {fileID: 1675182130307306419, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
+  m_ScriptNodesList: []
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 786148084}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467469}
     - {fileID: 786148084}
     m_values:
-    - {fileID: -1544380487707568891, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
-    - {fileID: 1675182130307306419, guid: 9fb9e1aad79d5da429bde8b673fe006b, type: 2}
+    - {fileID: 0}
   m_MonobehaviourClones: []
 --- !u!114 &786148084
 MonoBehaviour:
@@ -7685,6 +7660,7 @@ MonoBehaviour:
   errorTimerReset: {fileID: 11400000, guid: 6169382641c840b419dd1dca7f64b2ac, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 497345238}
+  threshSlider: {fileID: 290957127}
 --- !u!114 &786148085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7725,6 +7701,7 @@ GameObject:
   - component: {fileID: 786797244}
   - component: {fileID: 786797243}
   - component: {fileID: 786797245}
+  - component: {fileID: 786797246}
   m_Layer: 0
   m_Name: RepCounter
   m_TagString: Untagged
@@ -7744,7 +7721,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &786797242
 MonoBehaviour:
@@ -7834,9 +7811,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbb64a267790c849b25107b7e8a96b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i_classificationValue: {fileID: 1934467466}
+  i_classificationValue: {fileID: 786797246}
   i_repCount: 0
   intCurrentRepText: {fileID: 1146657899}
+--- !u!114 &786797246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786797240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e5ec0bdc91820449bd316055faf000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i_knnOutputValue: 0
+  intKnnText: {fileID: 1058266898}
 --- !u!1 &790566178
 GameObject:
   m_ObjectHideFlags: 0
@@ -8042,20 +8033,16 @@ MonoBehaviour:
   m_GameObjectNodeList:
   - {fileID: 1292495224468012309, guid: caf5a568551bf014690893a3e5753b93, type: 2}
   - {fileID: -755376702173356288, guid: caf5a568551bf014690893a3e5753b93, type: 2}
-  m_ScriptNodesList:
-  - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
-  - {fileID: -4451589545910479266, guid: caf5a568551bf014690893a3e5753b93, type: 2}
+  m_ScriptNodesList: []
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 792984392}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467470}
     - {fileID: 792984392}
     m_values:
-    - {fileID: -7774270626402005474, guid: caf5a568551bf014690893a3e5753b93, type: 2}
-    - {fileID: -4451589545910479266, guid: caf5a568551bf014690893a3e5753b93, type: 2}
+    - {fileID: 0}
   m_MonobehaviourClones: []
 --- !u!114 &792984392
 MonoBehaviour:
@@ -8077,6 +8064,7 @@ MonoBehaviour:
   errorTimerReset: {fileID: 11400000, guid: 6169382641c840b419dd1dca7f64b2ac, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 137238741}
+  threshSlider: {fileID: 590691781}
 --- !u!114 &792984393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9520,7 +9508,7 @@ RectTransform:
   - {fileID: 1126659260}
   - {fileID: 1587960511}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10646,20 +10634,16 @@ MonoBehaviour:
     - {fileID: -7081005194567604468, guid: afbce47d1573d1d478c26238810a1512, type: 2}
   m_GameObjectNodeList:
   - {fileID: -7081005194567604468, guid: afbce47d1573d1d478c26238810a1512, type: 2}
-  m_ScriptNodesList:
-  - {fileID: -5821081313487316623, guid: afbce47d1573d1d478c26238810a1512, type: 2}
-  - {fileID: 7612064059515926562, guid: afbce47d1573d1d478c26238810a1512, type: 2}
+  m_ScriptNodesList: []
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 1097821609}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467468}
     - {fileID: 1097821609}
     m_values:
-    - {fileID: -5821081313487316623, guid: afbce47d1573d1d478c26238810a1512, type: 2}
-    - {fileID: 7612064059515926562, guid: afbce47d1573d1d478c26238810a1512, type: 2}
+    - {fileID: 0}
   m_MonobehaviourClones: []
 --- !u!114 &1097821609
 MonoBehaviour:
@@ -10681,6 +10665,7 @@ MonoBehaviour:
   errorTimerReset: {fileID: 11400000, guid: 6169382641c840b419dd1dca7f64b2ac, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 439482022}
+  threshSlider: {fileID: 1055311187}
 --- !u!114 &1097821610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11014,7 +10999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 1157765281}
 --- !u!114 &1157765281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11865,7 +11850,7 @@ Transform:
   - {fileID: 241272683}
   - {fileID: 1097821607}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321514480
 GameObject:
@@ -15436,7 +15421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 1777949378}
 --- !u!114 &1777949378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16436,7 +16421,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1895510441}
   - component: {fileID: 1895510442}
-  - component: {fileID: 1895510443}
   m_Layer: 0
   m_Name: IML_KNNRight
   m_TagString: Untagged
@@ -16485,34 +16469,17 @@ MonoBehaviour:
   - {fileID: -7524054682552693147, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   - {fileID: 1677935741461695865, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   m_ScriptNodesList:
-  - {fileID: 4552488654130529052, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
-  - {fileID: 2377371536901232256, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
+  - {fileID: 2132538595147960852, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   FeaturesUpdated: 0
   ComponentsWithIMLData:
-  - GameComponent: {fileID: 1895510443}
+  - GameComponent: {fileID: 786797246}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467466}
-    - {fileID: 1895510443}
+    - {fileID: 786797246}
     m_values:
-    - {fileID: 4552488654130529052, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
-    - {fileID: 2377371536901232256, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
+    - {fileID: 2132538595147960852, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   m_MonobehaviourClones: []
---- !u!114 &1895510443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895510440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e5ec0bdc91820449bd316055faf000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  i_knnOutputValue: 0
-  intKnnText: {fileID: 1058266898}
 --- !u!1 &1897296503
 GameObject:
   m_ObjectHideFlags: 0
@@ -17000,114 +16967,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928348955}
   m_CullTransparentMesh: 0
---- !u!1 &1934467465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1934467467}
-  - component: {fileID: 1934467466}
-  - component: {fileID: 1934467468}
-  - component: {fileID: 1934467470}
-  - component: {fileID: 1934467469}
-  m_Layer: 0
-  m_Name: IML_Output
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1934467466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934467465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57e5ec0bdc91820449bd316055faf000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  i_knnOutputValue: 0
-  intKnnText: {fileID: 1058266898}
---- !u!4 &1934467467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934467465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1934467468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934467465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c053ae2bc4961704a958dca848f6cef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  f_MLPOutputValue: 0
-  f_threshold: 0.2
-  errorTimerStart: {fileID: 0}
-  errorTimerPause: {fileID: 0}
-  errorTimerStop: {fileID: 0}
-  errorTimerReset: {fileID: 0}
-  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
-  outputSlider: {fileID: 439482022}
---- !u!114 &1934467469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934467465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffea987dc4dbb3140a7074738b12508e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  f_MLPOutputValue: 0
-  f_threshold: 0.2
-  errorTimerStart: {fileID: 0}
-  errorTimerPause: {fileID: 0}
-  errorTimerStop: {fileID: 0}
-  errorTimerReset: {fileID: 0}
-  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
-  outputSlider: {fileID: 497345238}
---- !u!114 &1934467470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934467465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc549652773efd348a13cb3aa24a72ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  f_MLPOutputValue: 0
-  f_threshold: 0.2
-  errorTimerStart: {fileID: 0}
-  errorTimerPause: {fileID: 0}
-  errorTimerStop: {fileID: 0}
-  errorTimerReset: {fileID: 0}
-  errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
-  outputSlider: {fileID: 137238741}
 --- !u!1 &1943049695
 GameObject:
   m_ObjectHideFlags: 0
@@ -17489,7 +17348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 1985657676}
 --- !u!114 &1985657676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18714,20 +18573,16 @@ MonoBehaviour:
   m_GameObjectNodeList:
   - {fileID: -8220465022779601038, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
   - {fileID: -8900866623354634563, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
-  m_ScriptNodesList:
-  - {fileID: -4521180899270199881, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
-  - {fileID: 7617025112383142327, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
+  m_ScriptNodesList: []
   FeaturesUpdated: 0
   ComponentsWithIMLData:
   - GameComponent: {fileID: 2101674009}
     ControlClones: 0
   m_MonoBehavioursPerScriptNode:
     m_keys:
-    - {fileID: 1934467470}
     - {fileID: 2101674009}
     m_values:
-    - {fileID: -4521180899270199881, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
-    - {fileID: 7617025112383142327, guid: 0b7b04719ad50e644b5c6cef10ef7478, type: 2}
+    - {fileID: 0}
   m_MonobehaviourClones: []
 --- !u!114 &2101674009
 MonoBehaviour:
@@ -18749,6 +18604,7 @@ MonoBehaviour:
   errorTimerReset: {fileID: 11400000, guid: 6169382641c840b419dd1dca7f64b2ac, type: 2}
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 137238741}
+  threshSlider: {fileID: 590691781}
 --- !u!114 &2101674010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19174,7 +19030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19a3e0d566452947aa21927fdeabfdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatText: {fileID: 0}
+  floatText: {fileID: 2141122734}
 --- !u!114 &2141122734
 MonoBehaviour:
   m_ObjectHideFlags: 0

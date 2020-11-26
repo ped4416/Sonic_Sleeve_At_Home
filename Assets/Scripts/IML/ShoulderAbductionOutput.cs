@@ -15,19 +15,27 @@ public class ShoulderAbductionOutput : MonoBehaviour
     public OnErrorTimerReset errorTimerReset;
     public ErrorTimerActive errorTimerCheck;
     public GameObject outputSlider;
+    public GameObject threshSlider;
 
     private float f_prevVal;
+    private float f_initialThresh;
+
     // Start is called before the first frame update
     void Start()
     {
         f_prevVal = 0.0f;
-        f_threshold = 0.2f; // default value
+
+        f_initialThresh = PlayerPrefs.GetFloat("Shoulder Abduction Threshold"); // default value
+        threshSlider.GetComponent<Slider>().value = f_initialThresh;
+
         errorTimerCheck.b_isActive = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        f_threshold = threshSlider.GetComponent<Slider>().value;
+      
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
         if(GUItoIML.b_runModel)
@@ -64,5 +72,10 @@ public class ShoulderAbductionOutput : MonoBehaviour
     {
         errorTimerStop.Raise();
         errorTimerReset.Raise();
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetFloat("Shoulder Abduction Threshold", f_threshold);
     }
 }
