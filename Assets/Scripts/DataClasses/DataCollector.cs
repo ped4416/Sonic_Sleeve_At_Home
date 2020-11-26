@@ -13,6 +13,7 @@ public class DataCollector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // filepath needs to save with user ID, condition and timestamp in filename
         filepath = "data.txt";
         AddHeader();
     }

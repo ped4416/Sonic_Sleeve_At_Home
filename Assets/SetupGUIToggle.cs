@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GuiCanvasToggle : MonoBehaviour
+public class SetupGUIToggle : MonoBehaviour
 {
     public GameObject canvas;
     private bool bGuiToggle;
@@ -11,6 +11,5 @@ public class GuiCanvasToggle : MonoBehaviour
     {
         bGuiToggle = !bGuiToggle;
         canvas.SetActive(bGuiToggle);
-        Debug.Log("Toggle GUI");
     }
 }
