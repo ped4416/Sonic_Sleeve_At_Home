@@ -9,4 +9,14 @@ public class DataTracker : ScriptableObject
     public double rep_error_ms;
     public Vector3 neck_pos;
     public Quaternion neck_rot;
+
+    public enum Condition
+    { 
+        Practice,
+        Control,
+        Experimental
+    }
+
+    public Condition e_condition;
+
 }

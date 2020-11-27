@@ -37,6 +37,10 @@ public class EnableDisableGUIs : MonoBehaviour
         if(b_setupGUI)
         {
             setupGUI.SetActive(true);
+            if(b_menuGUI)
+            {
+                menuGUI.SetActive(false);
+            }
         }
         else
         {

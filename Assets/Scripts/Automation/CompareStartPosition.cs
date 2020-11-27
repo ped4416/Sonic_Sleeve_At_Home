@@ -98,10 +98,12 @@ public class CompareStartPosition : MonoBehaviour
         float f_distLHip = Vector3.Distance(currentLeftHip, referenceLeftHip);
         float f_totalDist = f_distLShoulder + f_distRShoulder + f_distNeck + f_distRHip + f_distLHip;
 
+
+
         if (f_totalDist < f_startPosThresh)
         {
             print("Correct Position");
-            if(!b_singleCheck)
+            if (!b_singleCheck)
             {
                 b_autoCheck = false;
                 StopCoroutine(ComparePositionCoroutine());
@@ -115,6 +117,37 @@ public class CompareStartPosition : MonoBehaviour
         else
         {
             print("Wrong Position: Please adjust your sitting position");
+            Vector3 v_neckDiff = referenceNeck - currentNeck;
+            print("Diff X: " + v_neckDiff.x + " || Diff Y: " + v_neckDiff.y + " || Diff Z: " + v_neckDiff.z);
+
+            float f_largestComponentVal = Mathf.Max(Mathf.Abs(v_neckDiff.x), Mathf.Max(Mathf.Abs(v_neckDiff.y), Mathf.Abs(v_neckDiff.z)));
+            
+            if (v_neckDiff.x > 0 && Mathf.Abs(v_neckDiff.x) == f_largestComponentVal)
+            {
+                print("Move Left");
+            }
+            else if (v_neckDiff.x < 0 && Mathf.Abs(v_neckDiff.x) == f_largestComponentVal)
+            {
+                print("Move Right");
+            }
+
+            if(v_neckDiff.y > 0 && Mathf.Abs(v_neckDiff.y) == f_largestComponentVal)
+            {
+                print("Move Up");
+            }
+            else if(v_neckDiff.y < 0 && Mathf.Abs(v_neckDiff.y) == f_largestComponentVal)
+            {
+                print("Move Down");
+            }
+
+            if (v_neckDiff.z > 0 && Mathf.Abs(v_neckDiff.z) == f_largestComponentVal)
+            {
+                print("Move Back");
+            }
+            else if (v_neckDiff.z < 0 && Mathf.Abs(v_neckDiff.z) == f_largestComponentVal)
+            {
+                print("Move Forward");
+            }
         }
 
         b_singleCheck = false;
