@@ -12,9 +12,9 @@ public class DataTracker : ScriptableObject
 
     public enum Condition
     { 
-        Practice,
         Control,
-        Experimental
+        Experimental,
+        Practice
     }
 
     public Condition e_condition;

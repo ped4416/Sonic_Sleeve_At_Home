@@ -8394,7 +8394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc549652773efd348a13cb3aa24a72ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_MLPOutputValue: 0
+  f_MLPOutputValue: -0.6025501
   f_threshold: 0
   errorTimerStart: {fileID: 11400000, guid: 52b7ab252213de645bc5c932b96d8f71, type: 2}
   errorTimerPause: {fileID: 11400000, guid: a0c8503ff26b76d428b75c37c540becd, type: 2}
@@ -10396,6 +10396,7 @@ GameObject:
   - component: {fileID: 1064157074}
   - component: {fileID: 1064157073}
   - component: {fileID: 1064157072}
+  - component: {fileID: 1064157075}
   m_Layer: 5
   m_Name: ConditionDropdown
   m_TagString: Untagged
@@ -10480,7 +10481,18 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1064157075}
+        m_MethodName: SetConditionEnum
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1064157073
 MonoBehaviour:
@@ -10519,6 +10531,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064157070}
   m_CullTransparentMesh: 0
+--- !u!114 &1064157075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064157070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67476ccddb3aada48af0d85c81c7291b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataTracker: {fileID: 11400000, guid: 41bf1392d92471f4b995228943b9f07e, type: 2}
+  conditionDropdown: {fileID: 1064157072}
 --- !u!1 &1066888730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11154,7 +11180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c053ae2bc4961704a958dca848f6cef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f_MLPOutputValue: 0
+  f_MLPOutputValue: 1.0258588
   f_threshold: 0
   errorTimerStart: {fileID: 11400000, guid: 52b7ab252213de645bc5c932b96d8f71, type: 2}
   errorTimerPause: {fileID: 11400000, guid: a0c8503ff26b76d428b75c37c540becd, type: 2}
@@ -15283,7 +15309,6 @@ GameObject:
   - component: {fileID: 1653168356}
   - component: {fileID: 1653168355}
   - component: {fileID: 1653168358}
-  - component: {fileID: 1653168359}
   - component: {fileID: 1653168360}
   m_Layer: 5
   m_Name: PracticeButton
@@ -15471,18 +15496,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataTracker: {fileID: 11400000, guid: 41bf1392d92471f4b995228943b9f07e, type: 2}
---- !u!114 &1653168359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653168353}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1653168360
 MonoBehaviour:
   m_ObjectHideFlags: 0
