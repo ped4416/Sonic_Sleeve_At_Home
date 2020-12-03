@@ -9,7 +9,18 @@ public class Manager : MonoBehaviour
     private bool bGui = true;
     void Start()
     {
-       canvas.SetActive(bGui);
-       Debug.Log("GUI Hidden");
+       //retrain all models upon load? 
+       //canvas.SetActive(bGui);
+       //Debug.Log("GUI Hidden");
+    }
+
+    public void Exit()
+    {
+        //add calls to stop and reset music
+        //rest ML models? 
+        print("CLOSE APP");
+        Application.Quit();
     }
 }
+
+
