@@ -48,8 +48,8 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: -0.6025501
-  m_Out: -0.6025501
+  m_Value: 0
+  m_Out: 0
   ReceivingData: 0
   InputConnected: 1
   m_UserInput: 0
@@ -124,9 +124,9 @@ MonoBehaviour:
   - {fileID: 6312257469752930140}
   - {fileID: 9006353024598236423}
   PredictedRapidlibOutput:
-  - -0.6025500973650799
+  - 0
   DelayedPredictedOutput:
-  - -0.6025500973650799
+  - 0
   m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 00000000
