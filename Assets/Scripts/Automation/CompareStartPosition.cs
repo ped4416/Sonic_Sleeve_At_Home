@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditorInternal;
+#if UNITY_EDITOR
+    using UnityEditorInternal;
+#endif
 using UnityEngine;
 
 public class CompareStartPosition : MonoBehaviour
