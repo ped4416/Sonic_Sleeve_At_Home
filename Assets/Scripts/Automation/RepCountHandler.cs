@@ -13,12 +13,15 @@ public class RepCountHandler : MonoBehaviour
     public OnRepTimerStop repTimerStop;
     public OnRepTimerReset repTimerReset;
     public OnRepTimeWrite repTimeWrite;
+    public OnStartMusic startMusic;
 
     private int i_prevRep;
     private bool b_isRest;
     private bool b_startPosition;
     private bool b_fiveSecTimerEnd;
     private bool b_repTimerTrigger;
+    private bool b_10SecTimerEnd;
+    private bool b_2MinTimerEnd;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,8 @@ public class RepCountHandler : MonoBehaviour
         b_fiveSecTimerEnd = false;
         b_repTimerTrigger = true;
         b_isRest = true;
+        b_10SecTimerEnd = false;
+        b_2MinTimerEnd = false;
     }
 
     // Update is called once per frame
@@ -37,8 +42,23 @@ public class RepCountHandler : MonoBehaviour
         {
             print("Rep Timer Start Block");
             repTimerStart.Raise();
+            startMusic.Raise();
             b_isRest = false;
             b_repTimerTrigger = false;
+            b_fiveSecTimerEnd = false;
+        }
+
+        if(b_10SecTimerEnd && b_startPosition)
+        {
+            startMusic.Raise();
+            b_10SecTimerEnd = false;
+            b_isRest = false;
+        }
+
+        if(b_2MinTimerEnd && b_startPosition)
+        {
+            startMusic.Raise();
+            b_isRest = false;
         }
 
         if (!b_isRest)
@@ -97,5 +117,15 @@ public class RepCountHandler : MonoBehaviour
         b_fiveSecTimerEnd = true;
         repCounter.i_repCount = 0;
         blockCount.i_value = 1;
+    }
+
+    public void Set10SecTimerBool()
+    {
+        b_10SecTimerEnd = true;
+    }
+
+    public void Set2MinTimerBool()
+    {
+        b_2MinTimerEnd = true;
     }
 }

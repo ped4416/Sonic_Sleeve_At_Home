@@ -298,8 +298,8 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 0.20677325327365226
-  m_NumExamplesTrainedOn: 233
+  - 0.12252696923445155
+  m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 03000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 1
@@ -307,7 +307,7 @@ MonoBehaviour:
   TrainingKey: 116
   RunningKey: 0
   TrainOnPlaymodeChange: 0
-  RunOnAwake: 1
+  RunOnAwake: 0
   matchLiveDataInputs: 1
   learningChoice: 1
 --- !u!114 &11400000
@@ -376,11 +376,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0.20677325
+  m_Value: 0.122526966
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0.20677325
+  m_UserInput: 0.122526966
   float_switch: 1
 --- !u!114 &9080012192809851136
 MonoBehaviour:

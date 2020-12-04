@@ -8055,6 +8055,7 @@ MonoBehaviour:
   repTimerStop: {fileID: 11400000, guid: 938346907b83c3a4d8c4ed986e217647, type: 2}
   repTimerReset: {fileID: 11400000, guid: 13c33925b8a64be498aa30bbc1718fec, type: 2}
   repTimeWrite: {fileID: 11400000, guid: 8d3d414c6d2476745a8a20769f9deb69, type: 2}
+  startMusic: {fileID: 11400000, guid: fb155edcd1227944bbd7fdb76662daaf, type: 2}
 --- !u!114 &786797243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9145,9 +9146,9 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
   - component: {fileID: 963194230}
-  - component: {fileID: 963194234}
   - component: {fileID: 963194233}
   - component: {fileID: 963194232}
+  - component: {fileID: 963194234}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9323,10 +9324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0b965a9fd348b641bbe9a78ed26f214, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a59e86be91f5dc4f9ed9a1aaf84fbd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 93e11bb9b85d11d47809e21ef1bff09e, type: 2}
+  Event: {fileID: 11400000, guid: fb155edcd1227944bbd7fdb76662daaf, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

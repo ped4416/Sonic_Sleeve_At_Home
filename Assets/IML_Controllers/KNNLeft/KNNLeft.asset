@@ -180,7 +180,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 0
-  m_NumExamplesTrainedOn: 18
+  m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   TrainingKey: 116
   RunningKey: 0
   TrainOnPlaymodeChange: 0
-  RunOnAwake: 1
+  RunOnAwake: 0
   matchLiveDataInputs: 1
   learningChoice: 0
 --- !u!114 &11400000
