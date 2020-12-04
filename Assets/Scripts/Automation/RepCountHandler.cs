@@ -9,7 +9,6 @@ public class RepCountHandler : MonoBehaviour
     public On50Reps fiftyReps;
     public BlockCount blockCount;
     public OnRestStartListener restStartListener;
-    //public OnPositionFoundListener positionFoundListener;
     public OnRepTimerStart repTimerStart;
     public OnRepTimerStop repTimerStop;
     public OnRepTimerReset repTimerReset;

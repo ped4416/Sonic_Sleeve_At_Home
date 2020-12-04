@@ -230,7 +230,7 @@ MonoBehaviour:
   TrainingKey: 116
   RunningKey: 0
   TrainOnPlaymodeChange: 0
-  RunOnAwake: 0
+  RunOnAwake: 1
   matchLiveDataInputs: 1
   learningChoice: 1
 --- !u!114 &6451367934595914095
@@ -269,7 +269,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 103152
+  GOHashCode: 83954
   CreatedDuringPlaymode: 0
 --- !u!114 &7888539389499672146
 MonoBehaviour:
@@ -416,7 +416,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 101446
+  ScriptHashCode: 82220
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: f_MLPOutputValue
