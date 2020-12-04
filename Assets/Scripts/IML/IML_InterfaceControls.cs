@@ -7,7 +7,7 @@ public class IML_InterfaceControls : MonoBehaviour
 {
     private int i_targetVal;
     private bool b_record;
-    private bool b_train;
+    //private bool b_train;
     private bool b_run;
     private float f_boundVal;
     
@@ -16,8 +16,9 @@ public class IML_InterfaceControls : MonoBehaviour
         GUItoIML.knnTargetVal = 1;
         f_boundVal = 0.0f;
         b_record = false;
-        b_train = false;
+        //b_train = false;
         b_run = false;
+        GUItoIML.b_trainModel = false;
         //print("START CALL");
     }
 
@@ -44,7 +45,7 @@ public class IML_InterfaceControls : MonoBehaviour
 
     public void TrainModel()
     {
-        GUItoIML.b_trainModel = true;
+        GUItoIML.b_trainModel = !GUItoIML.b_trainModel;
         //print("TRAINMODEL CALL");
         //b_train = true;
     }

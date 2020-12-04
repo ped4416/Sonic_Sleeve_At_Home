@@ -27,6 +27,7 @@ public class RepCountHandler : MonoBehaviour
         b_startPosition = false;
         b_fiveSecTimerEnd = false;
         b_repTimerTrigger = true;
+        b_isRest = true;
     }
 
     // Update is called once per frame

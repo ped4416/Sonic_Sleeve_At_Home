@@ -421,7 +421,9 @@ namespace InteractML
             {
                 Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
                 TrainModel();
-                GUItoIML.b_trainModel = false;
+                //GUItoIML.b_trainModel = false;
+                //Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
+
             }
             b_tempTrain = b_currentTrain;
 

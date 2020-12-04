@@ -8403,7 +8403,7 @@ MonoBehaviour:
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 137238741}
   threshSlider: {fileID: 590691781}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 963194225}
 --- !u!114 &792984393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20125,7 +20125,7 @@ MonoBehaviour:
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 137238741}
   threshSlider: {fileID: 590691781}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 963194225}
 --- !u!114 &2101674010
 MonoBehaviour:
   m_ObjectHideFlags: 0
