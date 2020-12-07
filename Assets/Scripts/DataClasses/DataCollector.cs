@@ -15,7 +15,7 @@ public class DataCollector : MonoBehaviour
     {
         // filepath needs to save with user ID, condition and timestamp in filename
         filepath = "data.txt";
-        AddHeader();
+        //AddHeader();
     }
 
     void AddHeader()
@@ -50,6 +50,7 @@ public class DataCollector : MonoBehaviour
 
     public void WriteDataToFile()
     {
-        AddData("test", "27/11/2020", dataTracker.e_condition.ToString(), dataTracker.rep_ms, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
+        //AddData("test", "27/11/2020", dataTracker.e_condition.ToString(), dataTracker.rep_ms, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
+        AddData("", "", dataTracker.e_condition.ToString(), dataTracker.rep_ms, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
     }
 }

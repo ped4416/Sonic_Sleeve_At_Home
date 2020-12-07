@@ -35,13 +35,15 @@ public class RepCounter : MonoBehaviour
             if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount);
             i_prevRep = i_currentRep;
             i_prevVal = i_currentVal;
-            intCurrentRepText.text = i_currentRep.ToString("F0");
+            intCurrentRepText.text = i_repCount.ToString("F0");
         }
     }
 
     public void Begin()
     {
         b_active = true;
+        i_repCount = 0;
+        i_prevRep = 0;
     }
 
     public void End()

@@ -1944,6 +1944,33 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 847802396}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &210279053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210279052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be357f787b1413e45acbd06f2b2065dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c6389bda27637e4cb93dd3820b2823d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 210279056}
+        m_MethodName: CheckPositionAuto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &210279055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,7 +2006,6 @@ MonoBehaviour:
   leftHip: {fileID: 1561207730}
   rightHip: {fileID: 186009866}
   f_startPosThresh: 0
-  timerEndListener: {fileID: 210279058}
   positionFound: {fileID: 11400000, guid: 96f630da5de229c44b9f28f9ead309d5, type: 2}
   startPosThreshInput: {fileID: 502716427}
 --- !u!114 &210279057
@@ -2010,7 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bac2d9ab3a07b545807daea68b5c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
+  Event: {fileID: 11400000, guid: d79ecdc60eba0504fa6076313db84395, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2019,7 +2045,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2625,6 +2651,7 @@ MonoBehaviour:
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 439482022}
   threshSlider: {fileID: 1055311187}
+  audioSource: {fileID: 963194225}
 --- !u!114 &241272686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7971,6 +7998,7 @@ MonoBehaviour:
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 497345238}
   threshSlider: {fileID: 290957127}
+  audioSource: {fileID: 963194225}
 --- !u!114 &786148085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8013,6 +8041,8 @@ GameObject:
   - component: {fileID: 786797245}
   - component: {fileID: 786797246}
   - component: {fileID: 786797247}
+  - component: {fileID: 786797248}
+  - component: {fileID: 786797249}
   m_Layer: 0
   m_Name: RepCounter
   m_TagString: Untagged
@@ -8050,7 +8080,6 @@ MonoBehaviour:
   tenReps: {fileID: 11400000, guid: 1a74a6268044d7942bc0ef10b122bd45, type: 2}
   fiftyReps: {fileID: 11400000, guid: 2be44df9aeea0e14da7dec5a7d97e6d8, type: 2}
   blockCount: {fileID: 11400000, guid: 40722a0087d184c4b847cba180501b7c, type: 2}
-  restStartListener: {fileID: 786797244}
   repTimerStart: {fileID: 11400000, guid: 93e11bb9b85d11d47809e21ef1bff09e, type: 2}
   repTimerStop: {fileID: 11400000, guid: 938346907b83c3a4d8c4ed986e217647, type: 2}
   repTimerReset: {fileID: 11400000, guid: 13c33925b8a64be498aa30bbc1718fec, type: 2}
@@ -8157,6 +8186,60 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 786797242}
         m_MethodName: SetFiveSecTimerBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &786797248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786797240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bac2d9ab3a07b545807daea68b5c662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d79ecdc60eba0504fa6076313db84395, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 786797242}
+        m_MethodName: Set10SecTimerBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &786797249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786797240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be357f787b1413e45acbd06f2b2065dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c6389bda27637e4cb93dd3820b2823d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 786797242}
+        m_MethodName: Set2MinTimerBool
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8822,7 +8905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &871045035
 Transform:
   m_ObjectHideFlags: 0
@@ -9632,7 +9715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1024326948
 Transform:
   m_ObjectHideFlags: 0
@@ -11276,6 +11359,7 @@ MonoBehaviour:
   errorTimerCheck: {fileID: 11400000, guid: 02236a60e24724c40a64155a9cc289a3, type: 2}
   outputSlider: {fileID: 439482022}
   threshSlider: {fileID: 1055311187}
+  audioSource: {fileID: 963194225}
 --- !u!114 &1097821610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13087,7 +13171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tenRepsListener: {fileID: 1360341518}
-  timerEnd: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
+  timerEnd: {fileID: 11400000, guid: d79ecdc60eba0504fa6076313db84395, type: 2}
   restStart: {fileID: 11400000, guid: 88e4d7f7ec3fd2847a199febff485baa, type: 2}
 --- !u!114 &1360341518
 MonoBehaviour:
@@ -19759,7 +19843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fiftyRepsListener: {fileID: 2075525568}
-  timerEnd: {fileID: 11400000, guid: ddc52bcbbae7c5e4098dc42a7b394dcd, type: 2}
+  timerEnd: {fileID: 11400000, guid: 4c6389bda27637e4cb93dd3820b2823d, type: 2}
   restStart: {fileID: 11400000, guid: 88e4d7f7ec3fd2847a199febff485baa, type: 2}
 --- !u!114 &2075525568
 MonoBehaviour:

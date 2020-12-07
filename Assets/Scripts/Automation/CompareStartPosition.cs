@@ -14,7 +14,7 @@ public class CompareStartPosition : MonoBehaviour
     public Transform leftHip;
     public Transform rightHip;
     public float f_startPosThresh;
-    public OnTimerEndListener timerEndListener;
+    /*public On10SecTimerEndListener tenSecTimerEndListener;*/
     public OnPositionFound positionFound;
     public GameObject startPosThreshInput;
 

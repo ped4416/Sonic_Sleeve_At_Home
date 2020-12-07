@@ -16,6 +16,7 @@ public class TrunkLeaningOutput : MonoBehaviour
     public ErrorTimerActive errorTimerCheck;
     public GameObject outputSlider;
     public GameObject threshSlider;
+    public GameObject audioSource;
 
     private float f_prevVal;
     private float f_initialThresh;
@@ -50,6 +51,7 @@ public class TrunkLeaningOutput : MonoBehaviour
             if(!errorTimerCheck.b_isActive)
             {
                 print("Trunk adjustment needed");
+                audioSource.GetComponent<AudioSource>().volume = 0.0f;
                 errorTimerStart.Raise();
                 errorTimerCheck.b_isActive = true;
             }
@@ -59,6 +61,7 @@ public class TrunkLeaningOutput : MonoBehaviour
         {
             if(errorTimerCheck.b_isActive)
             {
+                audioSource.GetComponent<AudioSource>().volume = 1.0f;
                 errorTimerPause.Raise();
                 errorTimerCheck.b_isActive = false;
             }

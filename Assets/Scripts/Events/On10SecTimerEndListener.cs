@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnTimerEndListener : MonoBehaviour
+public class On10SecTimerEndListener : MonoBehaviour
 {
-    public OnTimerEnd Event;
+    public On10SecTimerEnd Event;
     public UnityEvent Response;
 
     private void OnEnable()

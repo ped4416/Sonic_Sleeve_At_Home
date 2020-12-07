@@ -5,7 +5,7 @@ using UnityEngine;
 public class TwoMinTimer : MonoBehaviour
 {
     public On50RepsListener fiftyRepsListener;
-    public OnTimerEnd timerEnd;
+    public On2MinTimerEnd timerEnd;
     public OnRestStart restStart;
 
     private int timer;

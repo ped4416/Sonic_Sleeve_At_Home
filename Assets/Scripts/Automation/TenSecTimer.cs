@@ -5,7 +5,7 @@ using UnityEngine;
 public class TenSecTimer : MonoBehaviour
 {
     public OnTenRepsListener tenRepsListener;
-    public OnTimerEnd timerEnd;
+    public On10SecTimerEnd timerEnd;
     public OnRestStart restStart;
 
     private int timer;

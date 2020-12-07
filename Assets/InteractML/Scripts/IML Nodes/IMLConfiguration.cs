@@ -417,7 +417,7 @@ namespace InteractML
 
             bool b_currentTrain = GUItoIML.b_trainModel;
 
-            if (b_currentTrain != b_tempTrain)
+            /*if (b_currentTrain != b_tempTrain)
             {
                 Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
                 TrainModel();
@@ -425,7 +425,7 @@ namespace InteractML
                 //Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
 
             }
-            b_tempTrain = b_currentTrain;
+            b_tempTrain = b_currentTrain;*/
 
             // Keyboard shortcut to reset model - Bryan
             if (Input.GetKeyDown(KeyCode.X))

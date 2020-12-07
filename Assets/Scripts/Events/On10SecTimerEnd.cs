@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class OnTimerEnd : ScriptableObject
+public class On10SecTimerEnd : ScriptableObject
 {
-    private List<OnTimerEndListener> listeners = new List<OnTimerEndListener>();
+    private List<On10SecTimerEndListener> listeners = new List<On10SecTimerEndListener>();
 
     public void Raise()
     {
@@ -15,12 +15,12 @@ public class OnTimerEnd : ScriptableObject
         }
     }
 
-    public void RegisterListener(OnTimerEndListener listener)
+    public void RegisterListener(On10SecTimerEndListener listener)
     {
         listeners.Add(listener);
     }
 
-    public void UnregisterListener(OnTimerEndListener listener)
+    public void UnregisterListener(On10SecTimerEndListener listener)
     {
         listeners.Remove(listener);
     }
