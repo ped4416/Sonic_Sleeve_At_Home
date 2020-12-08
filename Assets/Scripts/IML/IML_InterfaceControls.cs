@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using InteractML;
 
 public class IML_InterfaceControls : MonoBehaviour
 {
+    //public GameObject knnRight;
+
     private int i_targetVal;
     private bool b_record;
     //private bool b_train;
@@ -70,4 +73,13 @@ public class IML_InterfaceControls : MonoBehaviour
     {
         GUItoIML.b_deleteExamples = true;
     }
+
+   /* public void KNNRight_Record()
+    {
+        TrainingExamplesNode trainingNode;
+        trainingNode = knnRight.GetComponent<IMLComponent>().TrainingExamplesNodesList[0];
+        trainingNode.ToggleCollectExamples();
+    }*/
+
+
 }
