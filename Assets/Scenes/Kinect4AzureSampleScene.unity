@@ -2575,6 +2575,7 @@ GameObject:
   - component: {fileID: 241272684}
   - component: {fileID: 241272685}
   - component: {fileID: 241272686}
+  - component: {fileID: 241272687}
   m_Layer: 0
   m_Name: IML_ShoulderElevationLeft
   m_TagString: Untagged
@@ -2679,6 +2680,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &241272687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241272682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b342bbc59323ae4fa829cc3c9fef5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250071858
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,9 +6277,9 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 647424509}
-        m_MethodName: KNNRight_Record
+        m_CallState: 0
+      - m_Target: {fileID: 1309021031}
+        m_MethodName: RecordData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6275,7 +6288,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &647424507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6320,7 +6333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647424504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2ba12f3ba48224fa84882703dd340b, type: 3}
   m_Name: 
@@ -7790,6 +7803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 778222788}
   - component: {fileID: 778222787}
+  - component: {fileID: 778222789}
   m_Layer: 0
   m_Name: IML_KNNLeft
   m_TagString: Untagged
@@ -7847,6 +7861,18 @@ Transform:
   m_Father: {fileID: 1309021030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778222789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778222786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fe3193344c96f44992d029d4592f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &785956055
 GameObject:
   m_ObjectHideFlags: 0
@@ -7933,6 +7959,7 @@ GameObject:
   - component: {fileID: 786148083}
   - component: {fileID: 786148084}
   - component: {fileID: 786148085}
+  - component: {fileID: 786148086}
   m_Layer: 0
   m_Name: IML_TrunkLeaning
   m_TagString: Untagged
@@ -8037,6 +8064,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &786148086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786148081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b342bbc59323ae4fa829cc3c9fef5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786797240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8418,6 +8457,7 @@ GameObject:
   - component: {fileID: 792984391}
   - component: {fileID: 792984392}
   - component: {fileID: 792984393}
+  - component: {fileID: 792984394}
   m_Layer: 0
   m_Name: IML_ShoulderAbductionRight
   m_TagString: Untagged
@@ -8526,6 +8566,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &792984394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792984389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b342bbc59323ae4fa829cc3c9fef5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803667022
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,6 +11346,7 @@ GameObject:
   - component: {fileID: 1097821608}
   - component: {fileID: 1097821609}
   - component: {fileID: 1097821610}
+  - component: {fileID: 1097821611}
   m_Layer: 0
   m_Name: IML_ShoulderElevationRight
   m_TagString: Untagged
@@ -11398,6 +11451,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1097821611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097821606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b342bbc59323ae4fa829cc3c9fef5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1126659256
 GameObject:
   m_ObjectHideFlags: 0
@@ -12566,11 +12631,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309021029}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eff90c42c8f75874d80752d590d55291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knnRight: {fileID: 1895510440}
+  knnLeft: {fileID: 778222786}
+  shoulderAbductionRight: {fileID: 792984389}
+  shoulderAbductionLeft: {fileID: 2101674006}
+  shoulderElevationRight: {fileID: 1097821606}
+  shoulderElevationLeft: {fileID: 241272682}
+  trunkLeaning: {fileID: 786148081}
+  armDropdown: {fileID: 1010838457}
+  knnEnableRecordButton: {fileID: 1505809004}
+  elbowEnableRecordButton: {fileID: 1512174300}
+  trunkEnableRecordButton: {fileID: 1736926114}
+  shoulderEnableRecordButton: {fileID: 2039487027}
 --- !u!1 &1321514480
 GameObject:
   m_ObjectHideFlags: 0
@@ -17997,6 +18074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895510441}
   - component: {fileID: 1895510442}
+  - component: {fileID: 1895510443}
   m_Layer: 0
   m_Name: IML_KNNRight
   m_TagString: Untagged
@@ -18056,6 +18134,18 @@ MonoBehaviour:
     m_values:
     - {fileID: 2132538595147960852, guid: ffd2b99599cb7b04ba2d9defa5ab9a46, type: 2}
   m_MonobehaviourClones: []
+--- !u!114 &1895510443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fe3193344c96f44992d029d4592f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1897296503
 GameObject:
   m_ObjectHideFlags: 0
@@ -20154,6 +20244,7 @@ GameObject:
   - component: {fileID: 2101674008}
   - component: {fileID: 2101674009}
   - component: {fileID: 2101674010}
+  - component: {fileID: 2101674011}
   m_Layer: 0
   m_Name: IML_ShoulderAbductionLeft
   m_TagString: Untagged
@@ -20262,6 +20353,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2101674011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101674006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b342bbc59323ae4fa829cc3c9fef5c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101763463
 GameObject:
   m_ObjectHideFlags: 0
