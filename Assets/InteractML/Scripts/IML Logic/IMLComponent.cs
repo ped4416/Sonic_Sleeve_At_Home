@@ -1325,6 +1325,7 @@ namespace InteractML
             {
                 // Loads the model in the IMLConfigNode
                 IMLConfigNode.LoadModelFromDisk(reCreateModels);
+                Debug.Log("LoadAllModelsFromDisk"); //- Bryan
             }
             
         }
@@ -1338,6 +1339,7 @@ namespace InteractML
             {
                 // Save model to disk
                 IMLConfigNode.SaveModelToDisk();
+                Debug.Log("SaveAllModels");
             }
 
         }

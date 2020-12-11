@@ -6,8 +6,16 @@ using InteractML.DataTypeNodes;
 
 public class KNNNodeAccess : MonoBehaviour
 {
+    public  IMLComponent imlComponent;
+
     private IMLConfiguration configNode;
     private TrainingExamplesNode trainingNode;
+
+    /*public void Awake()
+    {
+        imlComponent = gameObject.GetComponent<IMLComponent>();
+        imlComponent.LoadAllModelsFromDisk();
+    }*/
 
     public void KNNRecord()
     {
@@ -45,4 +53,9 @@ public class KNNNodeAccess : MonoBehaviour
         configNode = gameObject.GetComponent<IMLComponent>().IMLConfigurationNodesList[0];
         configNode.ResetModel();
     }
+
+    /*public void OnApplicationQuit()
+    {
+        imlComponent.SaveAllModels();
+    }*/
 }
