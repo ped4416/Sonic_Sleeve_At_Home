@@ -9,6 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+Sonic\ Sleeve\ \@\ Home_Data/*
+MonoBleedingEdge/*
 
 # Remove all large files from the repository UNITY AZURE FILES
 Assets/Plugins/
@@ -18,6 +20,7 @@ dnn_model_2_0.onnx
 cublas64_100.dll
 onnxruntime.dll
 cudart64_100.dll
+UnityPlayer.dll
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -68,6 +71,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.exe
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -78,4 +82,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*Assets/Plugins/
-
