@@ -1,7 +1,3 @@
-# Sonic Sleeve at Home 
-
-
-
 # Sample Unity Body Tracking Application
 
 ### Directions for getting started:
