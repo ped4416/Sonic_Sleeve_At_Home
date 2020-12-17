@@ -269,7 +269,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 15836
+  GOHashCode: 15372
   CreatedDuringPlaymode: 0
 --- !u!114 &7888539389499672146
 MonoBehaviour:
@@ -418,17 +418,5 @@ MonoBehaviour:
   m_ScriptInternal: {fileID: 0}
   ScriptHashCode: 14572
   m_PortsPerFieldInfo:
-    m_keys:
-    - _fieldName: f_MLPOutputValue
-      _node: {fileID: 9047479612705423195}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: -7921490108653061493}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
+    m_keys: []
   CreatedDuringPlaymode: 0
