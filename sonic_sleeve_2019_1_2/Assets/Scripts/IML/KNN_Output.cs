@@ -16,6 +16,7 @@ public class KNN_Output : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        i_knnOutputValue = 1;
         //i_prevVal = 0;
         //intKnnText = GetComponent<TextMeshProUGUI>();  //gameObject.AddComponent<TextMeshProUGUI>(); // 
     }
@@ -23,12 +24,13 @@ public class KNN_Output : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int i_currentVal;
-        i_currentVal = i_knnOutputValue;
+        /*int i_currentVal;
+        i_currentVal = i_knnOutputValue;*/
         //if (i_currentVal != i_prevVal) print("KNN Output = " + i_currentVal);
         /*if (GUItoIML.b_runModel)
         {*/
-        intKnnText.GetComponent<TextMeshProUGUI>().text = i_currentVal.ToString("F0");
+        print("OUTPUT: " + i_knnOutputValue);
+        intKnnText.GetComponent<Text>().text = i_knnOutputValue.ToString("F0");
         //}
         
         //i_prevVal = i_currentVal;
