@@ -84,6 +84,19 @@ namespace InteractML.DataTypeNodes
             {
                 InputConnected = false;
                 if (!float_switch) m_UserInput = 0;
+
+                // Hack to allow keyboard control of float node user input of lower and upper bounds - Bryan
+                if(Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    m_UserInput = 1.0f;
+                }
+                if(Input.GetKeyDown(KeyCode.Alpha0))
+                {
+                    m_UserInput = 0.0f;
+                }
+
+                m_UserInput = GUItoIML.f_boundaryValue;
+
                 Value = m_UserInput;
             }
             else

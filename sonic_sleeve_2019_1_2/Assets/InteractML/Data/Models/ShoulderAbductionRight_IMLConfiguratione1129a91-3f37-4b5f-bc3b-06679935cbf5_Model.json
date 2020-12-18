@@ -1,0 +1,110 @@
+{
+   "metadata" : {
+      "creator" : "Rapid API C++",
+      "inputNames" : [
+         "inputs-1",
+         "inputs-2",
+         "inputs-3",
+         "inputs-4",
+         "inputs-5",
+         "inputs-6"
+      ],
+      "numInputs" : 6,
+      "numOutputs" : 1,
+      "version" : "v0.1.1"
+   },
+   "modelSet" : [
+      {
+         "inBases" : [ 0, 1.0399999618530273, 0, 0, 1.0399999618530273, 0 ],
+         "inRanges" : [ 1, 1, 1, 1, 1, 1 ],
+         "inputNames" : [
+            "inputs-1",
+            "inputs-2",
+            "inputs-3",
+            "inputs-4",
+            "inputs-5",
+            "inputs-6"
+         ],
+         "modelType" : "Neural Network",
+         "nodes" : [
+            {
+               "Node 1" : -0.44878357421478332,
+               "Node 2" : -0.46355874841213229,
+               "Node 3" : -0.091268839038239624,
+               "Node 4" : -0.042010844571105099,
+               "Node 5" : -0.012431073131601744,
+               "Node 6" : 0.29397497154919272,
+               "Threshold" : 0.42087479115216175,
+               "name" : "Linear Node 0"
+            },
+            {
+               "Attrib inputs-1" : -0.3645229957032195,
+               "Attrib inputs-2" : 0.3350085899945795,
+               "Attrib inputs-3" : 0.46886777112423139,
+               "Attrib inputs-4" : -0.2789659570172951,
+               "Attrib inputs-5" : -0.19183294949299673,
+               "Attrib inputs-6" : 0.047220596367851919,
+               "Threshold" : -0.3116180239528189,
+               "name" : "Sigmoid Node 1"
+            },
+            {
+               "Attrib inputs-1" : 0.49288130191780666,
+               "Attrib inputs-2" : 0.4964613255480087,
+               "Attrib inputs-3" : 0.46769493701050258,
+               "Attrib inputs-4" : 0.22583896321188968,
+               "Attrib inputs-5" : 0.48110969177693896,
+               "Attrib inputs-6" : -0.39013824915579359,
+               "Threshold" : 0.29810585674954948,
+               "name" : "Sigmoid Node 2"
+            },
+            {
+               "Attrib inputs-1" : -0.20297055044204915,
+               "Attrib inputs-2" : -0.49521651558068436,
+               "Attrib inputs-3" : -0.3875354839438197,
+               "Attrib inputs-4" : 0.1397633570981528,
+               "Attrib inputs-5" : 0.37843064539884386,
+               "Attrib inputs-6" : 0.0036626777051697035,
+               "Threshold" : 0.29792861516022606,
+               "name" : "Sigmoid Node 3"
+            },
+            {
+               "Attrib inputs-1" : -0.13870599865081912,
+               "Attrib inputs-2" : -0.28807566760826642,
+               "Attrib inputs-3" : 0.18135953856026599,
+               "Attrib inputs-4" : -0.10126148008770886,
+               "Attrib inputs-5" : 0.2406472446764214,
+               "Attrib inputs-6" : -0.025241319382765248,
+               "Threshold" : -0.077912318894586774,
+               "name" : "Sigmoid Node 4"
+            },
+            {
+               "Attrib inputs-1" : -0.32613482799951965,
+               "Attrib inputs-2" : -0.19808687312268031,
+               "Attrib inputs-3" : 0.29727991523827568,
+               "Attrib inputs-4" : -0.18344955518100575,
+               "Attrib inputs-5" : 0.37242882006730027,
+               "Attrib inputs-6" : -0.3508860235926296,
+               "Threshold" : 0.49406849432204192,
+               "name" : "Sigmoid Node 5"
+            },
+            {
+               "Attrib inputs-1" : 0.32190326480741094,
+               "Attrib inputs-2" : -0.37481723546636558,
+               "Attrib inputs-3" : 0.26375001257217945,
+               "Attrib inputs-4" : -0.0094109603785392792,
+               "Attrib inputs-5" : 0.16360552050975297,
+               "Attrib inputs-6" : -0.37410336652799875,
+               "Threshold" : -0.28979092548099383,
+               "name" : "Sigmoid Node 6"
+            }
+         ],
+         "numHiddenLayers" : 1,
+         "numHiddenNodes" : 6,
+         "numHiddenOutputs" : 1,
+         "numInputs" : 6,
+         "outBase" : 0,
+         "outRange" : 0,
+         "whichInputs" : [ 0, 1, 2, 3, 4, 5 ]
+      }
+   ]
+}

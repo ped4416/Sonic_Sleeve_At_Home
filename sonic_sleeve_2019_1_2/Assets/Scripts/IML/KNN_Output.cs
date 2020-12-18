@@ -9,7 +9,9 @@ public class KNN_Output : MonoBehaviour
 {
     [PullFromIMLController]
     public int i_knnOutputValue;
-    public TextMeshProUGUI intKnnText;
+    //public TextMeshProUGUI intKnnText;
+    public GameObject intKnnText;
+
     //private int i_prevVal;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class KNN_Output : MonoBehaviour
         //if (i_currentVal != i_prevVal) print("KNN Output = " + i_currentVal);
         /*if (GUItoIML.b_runModel)
         {*/
-        intKnnText.text = i_currentVal.ToString("F0");
+        intKnnText.GetComponent<TextMeshProUGUI>().text = i_currentVal.ToString("F0");
         //}
         
         //i_prevVal = i_currentVal;

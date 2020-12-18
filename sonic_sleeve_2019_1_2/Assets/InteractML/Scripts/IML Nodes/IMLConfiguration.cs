@@ -384,6 +384,10 @@ namespace InteractML
             return model;
         }
 
+        // temp bool to ensure run button doesn't re-trigger - Bryan
+        private bool b_tempRun = false;
+        private bool b_tempTrain = false;
+
         public void UpdateLogic()
         {
             //Set Learning Type 
@@ -393,11 +397,40 @@ namespace InteractML
             //KeyboardInput();
             if (Input.GetKeyDown(KeyCode.P))
             {
+                Debug.Log("RUN MODEL BOOL: " + GUItoIML.b_runModel);
                 ToggleRunning();
             }
+
+            bool b_currentRun = GUItoIML.b_runModel;
+
+            if (b_currentRun != b_tempRun)
+            {
+                Debug.Log("RUN MODEL BOOL: " + GUItoIML.b_runModel);
+                ToggleRunning();
+            }
+            b_tempRun = b_currentRun;
+
             if (Input.GetKeyDown(KeyCode.T))
             {
                 TrainModel();
+            }
+
+            bool b_currentTrain = GUItoIML.b_trainModel;
+
+            /*if (b_currentTrain != b_tempTrain)
+            {
+                Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
+                TrainModel();
+                //GUItoIML.b_trainModel = false;
+                //Debug.Log("TRAIN: " + GUItoIML.b_trainModel);
+
+            }
+            b_tempTrain = b_currentTrain;*/
+
+            // Keyboard shortcut to reset model - Bryan
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                ResetModel();
             }
 
             //Check if live data input matches training examples 
