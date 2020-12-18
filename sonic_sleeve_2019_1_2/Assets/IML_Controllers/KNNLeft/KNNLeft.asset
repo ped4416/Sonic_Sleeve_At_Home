@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: KNN_Output (Script)
+  m_Name: RepCountHandler (Script)
   m_EditorClassIdentifier: 
   id: 3aae02aa-b2a4-47b9-9208-af61b45bf479
   graph: {fileID: 11400000}
@@ -91,21 +91,9 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 15026
+  ScriptHashCode: -2556
   m_PortsPerFieldInfo:
-    m_keys:
-    - _fieldName: i_knnOutputValue
-      _node: {fileID: -781126535327675811}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: 8174679739403498299}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
+    m_keys: []
   CreatedDuringPlaymode: 0
 --- !u!114 &-1599874515576188
 MonoBehaviour:
@@ -211,6 +199,7 @@ MonoBehaviour:
   - {fileID: 5449093109136495618}
   - {fileID: -1599874515576188}
   - {fileID: -781126535327675811}
+  - {fileID: 6227082251186271982}
   SceneComponent: {fileID: 0}
 --- !u!114 &2090072441207960850
 MonoBehaviour:
@@ -345,6 +334,50 @@ MonoBehaviour:
   RecordTime: -1
   EnableKeyboardControl: 0
   RecordDataKey: 0
+--- !u!114 &6227082251186271982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
+  m_Name: KNN_Output (Script)
+  m_EditorClassIdentifier: 
+  id: 31becd7c-ec0c-40ba-b068-a2061240765a
+  graph: {fileID: 11400000}
+  position: {x: 0, y: 0}
+  ports:
+    keys:
+    - i_knnOutputValue
+    values:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 6227082251186271982}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  DevMode: 0
+  IsInitialized: 1
+  m_ScriptInternal: {fileID: 0}
+  ScriptHashCode: -3712
+  m_PortsPerFieldInfo:
+    m_keys:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 6227082251186271982}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  CreatedDuringPlaymode: 0
 --- !u!114 &8174679739403498299
 MonoBehaviour:
   m_ObjectHideFlags: 0

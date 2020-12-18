@@ -257,11 +257,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 1
+  m_Value: 0
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 1
+  m_UserInput: 0
   int_switch: 1
 --- !u!114 &5449093109136495618
 MonoBehaviour:
