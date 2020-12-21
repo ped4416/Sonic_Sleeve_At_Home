@@ -54,8 +54,8 @@ public class MLPNodeAccess : MonoBehaviour
         configNode.ResetModel();
     }
 
-    /*public void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         imlComponent.SaveAllModels();
-    }*/
+    }
 }
