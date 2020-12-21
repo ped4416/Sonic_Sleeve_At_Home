@@ -127,7 +127,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 0
-  m_NumExamplesTrainedOn: 40
+  m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 1
@@ -367,7 +367,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 15418
+  GOHashCode: 15426
   CreatedDuringPlaymode: 0
 --- !u!114 &6312257469752930140
 MonoBehaviour:

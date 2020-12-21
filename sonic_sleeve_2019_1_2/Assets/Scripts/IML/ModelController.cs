@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class IMLtoGUI : MonoBehaviour
+public class ModelController : MonoBehaviour
 {
     public GameObject knnRight;
     public GameObject knnLeft;
@@ -34,6 +34,8 @@ public class IMLtoGUI : MonoBehaviour
         elbowOn = elbowEnableRecordButton.GetComponent<ToggleSwitch>().bOnOffSwitch;
         shoulderOn = shoulderEnableRecordButton.GetComponent<ToggleSwitch>().bOnOffSwitch;
         trunkOn = trunkEnableRecordButton.GetComponent<ToggleSwitch>().bOnOffSwitch;
+
+        ModelOutput();
     }
 
     public void RecordData()
@@ -92,5 +94,68 @@ public class IMLtoGUI : MonoBehaviour
         }
 
         if (trunkOn) trunkLeaning.GetComponent<MLPNodeAccess>().MLPTrain();
+    }
+
+    public void RunModels()
+    {
+        if (i_arm == 0)
+        {
+            if (knnOn) knnRight.GetComponent<KNNNodeAccess>().KNNRun();
+            if (elbowOn) shoulderAbductionRight.GetComponent<MLPNodeAccess>().MLPRun();
+            if (shoulderOn) shoulderElevationRight.GetComponent<MLPNodeAccess>().MLPRun();
+        }
+        else if (i_arm == 1)
+        {
+            if (knnOn) knnLeft.GetComponent<KNNNodeAccess>().KNNRun();
+            if (elbowOn) shoulderAbductionLeft.GetComponent<MLPNodeAccess>().MLPRun();
+            if (shoulderOn) shoulderElevationLeft.GetComponent<MLPNodeAccess>().MLPRun();
+        }
+
+        if (trunkOn) trunkLeaning.GetComponent<MLPNodeAccess>().MLPRun();
+    }
+
+    void ModelOutput()
+    {
+        if (i_arm == 0)
+        {
+            if (knnOn)
+            {
+                knnRight.GetComponent<KNN_Output>().enabled = true;
+                knnLeft.GetComponent<KNN_Output>().enabled = false;
+            }
+
+            if (elbowOn)
+            {
+                shoulderAbductionRight.GetComponent<ShoulderAbductionOutput>().enabled = true;
+                shoulderAbductionLeft.GetComponent<ShoulderAbductionOutput>().enabled = false;
+            }
+
+            if (shoulderOn)
+            {
+                shoulderElevationRight.GetComponent<ShoulderElevationOutput>().enabled = true;
+                shoulderElevationLeft.GetComponent<ShoulderElevationOutput>().enabled = false;
+            }
+
+        }
+        else if (i_arm == 1)
+        {
+            if (knnOn)
+            {
+                knnRight.GetComponent<KNN_Output>().enabled = false;
+                knnLeft.GetComponent<KNN_Output>().enabled = true;
+            }
+
+            if (elbowOn)
+            {
+                shoulderAbductionRight.GetComponent<ShoulderAbductionOutput>().enabled = false;
+                shoulderAbductionLeft.GetComponent<ShoulderAbductionOutput>().enabled = true;
+            }
+
+            if (shoulderOn)
+            {
+                shoulderElevationRight.GetComponent<ShoulderElevationOutput>().enabled = false;
+                shoulderElevationLeft.GetComponent<ShoulderElevationOutput>().enabled = true;
+            }
+        }  
     }
 }

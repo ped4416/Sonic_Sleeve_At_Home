@@ -96,7 +96,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 15418
+  GOHashCode: 15426
   CreatedDuringPlaymode: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -119,7 +119,7 @@ MonoBehaviour:
   - {fileID: 5698146144055646407}
   - {fileID: 5241940595933832001}
   - {fileID: 1383067374379658499}
-  - {fileID: 2132538595147960852}
+  - {fileID: 5471881311109003093}
   SceneComponent: {fileID: 0}
 --- !u!114 &1383067374379658499
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: i_knnOutputValue
-        node: {fileID: 2132538595147960852}
+        node: {fileID: 5471881311109003093}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -212,56 +212,6 @@ MonoBehaviour:
   GameObjMissing: 0
   state: 1
   GOHashCode: 14454
-  CreatedDuringPlaymode: 0
---- !u!114 &2132538595147960852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: KNN_Output (Script)
-  m_EditorClassIdentifier: 
-  id: 68763096-e173-48f2-b110-afef40e27537
-  graph: {fileID: 11400000}
-  position: {x: 1528, y: -184}
-  ports:
-    keys:
-    - i_knnOutputValue
-    values:
-    - _fieldName: i_knnOutputValue
-      _node: {fileID: 2132538595147960852}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: 1383067374379658499}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  DevMode: 0
-  IsInitialized: 1
-  m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14790
-  m_PortsPerFieldInfo:
-    m_keys:
-    - _fieldName: i_knnOutputValue
-      _node: {fileID: 2132538595147960852}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: 1383067374379658499}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
   CreatedDuringPlaymode: 0
 --- !u!114 &5241940595933832001
 MonoBehaviour:
@@ -336,7 +286,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 1
-  m_NumExamplesTrainedOn: 79
+  m_NumExamplesTrainedOn: 72
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
   m_LearningType: 0
@@ -347,6 +297,56 @@ MonoBehaviour:
   RunOnAwake: 0
   matchLiveDataInputs: 1
   learningChoice: 0
+--- !u!114 &5471881311109003093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
+  m_Name: KNN_Output (Script)
+  m_EditorClassIdentifier: 
+  id: efcd5e16-5d03-4c94-8abf-41176ff60c6e
+  graph: {fileID: 11400000}
+  position: {x: 1480, y: -184}
+  ports:
+    keys:
+    - i_knnOutputValue
+    values:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 5471881311109003093}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 1383067374379658499}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  DevMode: 0
+  IsInitialized: 1
+  m_ScriptInternal: {fileID: 0}
+  ScriptHashCode: -4110
+  m_PortsPerFieldInfo:
+    m_keys:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 5471881311109003093}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 1383067374379658499}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  CreatedDuringPlaymode: 0
 --- !u!114 &5698146144055646407
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -299,7 +299,7 @@ MonoBehaviour:
   - 0
   DelayedPredictedOutput:
   - 0
-  m_NumExamplesTrainedOn: 40
+  m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 03000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 1

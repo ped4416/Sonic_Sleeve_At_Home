@@ -1,55 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7158617172260214869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
-  m_Name: KNN_Output (Script)
-  m_EditorClassIdentifier: 
-  id: 6b53eca3-fc6a-442d-b8b6-e9ce2281b893
-  graph: {fileID: 11400000}
-  position: {x: 1368, y: 24}
-  ports:
-    keys:
-    - i_knnOutputValue
-    values:
-    - _fieldName: i_knnOutputValue
-      _node: {fileID: -7158617172260214869}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: 8174679739403498299}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  DevMode: 0
-  IsInitialized: 1
-  m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14790
-  m_PortsPerFieldInfo:
-    m_keys:
-    - _fieldName: i_knnOutputValue
-      _node: {fileID: -7158617172260214869}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: m_Out
-        node: {fileID: 8174679739403498299}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  CreatedDuringPlaymode: 0
 --- !u!114 &-2738212221435848212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +129,7 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 1
+  - 0
   m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
@@ -210,7 +160,7 @@ MonoBehaviour:
   - {fileID: 8174679739403498299}
   - {fileID: 5449093109136495618}
   - {fileID: -1599874515576188}
-  - {fileID: -7158617172260214869}
+  - {fileID: 7747027966702518032}
   SceneComponent: {fileID: 0}
 --- !u!114 &2090072441207960850
 MonoBehaviour:
@@ -345,6 +295,56 @@ MonoBehaviour:
   RecordTime: -1
   EnableKeyboardControl: 0
   RecordDataKey: 0
+--- !u!114 &7747027966702518032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e955aaefcc0cc3438b670a24cf66a3a, type: 3}
+  m_Name: KNN_Output (Script)
+  m_EditorClassIdentifier: 
+  id: b9d29198-9e99-4ffa-b5d7-1f57211bff47
+  graph: {fileID: 11400000}
+  position: {x: 1384, y: 24}
+  ports:
+    keys:
+    - i_knnOutputValue
+    values:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 7747027966702518032}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 8174679739403498299}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  DevMode: 0
+  IsInitialized: 1
+  m_ScriptInternal: {fileID: 0}
+  ScriptHashCode: -4026
+  m_PortsPerFieldInfo:
+    m_keys:
+    - _fieldName: i_knnOutputValue
+      _node: {fileID: 7747027966702518032}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: m_Out
+        node: {fileID: 8174679739403498299}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  CreatedDuringPlaymode: 0
 --- !u!114 &8174679739403498299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: i_knnOutputValue
-        node: {fileID: -7158617172260214869}
+        node: {fileID: 7747027966702518032}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
