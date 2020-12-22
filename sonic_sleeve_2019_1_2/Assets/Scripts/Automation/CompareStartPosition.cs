@@ -17,6 +17,7 @@ public class CompareStartPosition : MonoBehaviour
     /*public On10SecTimerEndListener tenSecTimerEndListener;*/
     public OnPositionFound positionFound;
     public GameObject startPosThreshInput;
+    public GameObject startPosFeedback;
 
     private List<Vector3> l_realTimePosition = new List<Vector3>();
     private List<Vector3> l_referencePosition = new List<Vector3>();
@@ -24,6 +25,7 @@ public class CompareStartPosition : MonoBehaviour
     private bool b_singleCheck;
     private bool b_autoCheck;
     private string s_startPosThresh;
+    private string s_feedbackText;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,8 @@ public class CompareStartPosition : MonoBehaviour
         while(b_autoCheck)
         {
             print("Please wait: checking start position");
+            s_feedbackText = "Please wait: checking start position";
+            startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText; 
             ComparePositions();
             yield return new WaitForSeconds(2);
         }
@@ -105,6 +109,9 @@ public class CompareStartPosition : MonoBehaviour
         if (f_totalDist < f_startPosThresh)
         {
             print("Correct Position");
+            s_feedbackText = "Correct Position";
+            startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
+
             if (!b_singleCheck)
             {
                 b_autoCheck = false;
@@ -119,36 +126,53 @@ public class CompareStartPosition : MonoBehaviour
         else
         {
             print("Wrong Position: Please adjust your sitting position");
+            s_feedbackText = "Wrong Position: Please adjust your sitting position";
+            startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
+
             Vector3 v_neckDiff = referenceNeck - currentNeck;
             print("Diff X: " + v_neckDiff.x + " || Diff Y: " + v_neckDiff.y + " || Diff Z: " + v_neckDiff.z);
+            s_feedbackText = "Diff X: " + v_neckDiff.x + " || Diff Y: " + v_neckDiff.y + " || Diff Z: " + v_neckDiff.z;
+            startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
 
             float f_largestComponentVal = Mathf.Max(Mathf.Abs(v_neckDiff.x), Mathf.Max(Mathf.Abs(v_neckDiff.y), Mathf.Abs(v_neckDiff.z)));
             
             if (v_neckDiff.x > 0 && Mathf.Abs(v_neckDiff.x) == f_largestComponentVal)
             {
                 print("Move Left");
+                s_feedbackText = "Move Left";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
             else if (v_neckDiff.x < 0 && Mathf.Abs(v_neckDiff.x) == f_largestComponentVal)
             {
                 print("Move Right");
+                s_feedbackText = "Move Right";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
 
             if(v_neckDiff.y > 0 && Mathf.Abs(v_neckDiff.y) == f_largestComponentVal)
             {
                 print("Move Up");
+                s_feedbackText = "Move Up";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
             else if(v_neckDiff.y < 0 && Mathf.Abs(v_neckDiff.y) == f_largestComponentVal)
             {
                 print("Move Down");
+                s_feedbackText = "Move Down";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
 
             if (v_neckDiff.z > 0 && Mathf.Abs(v_neckDiff.z) == f_largestComponentVal)
             {
                 print("Move Back");
+                s_feedbackText = "Move Back";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
             else if (v_neckDiff.z < 0 && Mathf.Abs(v_neckDiff.z) == f_largestComponentVal)
             {
                 print("Move Forward");
+                s_feedbackText = "Move Forward";
+                startPosFeedback.GetComponent<TextMeshProUGUI>().text = s_feedbackText;
             }
         }
 

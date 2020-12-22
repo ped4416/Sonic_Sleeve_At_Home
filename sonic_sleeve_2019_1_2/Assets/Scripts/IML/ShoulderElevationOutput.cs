@@ -27,8 +27,8 @@ public class ShoulderElevationOutput : MonoBehaviour
     {
         f_prevVal = 0.0f;
 
-        f_initialThresh = PlayerPrefs.GetFloat("Shoulder Elevation Threshold"); // initial value saved from previous runtime
-        threshSlider.GetComponent<Slider>().value = f_initialThresh;
+        /*f_initialThresh = PlayerPrefs.GetFloat("Shoulder Elevation Threshold"); // initial value saved from previous runtime
+        threshSlider.GetComponent<Slider>().value = f_initialThresh;*/
 
         errorTimerCheck.b_isActive = false;
     }
@@ -40,10 +40,12 @@ public class ShoulderElevationOutput : MonoBehaviour
 
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
-        if (GUItoIML.b_runModel)
+
+        if(GUItoIML.b_runModel)
         {
             outputSlider.GetComponent<Slider>().value = f_currentVal;
         }
+        
 
         //if (f_currentVal != f_prevVal) print("Shoulder Elevation Output = " + f_currentVal);
 
@@ -78,8 +80,8 @@ public class ShoulderElevationOutput : MonoBehaviour
         errorTimerReset.Raise();
     }
 
-    private void OnApplicationQuit()
+   /* private void OnApplicationQuit()
     {
         PlayerPrefs.SetFloat("Shoulder Elevation Threshold", f_threshold);
-    }
+    }*/
 }

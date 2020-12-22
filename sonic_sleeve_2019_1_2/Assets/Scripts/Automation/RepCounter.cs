@@ -5,7 +5,7 @@ using TMPro;
 
 public class RepCounter : MonoBehaviour
 {
-    public KNN_Output i_classificationValue;
+    public GameObject KNN_Output;
     public int i_repCount;
 
     private int i_prevVal;
@@ -25,9 +25,9 @@ public class RepCounter : MonoBehaviour
     void Update()
     {
         if(b_active)
-        { 
+        {
             int i_currentRep = i_repCount;
-            int i_currentVal = i_classificationValue.i_knnOutputValue;
+            int i_currentVal = KNN_Output.GetComponent<ModelController>().i_knnVal;
             if (i_currentVal == 1 && i_prevVal == 2)
             {
                 i_repCount += 1;

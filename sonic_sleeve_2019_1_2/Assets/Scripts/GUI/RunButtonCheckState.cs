@@ -20,8 +20,9 @@ public class RunButtonCheckState : MonoBehaviour
     {
         if(!b_isRunning)
         {
-            imlControls.GetComponent<IML_InterfaceControls>().RunModel();
+            imlControls.GetComponent<ModelController>().RunModels();
             changeText.GetComponent<RunStopChangeText>().changeText();
+            GUItoIML.b_runModel = true;
             b_isRunning = !b_isRunning;
         }
     }

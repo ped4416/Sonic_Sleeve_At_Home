@@ -397,25 +397,25 @@ namespace InteractML
             //KeyboardInput();
             if (Input.GetKeyDown(KeyCode.P))
             {
-                Debug.Log("RUN MODEL BOOL: " + GUItoIML.b_runModel);
+                //Debug.Log("RUN MODEL BOOL: " + GUItoIML.b_runModel);
                 ToggleRunning();
             }
 
-            bool b_currentRun = GUItoIML.b_runModel;
+            /*bool b_currentRun = GUItoIML.b_runModel;
 
             if (b_currentRun != b_tempRun)
             {
                 Debug.Log("RUN MODEL BOOL: " + GUItoIML.b_runModel);
                 ToggleRunning();
             }
-            b_tempRun = b_currentRun;
+            b_tempRun = b_currentRun;*/
 
             if (Input.GetKeyDown(KeyCode.T))
             {
                 TrainModel();
             }
 
-            bool b_currentTrain = GUItoIML.b_trainModel;
+            //bool b_currentTrain = GUItoIML.b_trainModel;
 
             /*if (b_currentTrain != b_tempTrain)
             {

@@ -26,8 +26,8 @@ public class TrunkLeaningOutput : MonoBehaviour
     {
         f_prevVal = 0.0f;
 
-        f_initialThresh = PlayerPrefs.GetFloat("Trunk Leaning Threshold"); // value set from last runtime
-        threshSlider.GetComponent<Slider>().value = f_initialThresh;
+        /*f_initialThresh = PlayerPrefs.GetFloat("Trunk Leaning Threshold"); // value set from last runtime
+        threshSlider.GetComponent<Slider>().value = f_initialThresh;*/
 
         errorTimerCheck.b_isActive = false;
     }
@@ -39,11 +39,13 @@ public class TrunkLeaningOutput : MonoBehaviour
 
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
-        if (GUItoIML.b_runModel)
+
+        if(GUItoIML.b_runModel)
         {
             outputSlider.GetComponent<Slider>().value = f_currentVal;
         }
-
+        
+        
         //if (f_currentVal != f_prevVal) print("Trunk Leaning Output = " + f_currentVal);
 
         if (f_currentVal >= f_threshold && f_prevVal < f_threshold)
@@ -77,8 +79,8 @@ public class TrunkLeaningOutput : MonoBehaviour
         errorTimerReset.Raise();
     }
 
-    private void OnApplicationQuit()
+    /*private void OnApplicationQuit()
     {
         PlayerPrefs.SetFloat("Trunk Leaning Threshold", f_threshold);
-    }
+    }*/
 }

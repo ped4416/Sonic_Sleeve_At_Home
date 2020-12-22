@@ -35,12 +35,12 @@ public class MLPNodeAccess : MonoBehaviour
         configNode.ToggleRunning();
     }
 
-    public void MLPTargetValue(float targetVal)
+    /*public void MLPTargetValue(float targetVal)
     {
         trainingNode = gameObject.GetComponent<IMLComponent>().TrainingExamplesNodesList[0];
         FloatNode floatNode = (FloatNode)trainingNode.TargetValues[0];
         floatNode.m_UserInput = targetVal;
-    }
+    }*/
 
     public void MLPDeleteTrainingExamples()
     {

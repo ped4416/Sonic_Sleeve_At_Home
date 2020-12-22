@@ -18,6 +18,8 @@ public class ModelController : MonoBehaviour
     public GameObject trunkEnableRecordButton;
     public GameObject shoulderEnableRecordButton;
     public GameObject knnTargetValDropdown;
+    public int i_knnVal;
+    public bool b_modelIsRunning;
 
     private int i_arm;
     private int i_targetVal;
@@ -26,6 +28,10 @@ public class ModelController : MonoBehaviour
     private bool shoulderOn;
     private bool trunkOn;
 
+    private void Start()
+    {
+        b_modelIsRunning = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +42,15 @@ public class ModelController : MonoBehaviour
         trunkOn = trunkEnableRecordButton.GetComponent<ToggleSwitch>().bOnOffSwitch;
 
         ModelOutput();
+
+        if(i_arm == 0)
+        {
+            i_knnVal = knnRight.GetComponent<KNN_Output>().i_knnOutputValue;
+        }
+        else if(i_arm == 1)
+        {
+            i_knnVal = knnLeft.GetComponent<KNN_Output>().i_knnOutputValue;
+        }
     }
 
     public void RecordData()
@@ -56,7 +71,7 @@ public class ModelController : MonoBehaviour
         if (trunkOn) trunkLeaning.GetComponent<MLPNodeAccess>().MLPRecord();
     }
 
-    public void UpdateKNNTargetValue()
+    /*public void UpdateKNNTargetValue()
     {
         i_targetVal = knnTargetValDropdown.GetComponent<TMP_Dropdown>().value;
         if (i_targetVal == 0)
@@ -76,7 +91,7 @@ public class ModelController : MonoBehaviour
         {
             knnLeft.GetComponent<KNNNodeAccess>().KNNTargetValue(i_targetVal);
         }
-    }
+    }*/
 
     public void TrainModels()
     {
@@ -157,5 +172,46 @@ public class ModelController : MonoBehaviour
                 shoulderElevationLeft.GetComponent<ShoulderElevationOutput>().enabled = true;
             }
         }  
+    }
+
+    public void ClearElbowTrainingExamples()
+    {
+        if (i_arm == 0)
+        {
+            shoulderAbductionRight.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        }
+        else if (i_arm == 1)
+        {
+            shoulderAbductionLeft.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        }
+    }
+
+    public void ClearShoulderTrainingExamples()
+    {
+        if (i_arm == 0)
+        {
+            shoulderElevationRight.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        }
+        else if (i_arm == 1)
+        {
+            shoulderElevationLeft.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        }
+    }
+
+    public void ClearTrunkTrainingExamples()
+    {
+        trunkLeaning.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+    }
+
+    public void ClearKNNTrainingExamples()
+    {
+        if (i_arm == 0)
+        {
+            knnRight.GetComponent<KNNNodeAccess>().KNNDeleteTrainingExamples();
+        }
+        else if (i_arm == 1)
+        {
+            knnLeft.GetComponent<KNNNodeAccess>().KNNDeleteTrainingExamples();
+        }
     }
 }

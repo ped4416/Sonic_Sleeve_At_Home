@@ -348,14 +348,14 @@ namespace InteractML
                 ToggleCollectExamples();
             }
 
-            bool b_currentRecord = GUItoIML.b_recordData;
+            /*bool b_currentRecord = GUItoIML.b_recordData;
 
             if (b_currentRecord != b_tempRecord)
             {
                 //Debug.Log("RECORD DATA BOOL: " + GUItoIML.b_recordData);
                 ToggleCollectExamples();
             }
-            b_tempRecord = b_currentRecord;
+            b_tempRecord = b_currentRecord;*/
 
             // Added keyboard shortcut to clear training examples - Bryan
             if (Input.GetKeyDown(KeyCode.D))

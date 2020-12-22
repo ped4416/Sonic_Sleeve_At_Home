@@ -35,12 +35,12 @@ public class KNNNodeAccess : MonoBehaviour
         configNode.ToggleRunning();
     }
 
-    public void KNNTargetValue(int targetVal)
+    /*public void KNNTargetValue(int targetVal)
     {
         trainingNode = gameObject.GetComponent<IMLComponent>().TrainingExamplesNodesList[0];
         IntegerNode intNode = (IntegerNode)trainingNode.TargetValues[0];
         intNode.m_UserInput = targetVal;
-    }
+    }*/
 
     public void KNNDeleteTrainingExamples()
     {
