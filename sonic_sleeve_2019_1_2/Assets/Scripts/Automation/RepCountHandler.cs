@@ -81,14 +81,14 @@ public class RepCountHandler : MonoBehaviour
             }
             i_prevRep = i_currentRep;
 
-            if (repCounter.i_repCount == 10 && blockCount.i_value < 5)
+            if (repCounter.i_repCount > 10 && blockCount.i_value < 5)
             {
                 tenReps.Raise();
                 repTimerStop.Raise();
                 repTimerReset.Raise();
                 b_startPosition = false;
             }
-            else if(repCounter.i_repCount == 10 && blockCount.i_value == 5)
+            else if(repCounter.i_repCount > 10 && blockCount.i_value == 5)
             {
                 fiftyReps.Raise();
                 repTimerStop.Raise();

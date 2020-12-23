@@ -376,11 +376,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0
+  m_Value: 0.032586902
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0
+  m_UserInput: 0.032586902
   float_switch: 1
 --- !u!114 &9047479612705423195
 MonoBehaviour:

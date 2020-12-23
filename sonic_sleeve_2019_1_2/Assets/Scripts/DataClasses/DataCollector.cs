@@ -33,13 +33,13 @@ public class DataCollector : MonoBehaviour
         }
     }
 
-    void AddData(string id, string date, string condition, double rep_ms, double rep_error_ms, float neck_x_raw, float neck_y_raw, float neck_z_raw, float neck_quart_w_raw, float neck_quart_x_raw, float neck_quart_y_raw, float neck_quart_z_raw)
+    void AddData(string id, string date, string condition, int rep_n, double rep_ms, bool is_in_error, double rep_error_ms, float neck_x_raw, float neck_y_raw, float neck_z_raw, float neck_quart_w_raw, float neck_quart_x_raw, float neck_quart_y_raw, float neck_quart_z_raw)
     {
         try
         {
             using (StreamWriter file = new StreamWriter(@filepath, true))
             {
-                file.WriteLine(id + ", " + date + ", " + condition + ", " + rep_ms + ", " + rep_error_ms + ", " + neck_x_raw + ", " + neck_y_raw + ", " + neck_z_raw + ", " + neck_quart_w_raw + ", " + neck_quart_x_raw + ", " + neck_quart_y_raw + ", " + neck_quart_z_raw);
+                file.WriteLine(id + ", " + date + ", " + condition + ", " + rep_n + ", " + rep_ms + ", " + is_in_error + ", " + rep_error_ms + ", " + neck_x_raw + ", " + neck_y_raw + ", " + neck_z_raw + ", " + neck_quart_w_raw + ", " + neck_quart_x_raw + ", " + neck_quart_y_raw + ", " + neck_quart_z_raw);
             }
         }
         catch(Exception ex)
@@ -51,6 +51,6 @@ public class DataCollector : MonoBehaviour
     public void WriteDataToFile()
     {
         //AddData("test", "27/11/2020", dataTracker.e_condition.ToString(), dataTracker.rep_ms, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
-        AddData("", "", dataTracker.e_condition.ToString(), dataTracker.rep_ms, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+        AddData("", "", dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
     }
 }

@@ -17,6 +17,7 @@ public class ShoulderAbductionOutput : MonoBehaviour
     public GameObject outputSlider;
     public GameObject threshSlider;
     public GameObject audioSource;
+    public DataTracker dataTracker;
 
     private float f_prevVal;
     private float f_initialThresh;
@@ -30,6 +31,7 @@ public class ShoulderAbductionOutput : MonoBehaviour
         //threshSlider.GetComponent<Slider>().value = f_initialThresh;
 
         errorTimerCheck.b_isActive = false;
+        dataTracker.is_in_error = false;
     }
 
     // Update is called once per frame
@@ -54,6 +56,7 @@ public class ShoulderAbductionOutput : MonoBehaviour
                 print("Shoulder abduction adjustment needed");
                 audioSource.GetComponent<AudioSource>().volume = 0.0f;
                 errorTimerStart.Raise();
+                dataTracker.is_in_error = true;
                 errorTimerCheck.b_isActive = true;
             }
             
@@ -64,6 +67,7 @@ public class ShoulderAbductionOutput : MonoBehaviour
             {
                 audioSource.GetComponent<AudioSource>().volume = 1.0f;
                 errorTimerPause.Raise();
+                dataTracker.is_in_error = false;
                 errorTimerCheck.b_isActive = false;
             }
             

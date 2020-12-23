@@ -6,6 +6,7 @@ using TMPro;
 public class RepCounter : MonoBehaviour
 {
     public GameObject KNN_Output;
+    public DataTracker dataTracker;
     public int i_repCount;
 
     private int i_prevVal;
@@ -16,9 +17,10 @@ public class RepCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        i_repCount = 0;
+        i_repCount = 1;
         i_prevVal = 0;
-        i_prevRep = 0;
+        i_prevRep = 1;
+        dataTracker.rep_n = 1;
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class RepCounter : MonoBehaviour
                 i_repCount += 1;
             }
             if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount);
+            dataTracker.rep_n = i_repCount;
             i_prevRep = i_currentRep;
             i_prevVal = i_currentVal;
             intCurrentRepText.text = i_repCount.ToString("F0");
@@ -42,8 +45,8 @@ public class RepCounter : MonoBehaviour
     public void Begin()
     {
         b_active = true;
-        i_repCount = 0;
-        i_prevRep = 0;
+        i_repCount = 1;
+        i_prevRep = 1;
     }
 
     public void End()

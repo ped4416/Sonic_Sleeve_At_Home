@@ -2932,6 +2932,7 @@ MonoBehaviour:
   outputSlider: {fileID: 439482022}
   threshSlider: {fileID: 1055311187}
   audioSource: {fileID: 963194225}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &250071858
 GameObject:
   m_ObjectHideFlags: 0
@@ -9715,6 +9716,7 @@ MonoBehaviour:
   outputSlider: {fileID: 497345238}
   threshSlider: {fileID: 290957127}
   audioSource: {fileID: 963194225}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &786797240
 GameObject:
   m_ObjectHideFlags: 0
@@ -9925,6 +9927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KNN_Output: {fileID: 1309021029}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
   i_repCount: 0
   intCurrentRepText: {fileID: 1146657899}
 --- !u!114 &786797249
@@ -10311,6 +10314,7 @@ MonoBehaviour:
   outputSlider: {fileID: 137238741}
   threshSlider: {fileID: 590691781}
   audioSource: {fileID: 963194225}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &803667022
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,7 +12089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1024326948
 Transform:
   m_ObjectHideFlags: 0
@@ -14016,6 +14020,7 @@ MonoBehaviour:
   outputSlider: {fileID: 439482022}
   threshSlider: {fileID: 1055311187}
   audioSource: {fileID: 963194225}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &1126659256
 GameObject:
   m_ObjectHideFlags: 0
@@ -24387,6 +24392,7 @@ MonoBehaviour:
   outputSlider: {fileID: 137238741}
   threshSlider: {fileID: 590691781}
   audioSource: {fileID: 963194225}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &2101763463
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,5 +18,7 @@ public class DataTracker : ScriptableObject
     }
 
     public Condition e_condition;
+    public int rep_n;
+    public bool is_in_error;
 
 }
