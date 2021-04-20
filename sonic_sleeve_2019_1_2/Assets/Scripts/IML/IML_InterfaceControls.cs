@@ -57,7 +57,7 @@ public class IML_InterfaceControls : MonoBehaviour
     {
         b_run = !b_run;
         GUItoIML.b_runModel = b_run;
-        print("RUN MODEL");
+        print("RUN MODEL =" + b_run);
     }
 
     public void SetBounds()

@@ -18,6 +18,7 @@ public class TrunkLeaningOutput : MonoBehaviour
     public GameObject threshSlider;
     public GameObject audioSource;
     public DataTracker dataTracker;
+    public RepTimerActive repTimerActive;
 
     private float f_prevVal;
     private float f_initialThresh;
@@ -56,9 +57,13 @@ public class TrunkLeaningOutput : MonoBehaviour
             {
                 print("Trunk adjustment needed");
                 audioSource.GetComponent<AudioSource>().volume = 0.0f;
-                errorTimerStart.Raise();
-                dataTracker.is_in_error = true;
-                errorTimerCheck.b_isActive = true;
+                if(repTimerActive.b_isActive)
+                {
+                    errorTimerStart.Raise();
+                    dataTracker.is_in_error = true;
+                    errorTimerCheck.b_isActive = true;
+                }
+                
             }
             
         }

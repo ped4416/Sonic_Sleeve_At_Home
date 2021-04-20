@@ -19,6 +19,7 @@ public class ShoulderElevationOutput : MonoBehaviour
     public GameObject threshSlider;
     public GameObject audioSource;
     public DataTracker dataTracker;
+    public RepTimerActive repTimerActive;
 
     private float f_prevVal;
     private float f_initialThresh;
@@ -57,9 +58,13 @@ public class ShoulderElevationOutput : MonoBehaviour
             {
                 print("Shoulder elevation adjustment needed");
                 audioSource.GetComponent<AudioSource>().volume = 0.0f;
-                errorTimerStart.Raise();
-                dataTracker.is_in_error = true;
-                errorTimerCheck.b_isActive = true;
+                if(repTimerActive.b_isActive)
+                {
+                    errorTimerStart.Raise();
+                    dataTracker.is_in_error = true;
+                    errorTimerCheck.b_isActive = true;
+                }
+                
             }
             
         }

@@ -13,6 +13,7 @@ public class RepCountHandler : MonoBehaviour
     public OnRepTimerReset repTimerReset;
     public OnRepTimeWrite repTimeWrite;
     public OnStartMusic startMusic;
+    public RepTimerActive repTimerActive;
 
     private int i_prevRep;
     private bool b_isRest;
@@ -31,6 +32,7 @@ public class RepCountHandler : MonoBehaviour
         b_isRest = true;
         b_10SecTimerEnd = false;
         b_2MinTimerEnd = false;
+        repTimerActive.b_isActive = false;
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class RepCountHandler : MonoBehaviour
         {
             print("Rep Timer Start Block");
             repTimerStart.Raise();
+            repTimerActive.b_isActive = true;
             startMusic.Raise();
             b_isRest = false;
             b_fiveSecTimerEnd = false;
@@ -51,6 +54,7 @@ public class RepCountHandler : MonoBehaviour
         if(b_10SecTimerEnd && b_startPosition)
         {
             repTimerStart.Raise();
+            repTimerActive.b_isActive = true;
             startMusic.Raise();
             b_10SecTimerEnd = false;
             b_isRest = false;
@@ -62,6 +66,7 @@ public class RepCountHandler : MonoBehaviour
         if(b_2MinTimerEnd && b_startPosition)
         {
             repTimerStart.Raise();
+            repTimerActive.b_isActive = true;
             startMusic.Raise();
             b_2MinTimerEnd = false;
             b_isRest = false;
@@ -76,8 +81,10 @@ public class RepCountHandler : MonoBehaviour
             if (i_currentRep != i_prevRep)
             {
                 repTimerStop.Raise();
+                repTimerActive.b_isActive = false;
                 repTimerReset.Raise();
                 repTimerStart.Raise();
+                repTimerActive.b_isActive = true;
             }
             i_prevRep = i_currentRep;
 
@@ -85,6 +92,7 @@ public class RepCountHandler : MonoBehaviour
             {
                 tenReps.Raise();
                 repTimerStop.Raise();
+                repTimerActive.b_isActive = false;
                 repTimerReset.Raise();
                 b_startPosition = false;
             }
@@ -92,6 +100,7 @@ public class RepCountHandler : MonoBehaviour
             {
                 fiftyReps.Raise();
                 repTimerStop.Raise();
+                repTimerActive.b_isActive = false;
                 repTimerReset.Raise();
                 b_startPosition = false;
             }
