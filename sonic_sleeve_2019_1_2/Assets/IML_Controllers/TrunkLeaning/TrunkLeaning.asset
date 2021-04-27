@@ -228,7 +228,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14922
+  GOHashCode: 14982
   CreatedDuringPlaymode: 0
 --- !u!114 &-2689086204555105422
 MonoBehaviour:
@@ -298,7 +298,7 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 1.2714787837973103
+  - 1.2249346821631468
   m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 03000000
   m_ExpectedOutputList: 00000000
@@ -376,11 +376,11 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0
+  m_Value: 1
   m_Out: 0
   ReceivingData: 0
   InputConnected: 0
-  m_UserInput: 0
+  m_UserInput: 1
   float_switch: 1
 --- !u!114 &9080012192809851136
 MonoBehaviour:
@@ -416,7 +416,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 14810
+  ScriptHashCode: 14870
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: f_MLPOutputValue

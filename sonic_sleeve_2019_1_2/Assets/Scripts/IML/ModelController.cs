@@ -186,6 +186,18 @@ public class ModelController : MonoBehaviour
         }
     }
 
+    public void ResetElbowModel()
+    {
+        if(i_arm == 0)
+        {
+            shoulderAbductionRight.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
+        else if(i_arm == 1)
+        {
+            shoulderAbductionLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
+    }
+
     public void ClearShoulderTrainingExamples()
     {
         if (i_arm == 0)
@@ -198,9 +210,26 @@ public class ModelController : MonoBehaviour
         }
     }
 
+    public void ResetShoulderModel()
+    {
+        if(i_arm == 0)
+        {
+            shoulderElevationRight.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
+        else if(i_arm == 1)
+        {
+            shoulderElevationLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
+    }
+
     public void ClearTrunkTrainingExamples()
     {
         trunkLeaning.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+    }
+
+    public void ResetTrunkModel()
+    {
+        trunkLeaning.GetComponent<MLPNodeAccess>().MLPResetModel();
     }
 
     public void ClearKNNTrainingExamples()
@@ -212,6 +241,18 @@ public class ModelController : MonoBehaviour
         else if (i_arm == 1)
         {
             knnLeft.GetComponent<KNNNodeAccess>().KNNDeleteTrainingExamples();
+        }
+    }
+
+    public void ResetKNNModel()
+    {
+        if(i_arm == 0)
+        {
+            knnRight.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
+        else if(i_arm == 1)
+        {
+            knnLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
         }
     }
 }

@@ -12,6 +12,7 @@ public class DataCollector : MonoBehaviour
     private string filepath;
     private DateTime dateTime;
     private string currentTime;
+    private string currentDate;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,9 @@ public class DataCollector : MonoBehaviour
         else
         {
             // filepath needs to save with user ID, condition and timestamp in filename
-            filepath = dataTracker.ID + ".txt";
+            currentTime = GetTime();
+            currentDate = GetDate();
+            filepath = dataTracker.ID + "_" + dataTracker.e_condition + "_" + currentDate + "_" + currentTime + ".txt";
         }
 
         //AddHeader();
@@ -62,8 +65,9 @@ public class DataCollector : MonoBehaviour
     public void WriteDataToFile()
     {
         currentTime = GetTime();
+        currentDate = GetDate();
 
-        AddData(dataTracker.ID, "27/11/2020", currentTime, dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
+        AddData(dataTracker.ID, currentDate, currentTime, dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
         //AddData("", "", dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
     }
 
@@ -74,6 +78,15 @@ public class DataCollector : MonoBehaviour
         string minuteVal = dateTime.Minute.ToString();
         string secondVal = dateTime.Second.ToString();
         string milliVal = dateTime.Millisecond.ToString();
-        return hourVal + " : " + minuteVal + " : " + secondVal + " : " + milliVal;
+        return hourVal + "-" + minuteVal + "-" + secondVal + "-" + milliVal;
+    }
+
+    public string GetDate()
+    {
+        dateTime = DateTime.Now;
+        string day = dateTime.Day.ToString();
+        string month = dateTime.Month.ToString();
+        string year = dateTime.Year.ToString();
+        return day + "-" + month + "-" + year;
     }
 }
