@@ -13,7 +13,7 @@ public class StopwatchTimer : MonoBehaviour
     public void StartTimer()
     {
         stopwatch.Start();
-        //InvokeRepeating("RaiseBang", 0.0f, 0.02f);
+        InvokeRepeating("RaiseBang", 0.0f, 0.02f);
         print("Timer Start********************************");
     }
 

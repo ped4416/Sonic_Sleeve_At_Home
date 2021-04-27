@@ -56,8 +56,13 @@ public class TrunkLeaningOutput : MonoBehaviour
             if(!errorTimerCheck.b_isActive)
             {
                 print("Trunk adjustment needed");
-                audioSource.GetComponent<AudioSource>().volume = 0.0f;
-                if(repTimerActive.b_isActive)
+
+                if (dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
+                {
+                    audioSource.GetComponent<AudioSource>().volume = 0.0f;
+                }
+
+                if (repTimerActive.b_isActive)
                 {
                     errorTimerStart.Raise();
                     dataTracker.is_in_error = true;

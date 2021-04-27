@@ -55,7 +55,12 @@ public class ShoulderAbductionOutput : MonoBehaviour
             if(!errorTimerCheck.b_isActive)
             {
                 print("Shoulder abduction adjustment needed");
-                audioSource.GetComponent<AudioSource>().volume = 0.0f;
+
+                if(dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
+                {
+                    audioSource.GetComponent<AudioSource>().volume = 0.0f;
+                }
+                
                 if(repTimerActive.b_isActive)
                 {
                     errorTimerStart.Raise();

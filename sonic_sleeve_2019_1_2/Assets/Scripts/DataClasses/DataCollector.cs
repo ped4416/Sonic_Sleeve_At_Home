@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using System.Globalization;
 
 public class DataCollector : MonoBehaviour
 {
     public DataTracker dataTracker;
 
     private string filepath;
+    private DateTime dateTime;
+    private string currentTime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +25,7 @@ public class DataCollector : MonoBehaviour
             // filepath needs to save with user ID, condition and timestamp in filename
             filepath = dataTracker.ID + ".txt";
         }
-        
+
         //AddHeader();
     }
 
@@ -41,13 +44,13 @@ public class DataCollector : MonoBehaviour
         }
     }
 
-    void AddData(string id, string date, string condition, int rep_n, double rep_ms, bool is_in_error, double rep_error_ms, float neck_x_raw, float neck_y_raw, float neck_z_raw, float neck_quart_w_raw, float neck_quart_x_raw, float neck_quart_y_raw, float neck_quart_z_raw)
-    {
+    void AddData(string id, string date, string time, string condition, int rep_n, double rep_ms, bool is_in_error, double rep_error_ms, float neck_x_raw, float neck_y_raw, float neck_z_raw, float neck_quart_w_raw, float neck_quart_x_raw, float neck_quart_y_raw, float neck_quart_z_raw)
+    {     
         try
         {
             using (StreamWriter file = new StreamWriter(@filepath, true))
             {
-                file.WriteLine(id + ", " + date + ", " + condition + ", " + rep_n + ", " + rep_ms + ", " + is_in_error + ", " + rep_error_ms + ", " + neck_x_raw + ", " + neck_y_raw + ", " + neck_z_raw + ", " + neck_quart_w_raw + ", " + neck_quart_x_raw + ", " + neck_quart_y_raw + ", " + neck_quart_z_raw);
+                file.WriteLine(id + ", " + date + ", " + time + ", " + condition + ", " + rep_n + ", " + rep_ms + ", " + is_in_error + ", " + rep_error_ms + ", " + neck_x_raw + ", " + neck_y_raw + ", " + neck_z_raw + ", " + neck_quart_w_raw + ", " + neck_quart_x_raw + ", " + neck_quart_y_raw + ", " + neck_quart_z_raw);
             }
         }
         catch(Exception ex)
@@ -58,7 +61,19 @@ public class DataCollector : MonoBehaviour
 
     public void WriteDataToFile()
     {
-        AddData(dataTracker.ID, "27/11/2020", dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
+        currentTime = GetTime();
+
+        AddData(dataTracker.ID, "27/11/2020", currentTime, dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, dataTracker.neck_pos.x, dataTracker.neck_pos.y, dataTracker.neck_pos.z, dataTracker.neck_rot.w, dataTracker.neck_rot.x, dataTracker.neck_rot.y, dataTracker.neck_rot.z);
         //AddData("", "", dataTracker.e_condition.ToString(), dataTracker.rep_n, dataTracker.rep_ms, dataTracker.is_in_error, dataTracker.rep_error_ms, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+    }
+
+    public string GetTime()
+    {
+        dateTime = DateTime.Now;
+        string hourVal = dateTime.Hour.ToString();
+        string minuteVal = dateTime.Minute.ToString();
+        string secondVal = dateTime.Second.ToString();
+        string milliVal = dateTime.Millisecond.ToString();
+        return hourVal + " : " + minuteVal + " : " + secondVal + " : " + milliVal;
     }
 }
