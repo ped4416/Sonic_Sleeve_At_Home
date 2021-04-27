@@ -84,6 +84,7 @@ public class TrunkLeaningOutput : MonoBehaviour
             
         }
 
+        dataTracker.trunk_comp = f_currentVal;
         f_prevVal = f_currentVal;
     }
 

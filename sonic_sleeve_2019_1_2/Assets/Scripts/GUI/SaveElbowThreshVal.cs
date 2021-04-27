@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SaveElbowThreshVal : MonoBehaviour
 {
     public GameObject slider;
+    public DataTracker dataTracker;
 
     public float f_val;
 
@@ -13,6 +14,11 @@ public class SaveElbowThreshVal : MonoBehaviour
     void Awake()
     {
         slider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Shoulder Abduction Threshold");
+    }
+
+    void Update()
+    {
+        dataTracker.cal_elbow = slider.GetComponent<Slider>().value;
     }
 
     public void SaveThreshVal()

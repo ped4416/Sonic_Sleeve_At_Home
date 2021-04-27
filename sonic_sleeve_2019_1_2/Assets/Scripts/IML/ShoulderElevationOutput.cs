@@ -84,6 +84,7 @@ public class ShoulderElevationOutput : MonoBehaviour
             
         }
 
+        dataTracker.shoulder_comp = f_currentVal;
         f_prevVal = f_currentVal;
     }
 

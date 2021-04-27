@@ -3701,6 +3701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trunkThreshSlider: {fileID: 290957127}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
   f_trunkVal: 0
 --- !u!1 &295194143
 GameObject:
@@ -7112,6 +7113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 590691781}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
   f_val: 0
 --- !u!1 &603520788
 GameObject:
@@ -9544,6 +9546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
   intKnnText: {fileID: 1058266896}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &785956055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9949,6 +9952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
   intKnnText: {fileID: 0}
+  dataTracker: {fileID: 0}
 --- !u!114 &786797248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12734,7 +12738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576b4db8794ac5a438cbc4e639b98665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouderThreshSlider: {fileID: 1055311187}
+  shoulderThreshSlider: {fileID: 1055311187}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
   f_shoulderVal: 0
 --- !u!1 &1057571171
 GameObject:
@@ -21787,6 +21792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
   intKnnText: {fileID: 1058266896}
+  dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
 --- !u!1 &1897296503
 GameObject:
   m_ObjectHideFlags: 0

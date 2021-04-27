@@ -7,13 +7,14 @@ public class RepCountHandler : MonoBehaviour
     public RepCounter repCounter;
     public OnTenReps tenReps;
     public On50Reps fiftyReps;
-    public BlockCount blockCount;
+    //public BlockCount blockCount;
     public OnRepTimerStart repTimerStart;
     public OnRepTimerStop repTimerStop;
     public OnRepTimerReset repTimerReset;
     public OnRepTimeWrite repTimeWrite;
     public OnStartMusic startMusic;
     public RepTimerActive repTimerActive;
+    public DataTracker dataTracker;
 
     private int i_prevRep;
     private bool b_isRest;
@@ -21,12 +22,15 @@ public class RepCountHandler : MonoBehaviour
     private bool b_fiveSecTimerEnd;
     private bool b_10SecTimerEnd;
     private bool b_2MinTimerEnd;
+    private int i_blockNumber;
 
     // Start is called before the first frame update
     void Start()
     {
         i_prevRep = 0;
-        blockCount.i_value = 1;
+        //blockCount.i_value = 1;
+        i_blockNumber = 1;
+
         b_startPosition = false;
         b_fiveSecTimerEnd = false;
         b_isRest = true;
@@ -46,8 +50,10 @@ public class RepCountHandler : MonoBehaviour
             startMusic.Raise();
             b_isRest = false;
             b_fiveSecTimerEnd = false;
-            blockCount.i_value = 1;
-            print("Block Number: " + blockCount.i_value);
+            //blockCount.i_value = 1;
+            i_blockNumber = 1;
+            //print("Block Number: " + blockCount.i_value);
+            print("Block Number: " + i_blockNumber);
             repCounter.Begin();
         }
 
@@ -58,8 +64,10 @@ public class RepCountHandler : MonoBehaviour
             startMusic.Raise();
             b_10SecTimerEnd = false;
             b_isRest = false;
-            blockCount.i_value += 1;
-            print("Block Number: " + blockCount.i_value);
+            //blockCount.i_value += 1;
+            //print("Block Number: " + blockCount.i_value);
+            i_blockNumber += 1;
+            print("Block Number: " + i_blockNumber);
             repCounter.Begin();
         }
 
@@ -70,8 +78,10 @@ public class RepCountHandler : MonoBehaviour
             startMusic.Raise();
             b_2MinTimerEnd = false;
             b_isRest = false;
-            blockCount.i_value = 1;
-            print("Block Number: " + blockCount.i_value);
+            //blockCount.i_value = 1;
+            //print("Block Number: " + blockCount.i_value);
+            i_blockNumber = 1;
+            print("Block Number: " + i_blockNumber);
             repCounter.Begin();
         }
 
@@ -88,7 +98,8 @@ public class RepCountHandler : MonoBehaviour
             }
             i_prevRep = i_currentRep;
 
-            if (repCounter.i_repCount > 10 && blockCount.i_value < 5)
+            //if (repCounter.i_repCount > 10 && blockCount.i_value < 5)
+            if (repCounter.i_repCount > 10 && i_blockNumber < 5)
             {
                 tenReps.Raise();
                 repTimerStop.Raise();
@@ -96,7 +107,8 @@ public class RepCountHandler : MonoBehaviour
                 repTimerReset.Raise();
                 b_startPosition = false;
             }
-            else if(repCounter.i_repCount > 10 && blockCount.i_value == 5)
+            //else if(repCounter.i_repCount > 10 && blockCount.i_value == 5)
+            else if (repCounter.i_repCount > 10 && i_blockNumber == 5)
             {
                 fiftyReps.Raise();
                 repTimerStop.Raise();
@@ -105,6 +117,7 @@ public class RepCountHandler : MonoBehaviour
                 b_startPosition = false;
             }
         }
+        dataTracker.block_n = i_blockNumber;
     }
 
     public void DisableRepCounter()

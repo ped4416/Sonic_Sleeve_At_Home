@@ -52,15 +52,15 @@ public class ShoulderAbductionOutput : MonoBehaviour
 
         if (f_currentVal >= f_threshold && f_prevVal < f_threshold)
         {
-            if(!errorTimerCheck.b_isActive)
+            if (dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
+            {
+                audioSource.GetComponent<AudioSource>().volume = 0.0f;
+            }
+
+            if (!errorTimerCheck.b_isActive)
             {
                 print("Shoulder abduction adjustment needed");
 
-                if(dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
-                {
-                    audioSource.GetComponent<AudioSource>().volume = 0.0f;
-                }
-                
                 if(repTimerActive.b_isActive)
                 {
                     errorTimerStart.Raise();
@@ -72,16 +72,18 @@ public class ShoulderAbductionOutput : MonoBehaviour
         }
         else if (f_currentVal < f_threshold && f_prevVal >= f_threshold)
         {
-            if(errorTimerCheck.b_isActive)
+            audioSource.GetComponent<AudioSource>().volume = 1.0f;
+
+            if (errorTimerCheck.b_isActive)
             {
-                audioSource.GetComponent<AudioSource>().volume = 1.0f;
+                
                 errorTimerPause.Raise();
                 dataTracker.is_in_error = false;
                 errorTimerCheck.b_isActive = false;
             }
-            
         }
 
+        dataTracker.elbow_comp = f_currentVal;
         f_prevVal = f_currentVal;
     }
 

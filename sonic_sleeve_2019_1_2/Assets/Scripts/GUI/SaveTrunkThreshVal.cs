@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SaveTrunkThreshVal : MonoBehaviour
 {
     public GameObject trunkThreshSlider;
+    public DataTracker dataTracker;
 
     public float f_trunkVal;
 
@@ -13,6 +14,11 @@ public class SaveTrunkThreshVal : MonoBehaviour
     void Awake()
     {
         trunkThreshSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("Trunk Leaning Threshold");
+    }
+
+    private void Update()
+    {
+        dataTracker.cal_trunk = trunkThreshSlider.GetComponent<Slider>().value;
     }
 
     public void SaveThreshVal()
