@@ -8,37 +8,37 @@
    },
    "modelSet" : [
       {
-         "inBases" : [ 0, 1.380625307559967, 0 ],
-         "inRanges" : [ 1, 0.058880507946014404, 1 ],
+         "inBases" : [ 0, 1.8509052991867065, 0 ],
+         "inRanges" : [ 1, 0.034294724464416504, 1 ],
          "inputNames" : [ "inputs-1", "inputs-2", "inputs-3" ],
          "modelType" : "Neural Network",
          "nodes" : [
             {
-               "Node 1" : -0.3323552848755445,
-               "Node 2" : 1.5444622575789719,
-               "Node 3" : 1.1311938034912223,
-               "Threshold" : -1.1431624400263893,
+               "Node 1" : -0.65378183271064927,
+               "Node 2" : 2.2494461014754399,
+               "Node 3" : 0.0037297021507983808,
+               "Threshold" : -0.88194755914541523,
                "name" : "Linear Node 0"
             },
             {
                "Attrib inputs-1" : -0.3645229957032195,
-               "Attrib inputs-2" : -0.13785618505492453,
+               "Attrib inputs-2" : 0.60316033777720268,
                "Attrib inputs-3" : 0.46886777112423139,
-               "Threshold" : -0.63642409130996502,
+               "Threshold" : -0.79520832512241846,
                "name" : "Sigmoid Node 1"
             },
             {
                "Attrib inputs-1" : -0.19183294949299673,
-               "Attrib inputs-2" : 2.2739922602365614,
+               "Attrib inputs-2" : 4.8150395166271043,
                "Attrib inputs-3" : -0.3116180239528189,
-               "Threshold" : -0.19430918671526776,
+               "Threshold" : -1.3234491850720584,
                "name" : "Sigmoid Node 2"
             },
             {
                "Attrib inputs-1" : 0.4964613255480087,
-               "Attrib inputs-2" : 1.8286022945348488,
+               "Attrib inputs-2" : 2.4242126392238479,
                "Attrib inputs-3" : 0.22583896321188968,
-               "Threshold" : -0.19598833547721747,
+               "Threshold" : -1.3412833006590621,
                "name" : "Sigmoid Node 3"
             }
          ],

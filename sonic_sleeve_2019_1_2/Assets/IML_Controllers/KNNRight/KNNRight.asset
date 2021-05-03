@@ -56,10 +56,10 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 0
-    - 1.04
-    - 0
-  ReceivingData: 0
+    - -0.10058384
+    - 1.4320866
+    - 1.2229834
+  ReceivingData: 1
 --- !u!114 &-7524054682552693147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 15526
+  GOHashCode: 15528
   CreatedDuringPlaymode: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -169,8 +169,8 @@ MonoBehaviour:
   IsInitialized: 1
   ValueName: 
   m_In: 0
-  m_Value: 0
-  m_Out: 0
+  m_Value: 2
+  m_Out: 2
   ReceivingData: 0
   InputConnected: 1
   m_UserInput: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   GameObjectDataOut: {fileID: 0}
   GameObjMissing: 0
   state: 1
-  GOHashCode: 14550
+  GOHashCode: 14552
   CreatedDuringPlaymode: 0
 --- !u!114 &5241940595933832001
 MonoBehaviour:
@@ -283,9 +283,9 @@ MonoBehaviour:
   - {fileID: -7894367202581229412}
   - {fileID: 9121535258794980976}
   PredictedRapidlibOutput:
-  - 0
+  - 2
   DelayedPredictedOutput:
-  - 1
+  - 2
   m_NumExamplesTrainedOn: 0
   m_ExpectedInputList: 0300000003000000
   m_ExpectedOutputList: 01000000
@@ -331,7 +331,7 @@ MonoBehaviour:
   DevMode: 0
   IsInitialized: 1
   m_ScriptInternal: {fileID: 0}
-  ScriptHashCode: 15928
+  ScriptHashCode: 15930
   m_PortsPerFieldInfo:
     m_keys:
     - _fieldName: i_knnOutputValue
@@ -536,7 +536,7 @@ MonoBehaviour:
   z_switch: 1
   m_PositionExtracted:
     m_Values:
-    - 0
-    - 1.04
-    - 0
-  ReceivingData: 0
+    - -0.13288714
+    - 1.5742947
+    - 1.385965
+  ReceivingData: 1
