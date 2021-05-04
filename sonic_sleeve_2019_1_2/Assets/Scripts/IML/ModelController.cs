@@ -113,6 +113,8 @@ public class ModelController : MonoBehaviour
 
     public void RunModels()
     {
+        b_modelIsRunning = !b_modelIsRunning;
+
         if (i_arm == 0)
         {
             if (knnOn) knnRight.GetComponent<KNNNodeAccess>().KNNRun();
@@ -176,11 +178,11 @@ public class ModelController : MonoBehaviour
 
     public void ClearElbowTrainingExamples()
     {
-        if (i_arm == 0)
+        if (i_arm == 0 && !b_modelIsRunning)
         {
             shoulderAbductionRight.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
         }
-        else if (i_arm == 1)
+        else if (i_arm == 1 && !b_modelIsRunning)
         {
             shoulderAbductionLeft.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
         }
@@ -188,11 +190,11 @@ public class ModelController : MonoBehaviour
 
     public void ResetElbowModel()
     {
-        if(i_arm == 0)
+        if(i_arm == 0 && !b_modelIsRunning)
         {
             shoulderAbductionRight.GetComponent<MLPNodeAccess>().MLPResetModel();
         }
-        else if(i_arm == 1)
+        else if(i_arm == 1 && !b_modelIsRunning)
         {
             shoulderAbductionLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
         }
@@ -200,11 +202,11 @@ public class ModelController : MonoBehaviour
 
     public void ClearShoulderTrainingExamples()
     {
-        if (i_arm == 0)
+        if (i_arm == 0 && !b_modelIsRunning)
         {
             shoulderElevationRight.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
         }
-        else if (i_arm == 1)
+        else if (i_arm == 1 && !b_modelIsRunning)
         {
             shoulderElevationLeft.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
         }
@@ -212,11 +214,11 @@ public class ModelController : MonoBehaviour
 
     public void ResetShoulderModel()
     {
-        if(i_arm == 0)
+        if(i_arm == 0 && !b_modelIsRunning)
         {
             shoulderElevationRight.GetComponent<MLPNodeAccess>().MLPResetModel();
         }
-        else if(i_arm == 1)
+        else if(i_arm == 1 && !b_modelIsRunning)
         {
             shoulderElevationLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
         }
@@ -224,21 +226,27 @@ public class ModelController : MonoBehaviour
 
     public void ClearTrunkTrainingExamples()
     {
-        trunkLeaning.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        if(!b_modelIsRunning)
+        {
+            trunkLeaning.GetComponent<MLPNodeAccess>().MLPDeleteTrainingExamples();
+        }
     }
 
     public void ResetTrunkModel()
     {
-        trunkLeaning.GetComponent<MLPNodeAccess>().MLPResetModel();
+        if(!b_modelIsRunning)
+        {
+            trunkLeaning.GetComponent<MLPNodeAccess>().MLPResetModel();
+        }
     }
 
     public void ClearKNNTrainingExamples()
     {
-        if (i_arm == 0)
+        if (i_arm == 0 && !b_modelIsRunning)
         {
             knnRight.GetComponent<KNNNodeAccess>().KNNDeleteTrainingExamples();
         }
-        else if (i_arm == 1)
+        else if (i_arm == 1 && !b_modelIsRunning)
         {
             knnLeft.GetComponent<KNNNodeAccess>().KNNDeleteTrainingExamples();
         }
@@ -246,11 +254,11 @@ public class ModelController : MonoBehaviour
 
     public void ResetKNNModel()
     {
-        if(i_arm == 0)
+        if(i_arm == 0 && !b_modelIsRunning)
         {
             knnRight.GetComponent<KNNNodeAccess>().KNNResetModel();
         }
-        else if(i_arm == 1)
+        else if(i_arm == 1 && !b_modelIsRunning)
         {
             knnLeft.GetComponent<KNNNodeAccess>().KNNResetModel();
         }

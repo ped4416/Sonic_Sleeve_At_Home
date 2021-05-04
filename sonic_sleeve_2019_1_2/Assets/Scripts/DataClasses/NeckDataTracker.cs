@@ -11,17 +11,11 @@ public class NeckDataTracker : MonoBehaviour
 
     void Update()
     {
-        if(b_filterOn)
-        {
-            dataTracker.neck_pos = vecFilter.dataOut;
-            dataTracker.neck_rot = quatFilter.dataOut;
-        }
-        else
-        {
-            dataTracker.neck_pos = gameObject.transform.position;
-            dataTracker.neck_rot = gameObject.transform.rotation;
-            //print("Neck Pos: " + dataTracker.neck_pos + "   ::  Neck Rot: " + dataTracker.neck_rot);
-        }
+            dataTracker.neck_pos = vecFilter.dataOut;            
+            //dataTracker.neck_rot = quatFilter.dataOut;
         
+            dataTracker.neck_pos_raw = gameObject.GetComponent<Vec3LowPassFilter>().rawDataOut;
+            dataTracker.neck_rot_raw = gameObject.GetComponent<QuaternionLowPassFilter>().rawDataOut;
+            //print("Neck Pos: " + dataTracker.neck_pos + "   ::  Neck Rot: " + dataTracker.neck_rot);
     }
 }

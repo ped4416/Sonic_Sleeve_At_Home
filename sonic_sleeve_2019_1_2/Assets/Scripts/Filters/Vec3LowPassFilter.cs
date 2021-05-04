@@ -8,6 +8,7 @@ public class Vec3LowPassFilter : MonoBehaviour
     public Vector3 dataOut;
     public float lowPassFactor;
     public bool connectToTransform;
+    public Vector3 rawDataOut;
 
     private bool b_init;
     private Vector3 dataBuffer = new Vector3();
@@ -21,6 +22,8 @@ public class Vec3LowPassFilter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         rawDataOut = dataIn.transform.position;
+
         dataOut = lowPassFilter(dataIn.transform.position, ref dataBuffer, lowPassFactor, b_init);
         if(connectToTransform)
         {

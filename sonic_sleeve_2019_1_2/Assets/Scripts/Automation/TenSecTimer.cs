@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TenSecTimer : MonoBehaviour
 {
     public OnTenRepsListener tenRepsListener;
     public On10SecTimerEnd timerEnd;
     public OnRestStart restStart;
+    public TMP_Text restCountdown;
 
     private int timer;
     private bool timerOn;
@@ -37,13 +39,16 @@ public class TenSecTimer : MonoBehaviour
 
     private void increaseTime()
     {
-        timer += 1;
+        int i_restCountdown = 11 - timer;
+        restCountdown.text = i_restCountdown.ToString();
+
         print("Time in seconds: " + timer);
         if (timer == 10)
         {
             timer = 0;
             End();
         }
+        timer += 1;
     }
 
     public void End()

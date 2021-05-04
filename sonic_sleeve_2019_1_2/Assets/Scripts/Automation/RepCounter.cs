@@ -11,8 +11,9 @@ public class RepCounter : MonoBehaviour
 
     private int i_prevVal;
     private int i_prevRep;
-    private bool b_active;
+    public bool b_active;
     public TextMeshProUGUI intCurrentRepText;
+    public TMP_Text repCountText;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,11 @@ public class RepCounter : MonoBehaviour
             {
                 i_repCount += 1;
             }
-            if (i_currentRep != i_prevRep) print("Rep Number: " + i_repCount);
+            if (i_currentRep != i_prevRep)
+            {
+                repCountText.text = i_repCount.ToString();
+                print("Rep Number: " + i_repCount);
+            }
             dataTracker.rep_n = i_repCount;
             i_prevRep = i_currentRep;
             i_prevVal = i_currentVal;

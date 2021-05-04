@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FiveSecTimer : MonoBehaviour
 {
     public OnFiveSecTimerEnd onFiveSecTimerEnd;
+    public TMP_Text restCountdown;
 
     private int timer;
     private bool timerOn;
@@ -34,13 +36,16 @@ public class FiveSecTimer : MonoBehaviour
 
     private void increaseTime()
     {
-        timer += 1;
+        int i_restCountdown = 6 - timer;
+        restCountdown.text = i_restCountdown.ToString();
+
         print("Time in seconds: " + timer);
         if (timer == 5)
         {
             timer = 0;
             End();
         }
+        timer += 1;
     }
 
     public void End()
