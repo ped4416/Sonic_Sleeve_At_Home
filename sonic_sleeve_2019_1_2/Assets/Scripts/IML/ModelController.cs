@@ -248,11 +248,11 @@ public class ModelController : MonoBehaviour
     {
         if(i_arm == 0)
         {
-            knnRight.GetComponent<MLPNodeAccess>().MLPResetModel();
+            knnRight.GetComponent<KNNNodeAccess>().KNNResetModel();
         }
         else if(i_arm == 1)
         {
-            knnLeft.GetComponent<MLPNodeAccess>().MLPResetModel();
+            knnLeft.GetComponent<KNNNodeAccess>().KNNResetModel();
         }
     }
 }
