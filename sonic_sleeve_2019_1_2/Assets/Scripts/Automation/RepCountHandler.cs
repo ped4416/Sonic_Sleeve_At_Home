@@ -117,7 +117,7 @@ public class RepCountHandler : MonoBehaviour
                 b_startPosition = false;
             }
         }
-        //dataTracker.block_n = i_blockNumber; //PDK TODO - throws a null error
+        dataTracker.block_n = i_blockNumber; //PDK TODO - throws a null error
     }
 
     public void DisableRepCounter()
