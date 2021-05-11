@@ -11,9 +11,9 @@ public static class StoreTargetPosition
     public static void WriteTargetPosition(List<Vector3> positionList)
     {
         l_savedTargetPosition = positionList;
-        PlayerPrefs.SetFloat("HandX", l_savedTargetPosition[0].x);
+        /*PlayerPrefs.SetFloat("HandX", l_savedTargetPosition[0].x);
         PlayerPrefs.SetFloat("HandY", l_savedTargetPosition[0].y);
-        PlayerPrefs.SetFloat("HandZ", l_savedTargetPosition[0].z);
+        PlayerPrefs.SetFloat("HandZ", l_savedTargetPosition[0].z);*/
         PlayerPrefs.SetFloat("WristX", l_savedTargetPosition[1].x);
         PlayerPrefs.SetFloat("WristY", l_savedTargetPosition[1].y);
         PlayerPrefs.SetFloat("WristZ", l_savedTargetPosition[1].z);
@@ -21,13 +21,13 @@ public static class StoreTargetPosition
 
     public static bool LoadTargetPosition()
     {
-        Vector3 hand = new Vector3();
+        /*Vector3 hand = new Vector3();
 
         hand.x = PlayerPrefs.GetFloat("HandX");
         hand.y = PlayerPrefs.GetFloat("HandY");
         hand.z = PlayerPrefs.GetFloat("HandZ");
 
-        l_loadedTargetPosition.Add(hand);
+        l_loadedTargetPosition.Add(hand);*/
 
         Vector3 wrist = new Vector3();
 
