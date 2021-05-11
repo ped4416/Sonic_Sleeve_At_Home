@@ -10,7 +10,7 @@ public class ChangeBoxColour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = Color.red;
+        col = Color.green;
     }
 
     private void OnCollisionEnter(Collision collision)
