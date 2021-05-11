@@ -16,7 +16,7 @@ public class MoveToTargetPosition : MonoBehaviour
             gameObject.transform.position = handPosition;
             /*gameObject.GetComponent<BoxCollider>().center = handPosition;
             gameObject.GetComponent<Rigidbody>().centerOfMass = handPosition;*/
-            float scaleVal = 0.2f;
+            float scaleVal = 0.1f;
             Vector3 scale = new Vector3();
             scale.Set(scaleVal, scaleVal, scaleVal);
             gameObject.transform.localScale = scale;
@@ -34,7 +34,7 @@ public class MoveToTargetPosition : MonoBehaviour
                 gameObject.transform.position = handPosition;
                 /*gameObject.GetComponent<BoxCollider>().center = handPosition;
                 gameObject.GetComponent<Rigidbody>().centerOfMass = handPosition;*/
-                float scaleVal = 0.2f;
+                float scaleVal = 0.1f;
                 Vector3 scale = new Vector3();
                 scale.Set(scaleVal, scaleVal, scaleVal);
                 gameObject.transform.localScale = scale;
