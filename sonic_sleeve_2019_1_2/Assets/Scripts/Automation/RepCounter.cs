@@ -11,6 +11,7 @@ public class RepCounter : MonoBehaviour
 
     private int i_prevVal;
     private int i_prevRep;
+    int i_repCountVisual;
     public bool b_active;
     public TextMeshProUGUI intCurrentRepText;
     public TMP_Text repCountText;
@@ -28,17 +29,22 @@ public class RepCounter : MonoBehaviour
     void Update()
     {
         if(b_active)
-        {
+        { 
             int i_currentRep = i_repCount;
             int i_currentVal = KNN_Output.GetComponent<ModelController>().i_knnVal;
             if (i_currentVal == 1 && i_prevVal == 2)
             {
                 i_repCount += 1;
+                if (i_repCount > 10)
+                {
+                    StartCoroutine(WaitOnTen());
+                }
             }
             if (i_currentRep != i_prevRep)
             {
-                repCountText.text = i_repCount.ToString();
-                print("Rep Number: " + i_repCount);
+                i_repCountVisual = i_repCount - 1;
+                repCountText.text = i_repCountVisual.ToString();
+                print("Rep Number: " + i_repCountVisual);
             }
             dataTracker.rep_n = i_repCount;
             i_prevRep = i_currentRep;
@@ -57,5 +63,16 @@ public class RepCounter : MonoBehaviour
     public void End()
     {
         b_active = false;
+    }
+
+    IEnumerator WaitOnTen()
+    {
+        i_repCountVisual = 10;
+        repCountText.text = i_repCountVisual.ToString();
+        print("Rep Number: " + i_repCountVisual);
+        yield return new WaitForSeconds(2);
+        i_repCountVisual = 0;
+        repCountText.text = i_repCountVisual.ToString();
+        print("Rep Number: " + i_repCountVisual);
     }
 }

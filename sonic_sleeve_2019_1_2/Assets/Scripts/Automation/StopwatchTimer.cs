@@ -28,6 +28,11 @@ public class StopwatchTimer : MonoBehaviour
         stopwatch.Reset();
     }
 
+    public void RestartTimer()
+    {
+        stopwatch.Restart();
+    }    
+
     public double GetTimeSeconds()
     {
         TimeSpan time = stopwatch.Elapsed;

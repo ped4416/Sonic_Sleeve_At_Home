@@ -45,11 +45,11 @@ public class ModelController : MonoBehaviour
 
         if(i_arm == 0)
         {
-            i_knnVal = knnRight.GetComponent<KNN_Output>().i_knnOutputValue;
+            i_knnVal = knnRight.GetComponent<KNN_Output>().i_constrainedKNNValue;
         }
         else if(i_arm == 1)
         {
-            i_knnVal = knnLeft.GetComponent<KNN_Output>().i_knnOutputValue;
+            i_knnVal = knnLeft.GetComponent<KNN_Output>().i_constrainedKNNValue;
         }
     }
 

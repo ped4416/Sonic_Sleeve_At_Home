@@ -36,7 +36,7 @@ public class FiveSecTimer : MonoBehaviour
 
     private void increaseTime()
     {
-        int i_restCountdown = 6 - timer;
+        int i_restCountdown = 5 - timer;
         restCountdown.text = i_restCountdown.ToString();
 
         print("Time in seconds: " + timer);

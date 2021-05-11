@@ -39,7 +39,7 @@ public class TenSecTimer : MonoBehaviour
 
     private void increaseTime()
     {
-        int i_restCountdown = 11 - timer;
+        int i_restCountdown = 10 - timer;
         restCountdown.text = i_restCountdown.ToString();
 
         print("Time in seconds: " + timer);
@@ -48,7 +48,10 @@ public class TenSecTimer : MonoBehaviour
             timer = 0;
             End();
         }
-        timer += 1;
+        else
+        {
+            timer += 1;
+        }
     }
 
     public void End()

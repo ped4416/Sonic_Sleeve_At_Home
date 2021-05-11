@@ -39,7 +39,7 @@ public class TwoMinTimer : MonoBehaviour
 
     private void increaseTime()
     {
-        int i_restCountdown = 121 - timer;
+        int i_restCountdown = 120 - timer;
         restCountdown.text = i_restCountdown.ToString();
 
         print("Time in seconds: " + timer);

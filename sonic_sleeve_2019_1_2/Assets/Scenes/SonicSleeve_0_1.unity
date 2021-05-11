@@ -9824,6 +9824,10 @@ GameObject:
   - component: {fileID: 778222787}
   - component: {fileID: 778222789}
   - component: {fileID: 778222790}
+  - component: {fileID: 778222793}
+  - component: {fileID: 778222792}
+  - component: {fileID: 778222791}
+  - component: {fileID: 778222794}
   m_Layer: 0
   m_Name: IML_KNNLeft
   m_TagString: Untagged
@@ -9907,8 +9911,110 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
+  i_constrainedKNNValue: 0
   intKnnText: {fileID: 1058266896}
   dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
+  constraintTimer: {fileID: 778222794}
+--- !u!114 &778222791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778222786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2af2f3d92a054849ac0e5a7b3cc3c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 498dc2cdcc326cc4190e05726290eebd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 778222790}
+        m_MethodName: ResetConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &778222792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778222786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca148b28a72c9e489ca4e6b99af8372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 44ea05550797a9348a4275e44b1af933, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 778222790}
+        m_MethodName: StopConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &778222793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778222786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dec7af678884148bb579dfea7c4a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6b9a3d4f547233a4c9637f984c85c66b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 778222790}
+        m_MethodName: StartConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &778222794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778222786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b982581f7803b24799186eed19a804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bang: {fileID: 11400000, guid: 6d01542a717ee7e4599b0157dd0a91c9, type: 2}
 --- !u!1 &785956055
 GameObject:
   m_ObjectHideFlags: 0
@@ -10313,8 +10419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
+  i_constrainedKNNValue: 0
   intKnnText: {fileID: 0}
   dataTracker: {fileID: 0}
+  constraintTimer: {fileID: 0}
 --- !u!114 &786797248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22624,6 +22732,10 @@ GameObject:
   - component: {fileID: 1895510442}
   - component: {fileID: 1895510443}
   - component: {fileID: 1895510444}
+  - component: {fileID: 1895510448}
+  - component: {fileID: 1895510447}
+  - component: {fileID: 1895510446}
+  - component: {fileID: 1895510445}
   m_Layer: 0
   m_Name: IML_KNNRight
   m_TagString: Untagged
@@ -22709,8 +22821,110 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i_knnOutputValue: 0
+  i_constrainedKNNValue: 0
   intKnnText: {fileID: 1058266896}
   dataTracker: {fileID: 11400000, guid: 8cf4e7926bc8ad14ca4fd1d60d0cf2ad, type: 2}
+  constraintTimer: {fileID: 1895510448}
+--- !u!114 &1895510445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2af2f3d92a054849ac0e5a7b3cc3c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 498dc2cdcc326cc4190e05726290eebd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1895510444}
+        m_MethodName: ResetConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1895510446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca148b28a72c9e489ca4e6b99af8372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 44ea05550797a9348a4275e44b1af933, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1895510444}
+        m_MethodName: StopConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1895510447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dec7af678884148bb579dfea7c4a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6b9a3d4f547233a4c9637f984c85c66b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1895510444}
+        m_MethodName: StartConstraintTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1895510448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895510440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b982581f7803b24799186eed19a804e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bang: {fileID: 11400000, guid: 6d01542a717ee7e4599b0157dd0a91c9, type: 2}
 --- !u!1 &1897296503
 GameObject:
   m_ObjectHideFlags: 0
