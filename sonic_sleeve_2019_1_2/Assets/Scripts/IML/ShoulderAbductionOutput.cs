@@ -31,7 +31,7 @@ public class ShoulderAbductionOutput : MonoBehaviour
         //f_initialThresh = PlayerPrefs.GetFloat("Shoulder Abduction Threshold"); // default value
         //threshSlider.GetComponent<Slider>().value = f_initialThresh;
 
-        errorTimerCheck.b_isActive = false;
+        errorTimerCheck.b_elbowActive = false;
         dataTracker.is_in_error = false;
     }
 
@@ -52,37 +52,31 @@ public class ShoulderAbductionOutput : MonoBehaviour
 
         if (f_currentVal >= f_threshold && f_prevVal < f_threshold)
         {
+            errorTimerCheck.b_elbowActive = true;
+
             if (dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
             {
                 audioSource.GetComponent<AudioSource>().volume = 0.0f;
             }
 
-            if (!errorTimerCheck.b_isActive)
-            {
-                print("Shoulder abduction adjustment needed");
+            print("Shoulder abduction adjustment needed");
 
-                if(repTimerActive.b_isActive)
-                {
-                    errorTimerStart.Raise();
-                    dataTracker.is_in_error = true;
-                    errorTimerCheck.b_isActive = true;
-                }                
-            }
-            
+            errorTimerStart.Raise();
+            dataTracker.is_in_error = true;
         }
         else if (f_currentVal < f_threshold && f_prevVal >= f_threshold)
         {
-            audioSource.GetComponent<AudioSource>().volume = 1.0f;
+            errorTimerCheck.b_elbowActive = false;
+            bool b_isInError = errorTimerCheck.CheckModelError();
 
-            if (errorTimerCheck.b_isActive)
+            if (!b_isInError)
             {
-                
+                audioSource.GetComponent<AudioSource>().volume = 1.0f;
+
                 errorTimerPause.Raise();
                 dataTracker.is_in_error = false;
-                errorTimerCheck.b_isActive = false;
             }
         }
-
         dataTracker.elbow_comp = f_currentVal;
         f_prevVal = f_currentVal;
     }

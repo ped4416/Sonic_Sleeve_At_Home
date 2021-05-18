@@ -31,7 +31,7 @@ public class TrunkLeaningOutput : MonoBehaviour
         /*f_initialThresh = PlayerPrefs.GetFloat("Trunk Leaning Threshold"); // value set from last runtime
         threshSlider.GetComponent<Slider>().value = f_initialThresh;*/
 
-        errorTimerCheck.b_isActive = false;
+        errorTimerCheck.b_trunkActive = false;
         dataTracker.is_in_error = false;
     }
 
@@ -43,47 +43,40 @@ public class TrunkLeaningOutput : MonoBehaviour
         float f_currentVal;
         f_currentVal = f_MLPOutputValue;
 
-        if(GUItoIML.b_runModel)
+        if (GUItoIML.b_runModel)
         {
             outputSlider.GetComponent<Slider>().value = f_currentVal;
         }
-        
-        
-        //if (f_currentVal != f_prevVal) print("Trunk Leaning Output = " + f_currentVal);
+
+        // if (f_currentVal != f_prevVal) print("Shoulder Abduction Output = " + f_currentVal);
 
         if (f_currentVal >= f_threshold && f_prevVal < f_threshold)
         {
-            if(!errorTimerCheck.b_isActive)
+            errorTimerCheck.b_trunkActive = true;
+
+            if (dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
             {
-                print("Trunk adjustment needed");
-
-                if (dataTracker.e_condition == DataTracker.Condition.Experimental || dataTracker.e_condition == DataTracker.Condition.Practice)
-                {
-                    audioSource.GetComponent<AudioSource>().volume = 0.0f;
-                }
-
-                if (repTimerActive.b_isActive)
-                {
-                    errorTimerStart.Raise();
-                    dataTracker.is_in_error = true;
-                    errorTimerCheck.b_isActive = true;
-                }
-                
+                audioSource.GetComponent<AudioSource>().volume = 0.0f;
             }
-            
+
+            print("Trunk adjustment needed");
+
+            errorTimerStart.Raise();
+            dataTracker.is_in_error = true;
         }
         else if (f_currentVal < f_threshold && f_prevVal >= f_threshold)
         {
-            if(errorTimerCheck.b_isActive)
+            errorTimerCheck.b_trunkActive = false;
+            bool b_isInError = errorTimerCheck.CheckModelError();
+
+            if (!b_isInError)
             {
                 audioSource.GetComponent<AudioSource>().volume = 1.0f;
+
                 errorTimerPause.Raise();
                 dataTracker.is_in_error = false;
-                errorTimerCheck.b_isActive = false;
             }
-            
         }
-
         dataTracker.trunk_comp = f_currentVal;
         f_prevVal = f_currentVal;
     }
