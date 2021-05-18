@@ -15,13 +15,22 @@ public class ChangeBoxColour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        mat = gameObject.GetComponent<Renderer>().material;
-        mat.color = col;
+        print("HITTTT");
+        StartCoroutine(ColourChangeCoroutine());
     }
 
-    private void OnCollisionExit(Collision collision)
+    IEnumerator ColourChangeCoroutine()
     {
         mat = gameObject.GetComponent<Renderer>().material;
+        mat.color = col;
+        yield return new WaitForSeconds(1.0f);
         mat.color = Color.white;
-    }
+    }    
+
+    /*private void OnCollisionExit(Collision collision)
+    {
+        print("EXIT");
+        mat = gameObject.GetComponent<Renderer>().material;
+        mat.color = Color.white;
+    }*/
 }

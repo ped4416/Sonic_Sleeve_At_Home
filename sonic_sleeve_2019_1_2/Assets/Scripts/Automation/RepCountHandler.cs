@@ -23,6 +23,7 @@ public class RepCountHandler : MonoBehaviour
     private bool b_10SecTimerEnd;
     private bool b_2MinTimerEnd;
     private int i_blockNumber;
+    private int i_conditionNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class RepCountHandler : MonoBehaviour
         b_10SecTimerEnd = false;
         b_2MinTimerEnd = false;
         repTimerActive.b_isActive = false;
+        i_conditionNumber = 1;
     }
 
     // Update is called once per frame
@@ -81,6 +83,7 @@ public class RepCountHandler : MonoBehaviour
             //blockCount.i_value = 1;
             //print("Block Number: " + blockCount.i_value);
             i_blockNumber = 1;
+            i_conditionNumber = 2;
             print("Block Number: " + i_blockNumber);
             repCounter.Begin();
         }
@@ -110,11 +113,19 @@ public class RepCountHandler : MonoBehaviour
             //else if(repCounter.i_repCount > 10 && blockCount.i_value == 5)
             else if (repCounter.i_repCount > 10 && i_blockNumber == 5)
             {
-                fiftyReps.Raise();
-                repTimerStop.Raise();
-                repTimerActive.b_isActive = false;
-                repTimerReset.Raise();
-                b_startPosition = false;
+                if(i_conditionNumber == 2)
+                {
+                    print("Experiment Finished. Please exit application");
+
+                }
+                else
+                {
+                    fiftyReps.Raise();
+                    repTimerStop.Raise();
+                    repTimerActive.b_isActive = false;
+                    repTimerReset.Raise();
+                    b_startPosition = false;
+                }
             }
         }
         dataTracker.block_n = i_blockNumber; //PDK TODO - throws a null error

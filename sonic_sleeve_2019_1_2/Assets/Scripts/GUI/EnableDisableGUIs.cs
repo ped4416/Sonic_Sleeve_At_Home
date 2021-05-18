@@ -9,6 +9,7 @@ public class EnableDisableGUIs : MonoBehaviour
     public GameObject runGUI;
     public GameObject startPosFeedbackText;
     public GameObject repCounter;
+    public GameObject autoCheckStartPosition;
 
     private bool b_setupGUI;
     private bool b_menuGUI;
@@ -49,6 +50,8 @@ public class EnableDisableGUIs : MonoBehaviour
         {
             setupGUI.SetActive(true);
             startPosFeedbackText.SetActive(true);
+            autoCheckStartPosition.GetComponent<CompareStartPosition>().CheckPositionAuto();
+
             if (b_menuGUI)
             {
                 menuGUI.SetActive(false);
