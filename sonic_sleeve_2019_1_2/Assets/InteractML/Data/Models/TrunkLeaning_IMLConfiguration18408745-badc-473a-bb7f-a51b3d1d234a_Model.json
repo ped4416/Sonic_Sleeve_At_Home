@@ -1,54 +1,10 @@
 {
    "metadata" : {
       "creator" : "Rapid API C++",
-      "inputNames" : [ "inputs-1", "inputs-2", "inputs-3" ],
-      "numInputs" : 3,
-      "numOutputs" : 1,
+      "inputNames" : null,
+      "numInputs" : -1,
+      "numOutputs" : -1,
       "version" : "v0.1.1"
    },
-   "modelSet" : [
-      {
-         "inBases" : [ 0.060946319252252579, 1.961004376411438, 1.5077037215232849 ],
-         "inRanges" : [ 0.019154343754053116, 0.043621420860290527, 0.12230366468429565 ],
-         "inputNames" : [ "inputs-1", "inputs-2", "inputs-3" ],
-         "modelType" : "Neural Network",
-         "nodes" : [
-            {
-               "Node 1" : -1.3917926670086851,
-               "Node 2" : 0.93780380218411774,
-               "Node 3" : -0.14800085062542465,
-               "Threshold" : 0.39263090203005746,
-               "name" : "Linear Node 0"
-            },
-            {
-               "Attrib inputs-1" : -0.73695228623200626,
-               "Attrib inputs-2" : 1.1441263873292102,
-               "Attrib inputs-3" : 2.4504399881585166,
-               "Threshold" : 1.5883948072382541,
-               "name" : "Sigmoid Node 1"
-            },
-            {
-               "Attrib inputs-1" : 0.15833438723612347,
-               "Attrib inputs-2" : -0.75943612220274148,
-               "Attrib inputs-3" : -2.1995392851289988,
-               "Threshold" : -1.3966619418811059,
-               "name" : "Sigmoid Node 2"
-            },
-            {
-               "Attrib inputs-1" : 0.78704984817060053,
-               "Attrib inputs-2" : 0.33827125692124699,
-               "Attrib inputs-3" : -0.22253323777374878,
-               "Threshold" : -0.018167377317160002,
-               "name" : "Sigmoid Node 3"
-            }
-         ],
-         "numHiddenLayers" : 1,
-         "numHiddenNodes" : 3,
-         "numHiddenOutputs" : 1,
-         "numInputs" : 3,
-         "outBase" : 0.53667785599827766,
-         "outRange" : 0.46332214400172234,
-         "whichInputs" : [ 0, 1, 2 ]
-      }
-   ]
+   "modelSet" : null
 }
